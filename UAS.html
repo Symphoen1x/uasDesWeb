@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets Station Footer</title>
+  <link rel="stylesheet" href="UAS.css">
+</head>
+<body>
+
+  <footer>
+    <!-- Footer Navigation -->
+    <div class="footer-container">
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>SHOPPING</h4>
+          <ul>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Dog</a></li>
+            <li><a href="#">Cat</a></li>
+            <li><a href="#">Rabbit</a></li>
+            <li><a href="#">Aquatic Pets</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>ABOUT US</h4>
+          <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Store Locations</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="#">Customer Service</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>FOLLOW US</h4>
+          <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="newsletter">
+        <h4>Get Rewards and Updates!</h4>
+        <form id="newsletter-form">
+          <input type="email" id="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 Pets Station. All rights reserved.</p>
+        <p>Free delivery for orders above \$55. Learn more about our Pawpoints rewards program!</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript untuk menangani form newsletter
+    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah reload halaman
+
+      const email = document.getElementById('email').value;
+    
+      if (email) {
+        alert('Thank you for subscribing with ' + email + '!');
+        document.getElementById('email').value = ''; // Clear input
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
+
+    // JavaScript untuk menangani form newsletter
+    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Mencegah reload halaman
+
+      const email = document.getElementById('email').value;
+    
+      if (email) {
+        alert('Thank you for subscribing with ' + email + '!');
+        document.getElementById('email').value = ''; // Clear input
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });  
+    </script>
+</body>
+</html>
