@@ -18,6 +18,9 @@ crossorigin="anonymous"></script>
         <nav>
             <ul>
                 <li class="button active" data-filter="semua">Semua</li>
+                <li class="button active" data-filter="semua">Trending</li>
+                <li class="button active" data-filter="semua">Populer Sepanjang Masa</li>
+                <li class="button active" data-filter="semua">Rating Tertinggi</li>
                 <li class="button" data-filter="action">Action</li>
                 <li class="button" data-filter="anime">Anime</li>
                 <li class="button" data-filter="comedy">Comedy</li>
@@ -47,10 +50,10 @@ crossorigin="anonymous"></script>
             $(".button").click(function () {
                 let nilai = $(this).attr("data-filter");
                 if (nilai == "semua") {
-                    $(".filter").show("1000");
+                    $(".filter").show(1000);
                 } else {
-                    $(".filter").not("." + nilai).hide("1000");
-                    $(".filter").filter("." + nilai).show("1000");
+                    $(".filter").not("." + nilai).hide(1000);
+                    $(".filter").filter("." + nilai).show(1000);
                 }
             });
           // Supaya class active dapat berpindah sesuai filter
