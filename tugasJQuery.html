@@ -18,9 +18,9 @@ crossorigin="anonymous"></script>
         <nav>
             <ul>
                 <li class="button active" data-filter="semua">Semua</li>
-                <li class="button active" data-filter="semua">Trending</li>
-                <li class="button active" data-filter="semua">Populer Sepanjang Masa</li>
-                <li class="button active" data-filter="semua">Rating Tertinggi</li>
+                <li class="button" data-filter="trend">Trending</li>
+                <li class="button" data-filter="Pop">Populer Sepanjang Masa</li>
+                <li class="button" data-filter="Rate">Rating Tertinggi</li>
                 <li class="button" data-filter="action">Action</li>
                 <li class="button" data-filter="anime">Anime</li>
                 <li class="button" data-filter="comedy">Comedy</li>
@@ -31,16 +31,22 @@ crossorigin="anonymous"></script>
 
         <section>
             <div class="box filter action">Action</div>
-            <div class="box filter action">Action</div>
-            <div class="box filter anime">Anime</div>
-            <div class="box filter comedy">Comedy</div>
-            <div class="box filter horror">Horror</div>
-            <div class="box filter romance">Romance</div>
             <div class="box filter anime">Anime</div>
             <div class="box filter comedy">Comedy</div>
             <div class="box filter horror">Horror</div>
             <div class="box filter romance">Romance</div>
             <div class="box filter action">Action</div>
+            <div class="box filter anime">Anime</div>
+            <div class="box filter comedy">Comedy</div>
+            <div class="box filter horror">Horror</div>
+            <div class="box filter romance">Romance</div>
+            <div class="box filter action">Action</div>
+            <div class="box filter anime">Anime</div>
+            <div class="box filter comedy">Comedy</div>
+            <div class="box filter horror">Horror</div>
+            <div class="box filter romance">Romance</div>
+            <div class="box filter action">Action</div>
+            <div class="box filter anime">Anime</div>
             <div class="box filter comedy">Comedy</div>
             <div class="box filter horror">Horror</div>
             <div class="box filter romance">Romance</div>
@@ -52,12 +58,25 @@ crossorigin="anonymous"></script>
                 let nilai = $(this).attr("data-filter");
                 if (nilai == "semua") {
                     $(".filter").show(1000);
-                } else {
+                } 
+                else if (nilai == "trend") {
+                    $(".filter").hide(1000);
+                    $(".filter").slice(0, 5).show(1000);
+                }
+                else if (nilai == "Pop") {
+                    $(".filter").hide(1000);
+                    $(".filter").slice(7, 12).show(1000);
+                }
+                else if (nilai == "Rate") {
+                    $(".filter").hide(1000);
+                    $(".filter").slice(-5).show(1000);
+                }
+                else {
                     $(".filter").not("." + nilai).hide(1000);
                     $(".filter").filter("." + nilai).show(1000);
                 }
             });
-          // Supaya class active dapat berpindah sesuai filter
+            
             $("ul .button").click(function () {
                 $(this).addClass('active');
                 $(this).siblings().removeClass('active');
