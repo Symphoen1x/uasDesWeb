@@ -10,21 +10,67 @@
 <body>
   <!-- nda kode nduwur iki nko hapus rpp, aku gur nempel gen footerku ra rusak -->
   <header>
-    <h1>Critter Haven
-    </h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- <section>
-    <h2>Welcome to Pets Station's</h2>
-    <p>Your one-stop shop for all your pet needs. From food to accessories, we have everything to keep your pets happy and healthy.</p>
-  </section> -->
+    <div class="header-top">
+        <!-- Logo and Website Name -->
+        <div class="logo-and-name">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="Logo Petshop">
+            </a>
+            <div class="website-name">
+                <h1>Critter Haven</h1>
+            </div>
+        
+
+        <!-- Search Bar with Icon Inside -->
+        <div class="search-bar">
+            <input type="text" placeholder="Cari produk...">
+            <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+        </div>
+      </div>
+
+        <!-- Authentication Links (Login, Wishlist, Cart) -->
+        <div class="auth-links">
+            <a href="/login" class="auth-icon">
+                <img src="img/dashboard/login.png" alt="Login">
+            </a>
+            <a href="/wishlist" class="auth-icon">
+                <img src="img/dashboard/wishlist.png" alt="Wishlist">
+            </a>
+            <a href="/cart" class="auth-icon">
+                <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
+            </a>
+        </div>
+    </div>
+
+    <div class="header-bottom">
+        <div class="categories-left">
+            <!-- Dropdown for Kucing, Anjing, Hewan Lain, and Brand -->
+            <select class="category" id="kucing">
+                <option value="">Kucing</option>
+                <!-- Add category options here -->
+            </select>
+            <select class="category" id="anjing">
+                <option value="">Anjing</option>
+                <!-- Add category options here -->
+            </select>
+            <select class="category" id="hewan-lain">
+                <option value="">Hewan Lain</option>
+                <!-- Add category options here -->
+            </select>
+            <select class="brand">
+                <option value="">Brand</option>
+                <!-- Add brand options here -->
+            </select>
+        </div>
+        <div class="link">
+            <a href="/link">Link</a>
+        </div>
+    </div>
+</header>
+
+
+
+
 
 
 
