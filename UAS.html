@@ -11,7 +11,6 @@
   <!-- nda kode nduwur iki nko hapus rpp, aku gur nempel gen footerku ra rusak -->
   <header>
     <div class="header-top">
-        <!-- Logo and Website Name -->
         <div class="logo-and-name">
             <a href="/" class="logo">
                 <img src="logo.png" alt="Logo Petshop">
@@ -19,16 +18,13 @@
             <div class="website-name">
                 <h1>Critter Haven</h1>
             </div>
-        
 
-        <!-- Search Bar with Icon Inside -->
-        <div class="search-bar">
-            <input type="text" placeholder="Cari produk...">
-            <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+            <div class="search-bar">
+                <input type="text" placeholder="Cari produk...">
+                <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+            </div>
         </div>
-      </div>
 
-        <!-- Authentication Links (Login, Wishlist, Cart) -->
         <div class="auth-links">
             <a href="/login" class="auth-icon">
                 <img src="img/dashboard/login.png" alt="Login">
@@ -44,29 +40,141 @@
 
     <div class="header-bottom">
         <div class="categories-left">
-            <!-- Dropdown for Kucing, Anjing, Hewan Lain, and Brand -->
-            <select class="category" id="kucing">
-                <option value="">Kucing</option>
-                <!-- Add category options here -->
-            </select>
-            <select class="category" id="anjing">
-                <option value="">Anjing</option>
-                <!-- Add category options here -->
-            </select>
-            <select class="category" id="hewan-lain">
-                <option value="">Hewan Lain</option>
-                <!-- Add category options here -->
-            </select>
-            <select class="brand">
-                <option value="">Brand</option>
-                <!-- Add brand options here -->
-            </select>
-        </div>
-        <div class="link">
-            <a href="/link">Link</a>
+            <!-- Kategori Kucing -->
+            <div class="category-container">
+              <a href="product-category/kucing/kucing.html">
+                <button id="kucing-button" class="category-button">
+                    Kucing <span class="arrow">&#9660;</span>
+                </button>
+              </a>
+                <div id="kucing-dropdown" class="category-dropdown">
+                    <ul>
+                        <li><a href="product-category/kucing/makanan-cemilan.html">Makanan dan Cemilan</a></li>
+                        <li><a href="/product-category/kucing/alat-kebersihan/">Alat Kebersihan</a></li>
+                        <li><a href="/product-category/kucing/obat-vitamin/">Obat dan Vitamin</a></li>
+                        <li><a href="/product-category/kucing/toilet/">Toilet</a></li>
+                        <li><a href="/product-category/kucing/lainnya/">Lainnya >> </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Kategori Anjing -->
+            <div class="category-container">
+              <a href="/product-category/anjing/">
+                <button id="anjing-button" class="category-button">
+                    Anjing <span class="arrow">&#9660;</span>
+                </button>
+              </a>
+                <div id="anjing-dropdown" class="category-dropdown">
+                    <ul>
+                        <li><a href="/product-category/anjing/makanan-cemilan/">Makanan dan Cemilan</a></li>
+                        <li><a href="/product-category/anjing/alat-kebersihan/">Alat Kebersihan</a></li>
+                        <li><a href="/product-category/anjing/obat-vitamin/">Obat dan Vitamin</a></li>
+                        <li><a href="/product-category/anjing/toilet/">Toilet</a></li>
+                        <li><a href="/product-category/anjing/kandang-tempat-tidur/">Kandang dan Tempat Tidur</a></li>
+                        <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Kategori Hewan Lain -->
+            <div class="category-container">
+                <button id="hewan-lain-button" class="category-button">
+                    Hewan Lain <span class="arrow">&#9660;</span>
+                </button>
+                <div id="hewan-lain-dropdown" class="category-dropdown">
+                    <ul>
+                        <li>
+                            <a href="/product-category/hewan-lain/kelinci/">Kelinci</a>
+                            <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
+                                <ul>
+                                    <li><a href="/product-category/kelinci/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                    <li><a href="/product-category/kelinci/kesehatan-perawatan/">Kesehatan dan Perawatan</a></li>
+                                    <li><a href="/product-category/kelinci/kandang-habitat/">Kandang & Habitat</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/product-category/hewan-lain/hamster/">Hamster</a>
+                            <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
+                                <ul>
+                                    <li><a href="/product-category/hamster/makanan-jerami/">Makanan & Jerami</a></li>
+                                    <li><a href="/product-category/hamster/kesehatan/">Kesehatan dan Perawatan</a></li>
+                                    <li><a href="/product-category/hamster/kandang-habitat/">Kandang & Habitat</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/product-category/hewan-lain/burung/">Burung</a>
+                            <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
+                                <ul>
+                                    <li><a href="/product-category/burung/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                    <li><a href="/product-category/burung/perawatan-kesehatan-vitamin/">Perawatan Kesehatan & Vitamin</a></li>
+                                    <li><a href="/product-category/burung/kandang-stand/">Kandang & Stand</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/product-category/hewan-lain/ikan/">Ikan</a>
+                            <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
+                                <ul>
+                                    <li><a href="/product-category/ikan/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                    <li><a href="/product-category/ikan/lifestyle/">Lifestyle</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Select for Brands -->
+            <div class="Brands">
+              <button onclick="window.location.href='brands.html';">Brand</button>
+          </div>
+          
+          <div class="link">
+              <button onclick="window.location.href='/link';">Link</button>
+          </div>
+          
+          
         </div>
     </div>
 </header>
+
+<div class="full-width-container">
+  <div class="content-container">
+    <div class="text-overlay">
+      <h2 class="title">Solusi Kesejahteraan Hewan Peliharaan Anda </h2>
+      <p class="subtitle">Kami siap membantu, mulai dari perawatan kulit sensitif, penyediaan makanan bebas alergen, hingga memastikan nutrisi terbaik bagi hewan peliharaan Anda!</p>
+      <button class="shop-now-button">Belanja Sekarang</button>
+    </div>
+    <!-- GIF animasi di sebelah kanan konten teks -->
+    <div class="gif-container">
+      <img src="img/dashboard/animasi_2.gif" alt="Animasi GIF" class="gif-animation">
+    </div>
+  </div>
+  <img src="img/dashboard/header.png" alt="Deskripsi Gambar" class="full-width-image">
+</div>
+
+<div class="Kategori-Belanja">
+  <h3 class="Kategori-Belanja-title">Kategori Belanja:</h3>
+  <div class="Kategori-Belanja-buttons">
+    <button class="Kategori-Belanja-button active" onclick="changeCategory('Kucing')">Kucing</button>
+    <button class="Kategori-Belanja-button" onclick="changeCategory('Anjing')">Anjing</button>
+    <button class="Kategori-Belanja-button" onclick="changeCategory('Kelinci')">Kelinci</button>
+    <button class="Kategori-Belanja-button" onclick="changeCategory('Hamster')">Hamster</button>
+    <button class="Kategori-Belanja-button" onclick="changeCategory('Burung')">Burung</button>
+    <button class="Kategori-Belanja-button" onclick="changeCategory('Ikan')">Ikan</button>
+  </div>
+</div>
+
+<div id="additional-buttons" class="additional-buttons">
+
+</div>
+
+
+
+
 
 
 
@@ -177,33 +285,281 @@
   </footer> 
 
   <script>
-    // JavaScript untuk menangani form newsletter
-    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah reload halaman
-
-      const email = document.getElementById('email').value;
     
-      if (email) {
-        alert('Thank you for subscribing with ' + email + '!');
-        document.getElementById('email').value = ''; // Clear input
-      } else {
-        alert('Please enter a valid email address.');
-      }
+
+    const buttons = document.querySelectorAll('.Kategori-Belanja-button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Hapus kelas 'active' dari semua tombol
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // Tambahkan kelas 'active' pada tombol yang diklik
+    button.classList.add('active');
+  });
+});
+
+  // JavaScript untuk menangani form newsletter
+document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah reload halaman
+
+  const email = document.getElementById('email').value;
+
+  if (email) {
+    alert('Thank you for subscribing with ' + email + '!');
+    document.getElementById('email').value = ''; // Clear input
+  } else {
+    alert('Please enter a valid email address.');
+  }
+});
+
+// Fungsi untuk toggle dropdown dan panah
+function toggleDropdown(buttonId, dropdownId) {
+  const dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle('show');
+  
+  const arrow = document.querySelector(`#${buttonId} .arrow`);
+  // Toggle panah
+  arrow.innerHTML = arrow.innerHTML === "&#9660;" ? "&#9650;" : "&#9660;"; // Toggle arrow
+}
+
+// Menangani klik pada kategori
+document.getElementById('kucing-button').addEventListener('click', function(event) {
+  event.stopPropagation(); // Prevent event from bubbling up
+  toggleDropdown('kucing-button', 'kucing-dropdown');
+});
+
+document.getElementById('anjing-button').addEventListener('click', function(event) {
+  event.stopPropagation(); // Prevent event from bubbling up
+  toggleDropdown('anjing-button', 'anjing-dropdown');
+});
+
+document.getElementById('hewan-lain-button').addEventListener('click', function(event) {
+  event.stopPropagation(); // Prevent event from bubbling up
+  toggleDropdown('hewan-lain-button', 'hewan-lain-dropdown');
+});
+
+// Menutup dropdown jika klik di luar kategori
+window.addEventListener('click', function(event) {
+  const allDropdowns = document.querySelectorAll('.category-dropdown');
+  const allButtons = document.querySelectorAll('.category-button');
+
+  // Close dropdown if clicking outside any category button
+  if (![...allButtons].some(button => button.contains(event.target))) {
+    allDropdowns.forEach(dropdown => dropdown.classList.remove('show'));
+    allButtons.forEach(button => {
+      button.querySelector('.arrow').innerHTML = "&#9660;"; // Reset panah
+    });
+  }
+});
+
+// Menangani hover pada kategori untuk menampilkan dropdown dan sub-dropdown
+document.querySelectorAll('.category-container').forEach(function(container) {
+  const dropdown = container.querySelector('.category-dropdown');
+  const subDropdowns = container.querySelectorAll('.sub-category-dropdown');
+
+  if (dropdown) {
+    // Menampilkan dropdown saat mouse masuk kategori
+    container.addEventListener('mouseenter', function() {
+      dropdown.style.display = 'block';
     });
 
-    // JavaScript untuk menangani form newsletter
-    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Mencegah reload halaman
-
-      const email = document.getElementById('email').value;
-    
-      if (email) {
-        alert('Thank you for subscribing with ' + email + '!');
-        document.getElementById('email').value = ''; // Clear input
-      } else {
-        alert('Please enter a valid email address.');
+    // Menyembunyikan dropdown saat mouse keluar kategori
+    container.addEventListener('mouseleave', function() {
+      // Hanya sembunyikan dropdown jika tidak ada mouse di sub-dropdown
+      if (![...subDropdowns].some(sub => sub.matches(':hover'))) {
+        dropdown.style.display = 'none';
       }
-    });  
-    </script>
+    });
+  }
+
+  // Menangani hover untuk sub-dropdown
+  subDropdowns.forEach(function(subDropdown) {
+    subDropdown.addEventListener('mouseenter', function() {
+      subDropdown.style.display = 'block'; // Tampilkan sub-dropdown
+    });
+
+    subDropdown.addEventListener('mouseleave', function() {
+      subDropdown.style.display = 'none'; // Sembunyikan sub-dropdown
+    });
+  });
+});
+
+// Menangani klik untuk memastikan dropdown tidak tertutup saat berada di dalam kategori/sub-dropdown
+document.querySelectorAll('.category-dropdown').forEach(function(dropdown) {
+  dropdown.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the dropdown from closing when clicking inside
+  });
+});
+
+// Fungsi untuk mengubah kategori dan menampilkan tombol tambahan
+function changeCategory(category) {
+  // Menghapus kelas 'active' dari semua tombol kategori
+  const categoryButtons = document.querySelectorAll('.Kategori-Belanja-button');
+  categoryButtons.forEach(button => button.classList.remove('active'));
+
+  // Menambahkan kelas 'active' ke tombol yang diklik
+  const activeButton = [...categoryButtons].find(button => button.textContent.includes(category));
+  activeButton.classList.add('active');
+
+  // Menampilkan tombol tambahan berdasarkan kategori yang dipilih
+  let additionalButtonsHtml = '';
+  switch (category) {
+    case 'Kucing':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-cemilan">
+            <img src="img/dashboard/canned-food.png" alt="Makanan dan Cemilan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan </span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/alat-kebersihan">
+            <img src="img/dashboard/scoop.png" alt="Alat Kebersihan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Alat Kebersihan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/obat-vitamin">
+            <img src="img/dashboard/medicine.png" alt="Obat dan Vitamin" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Obat dan Vitamin</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/toilet">
+            <img src="img/dashboard/litter-box.png" alt="Toilet" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Toilet</span>
+          </a>
+        </div>
+      `;
+      break;
+    case 'Anjing':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-cemilan">
+            <img src="img/dashboard/canned-food.png" alt="Makanan dan Cemilan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan </span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/alat-kebersihan">
+            <img src="img/dashboard/scoop.png" alt="Alat Kebersihan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Alat Kebersihan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/obat-vitamin">
+            <img src="img/dashboard/medicine.png" alt="Obat dan Vitamin" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Obat dan Vitamin</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/toilet">
+            <img src="img/dashboard/litter-box.png" alt="Toilet" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Toilet</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kandang-tempat-tidur">
+            <img src="img/dashboard/pet-carrier.png" alt="Kandang dan Tempat Tidur" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Tempat Tidur</span>
+          </a>
+        </div>
+      `;
+      break;
+    case 'Kelinci':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-cemilan">
+            <img src="img/dashboard/snack.png" alt="Makanan & Cemilan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kesehatan-perawatan">
+            <img src="img/dashboard/bandage.png" alt="Kesehatan dan Perawatan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Perawatan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kandang-habitat">
+            <img src="img/dashboard/pet-carrier.png" alt="Kandang & Habitat" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Kandang</span>
+          </a>
+        </div>
+      `;
+      break;
+    case 'Hamster':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-jerami">
+            <img src="img/dashboard/snack.png" alt="Makanan & Jerami" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kesehatan-perawatan">
+            <img src="img/dashboard/bandage.png" alt="Kesehatan dan Perawatan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Perawatan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kandang-habitat">
+            <img src="img/dashboard/pet-carrier.png" alt="Kandang & Habitat" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Kandang</span>
+          </a>
+        </div>
+      `;
+      break;
+    case 'Burung':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-cemilan">
+            <img src="img/dashboard/snack.png" alt="Makanan & Cemilan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/perawatan-vitamin">
+            <img src="img/dashboard/bandage.png" alt="Perawatan Kesehatan & Vitamin" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Perawatan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/kandang-stand">
+            <img src="img/dashboard/pet-carrier.png" alt="Kandang & Stand" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Kandang</span>
+          </a>
+        </div>
+      `;
+      break;
+    case 'Ikan':
+      additionalButtonsHtml = `
+        <div class="Kategori-Belanja-button">
+          <a href="/makanan-cemilan">
+            <img src="img/dashboard/snack.png" alt="Makanan & Cemilan" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Makanan</span>
+          </a>
+        </div>
+        <div class="Kategori-Belanja-button">
+          <a href="/lifestyle">
+            <img src="img/dashboard/seaweed.png" alt="Lifestyle" class="Kategori-Belanja-button-img">
+            <span class="Kategori-Belanja-button-text">Lifestyle</span>
+          </a>
+        </div>
+      `;
+      break;
+    default:
+      additionalButtonsHtml = '';
+  }
+
+  // Menampilkan tombol tambahan di bawah kategori
+  const additionalButtonsContainer = document.getElementById('additional-buttons');
+  additionalButtonsContainer.innerHTML = additionalButtonsHtml;
+}
+
+
+
+
+</script>
 </body>
 </html>
