@@ -12,12 +12,12 @@
   <header>
     <div class="header-top">
         <div class="logo-and-name">
-            <a href="/" class="logo">
+            <a href="UAS.html" class="logo">
                 <img src="logo.png" alt="Logo Petshop">
             </a>
-            <div class="website-name">
-                <h1>Critter Haven</h1>
-            </div>
+            <a href="UAS.html" class="website-name-link">
+              <h1>Critter Haven</h1>
+          </a>
 
             <div class="search-bar">
                 <input type="text" placeholder="Cari produk...">
@@ -49,9 +49,9 @@
               </a>
                 <div id="kucing-dropdown" class="category-dropdown">
                     <ul>
-                        <li><a href="product-category/kucing/makanan-cemilan.html">Makanan dan Cemilan</a></li>
+                        <li><a href="product-category/kucing/makanan-cemilan.html">Makanan & Cemilan</a></li>
                         <li><a href="/product-category/kucing/alat-kebersihan/">Alat Kebersihan</a></li>
-                        <li><a href="/product-category/kucing/obat-vitamin/">Obat dan Vitamin</a></li>
+                        <li><a href="/product-category/kucing/obat-vitamin/">Obat & Vitamin</a></li>
                         <li><a href="/product-category/kucing/toilet/">Toilet</a></li>
                         <li><a href="/product-category/kucing/lainnya/">Lainnya >> </a></li>
                     </ul>
@@ -67,11 +67,11 @@
               </a>
                 <div id="anjing-dropdown" class="category-dropdown">
                     <ul>
-                        <li><a href="/product-category/anjing/makanan-cemilan/">Makanan dan Cemilan</a></li>
+                        <li><a href="/product-category/anjing/makanan-cemilan/">Makanan & Cemilan</a></li>
                         <li><a href="/product-category/anjing/alat-kebersihan/">Alat Kebersihan</a></li>
-                        <li><a href="/product-category/anjing/obat-vitamin/">Obat dan Vitamin</a></li>
+                        <li><a href="/product-category/anjing/obat-vitamin/">Obat & Vitamin</a></li>
                         <li><a href="/product-category/anjing/toilet/">Toilet</a></li>
-                        <li><a href="/product-category/anjing/kandang-tempat-tidur/">Kandang dan Tempat Tidur</a></li>
+                        <li><a href="/product-category/anjing/kandang-tempat-tidur/">Kandang & Tempat Tidur</a></li>
                         <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
                     </ul>
                 </div>
@@ -89,7 +89,7 @@
                             <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="/product-category/kelinci/makanan-cemilan/">Makanan & Cemilan</a></li>
-                                    <li><a href="/product-category/kelinci/kesehatan-perawatan/">Kesehatan dan Perawatan</a></li>
+                                    <li><a href="/product-category/kelinci/kesehatan-perawatan/">Kesehatan & Perawatan</a></li>
                                     <li><a href="/product-category/kelinci/kandang-habitat/">Kandang & Habitat</a></li>
                                 </ul>
                             </div>
@@ -99,7 +99,7 @@
                             <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="/product-category/hamster/makanan-jerami/">Makanan & Jerami</a></li>
-                                    <li><a href="/product-category/hamster/kesehatan/">Kesehatan dan Perawatan</a></li>
+                                    <li><a href="/product-category/hamster/kesehatan/">Kesehatan & Perawatan</a></li>
                                     <li><a href="/product-category/hamster/kandang-habitat/">Kandang & Habitat</a></li>
                                 </ul>
                             </div>
@@ -127,6 +127,10 @@
                 </div>
             </div>
 
+            <div class="Blog">
+              <button onclick="window.location.href='blog.html';">Blog</button>
+          </div>
+
             <!-- Select for Brands -->
             <div class="Brands">
               <button onclick="window.location.href='brands.html';">Brand</button>
@@ -148,7 +152,9 @@
     <div class="text-overlay">
       <h2 class="title">Solusi Kesejahteraan Hewan Peliharaan Anda </h2>
       <p class="subtitle">Kami siap membantu, mulai dari perawatan kulit sensitif, penyediaan makanan bebas alergen, hingga memastikan nutrisi terbaik bagi hewan peliharaan Anda!</p>
-      <button class="shop-now-button">Belanja Sekarang</button>
+      <a href="shopping.html" class="shop-now-button-link">
+        <button class="shop-now-button">Belanja Sekarang</button>
+      </a>
     </div>
     <!-- GIF animasi di sebelah kanan konten teks -->
     <div class="gif-container">
@@ -173,6 +179,45 @@
 <div id="additional-buttons" class="additional-buttons">
 
 </div>
+
+
+
+<div class="product-finder-container">
+  <img src="img/dashboard/header2.png" alt="Background Product Finder" class="product-finder-bg">
+  <div class="product-finder-form">
+    <h3 class="product-finder-title">Product Finder</h3>
+    <form id="productFinderForm">
+      <div class="form-group">
+        <label for="category" class="label-inline">Hewan</label>
+        <div class="dropdown-container">
+          <select id="category" name="category" class="form-control">
+            <option value="Kucing">Kucing</option>
+            <option value="Anjing">Anjing</option>
+            <option value="Kelinci">Kelinci</option>
+            <option value="Hamster">Hamster</option>
+            <option value="Burung">Burung</option>
+            <option value="Ikan">Ikan</option>
+          </select>
+        
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="concern">Pilih Kebutuhan:</label>
+        <select id="concern" name="concern" class="form-control">
+          <option value="diet-nutrition">Diet and Nutrition</option>
+          <option value="skin-issues">Skin Issues</option>
+          <option value="grooming">Grooming</option>
+        </select>
+       
+      </div>
+
+      <button type="submit" class="search-button">Cari Produk</button>
+    </form>
+  </div>
+</div>
+
+
 
 
 
@@ -456,9 +501,82 @@ function changeCategory(category) {
   additionalButtonsContainer.innerHTML = additionalButtonsHtml;
 }
 
-
-
-
 </script>
+
+<script>
+  const concernOptions = {
+    Kucing: [
+      { value: "diet-nutrition", text: "Diet and Nutrition" },
+      { value: "skin-issues", text: "Skin Issues" },
+      { value: "grooming", text: "Grooming" }
+    ],
+    Anjing: [
+        { value: "training-behavior", text: "Training and Behavior" },
+        { value: "health", text: "Health" },
+        { value: "diet-nutrition", text: "Diet and Nutrition" }
+      ],
+      Hamster: [
+        { value: "exercise", text: "Exercise" },
+        { value: "diet-nutrition", text: "Diet and Nutrition" }
+      ],
+    // Tambahkan kategori lain sesuai kebutuhan...
+  };
+
+  const categoryDropdown = document.getElementById("category");
+  const concernDropdown = document.getElementById("concern");
+
+  concernDropdown.disabled = false; // Mengaktifkan dropdown kebutuhan saat halaman dimuat
+  categoryDropdown.value = "Kucing"; // Secara default memilih "Kucing"
+  
+  // Memilih kebutuhan default (Diet and Nutrition) jika "Kucing" dipilih
+  concernDropdown.value = "diet-nutrition";
+
+  // Memuat opsi kebutuhan berdasarkan kategori yang dipilih
+  categoryDropdown.addEventListener("change", function () {
+    const selectedCategory = this.value;
+    concernDropdown.disabled = !selectedCategory;
+
+    concernDropdown.innerHTML = ""; // Kosongkan dropdown kebutuhan
+    if (selectedCategory && concernOptions[selectedCategory]) {
+      concernOptions[selectedCategory].forEach(option => {
+        const newOption = document.createElement("option");
+        newOption.value = option.value;
+        newOption.textContent = option.text;
+        concernDropdown.appendChild(newOption);
+      });
+    }
+  });
+
+  // Menangani submit form
+  document.getElementById("productFinderForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const category = categoryDropdown.value;
+    const concern = concernDropdown.value;
+
+    if (!category || !concern) {
+      alert("Silakan pilih hewan dan kebutuhan!");
+      return;
+    }
+
+    if (category === "Kucing" && concern === "diet-nutrition") {
+      window.location.href = "shopping.html";
+    } else if (category === "Anjing" && concern === "training-behavior") {
+      window.location.href = "Training.html";
+    } else if (category === "Anjing" && concern === "health") {
+      window.location.href = "Health.html";
+    } else if (category === "Hamster" && concern === "exercise") {
+      window.location.href = "Exercise.html";
+    } else if (category === "Hamster" && concern === "diet-nutrition") {
+      window.location.href = "HamsterNutrition.html";
+    } else {
+      alert("Halaman untuk kombinasi ini belum tersedia.");
+    }
+  });
+</script>
+</body>
+</html>
+
+
+
 </body>
 </html>
