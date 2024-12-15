@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+    <link rel="stylesheet" href="chart_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="cart-container">
+        <header class="checkout-header">
+            <h1><i class="fas fa-shopping-bag"></i> Chart</h1>
+            <div class="steps">
+              <div class="step active">
+                <a href="chart_page.html"><i class="fas fa-cart-shopping"></i></a>
+                <span>Cart</span>
+              </div>
+              <div class="step-line"></div>
+              <div class="step">
+                <i class="fas fa-credit-card"></i>
+                <span>Payment</span>
+              </div>
+              <div class="step-line"></div>
+              <div class="step">
+                <i class="fas fa-check-circle"></i>
+                <span>Confirmation</span>
+              </div>
+            </div>
+        </header>
+      
+        <div class="cart-header">
+            <h2 class="cart-title">There are <span class="item-count">2 items</span> in your cart</h2>
+            <p class="shipping-info">$52.00 away from free shipping!</p>
+        </div>
+
+        <div class="cart-content">
+            <div class="cart-main">
+                <div class="cart-table-header">
+                    <div class="header-item">ITEM</div>
+                    <div class="header-quantity">QUANTITY</div>
+                    <div class="header-price">PRICE</div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-info">
+                        <div class="cart-item-image">
+                            <img src="nature-gift-gourmet.jpg" alt="Nature's Gift">
+                        </div>
+                        <div class="item-details">
+                            <span class="item-brand">Nature's Gift</span>
+                            <h3 class="item-name">Nature's Gift Gourmet Loaf Style Succulent Lamb Tray Dog Food - 100g can</h3>
+                        </div>
+                    </div>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn">-</button>
+                        <input type="number" value="2" class="quantity-input">
+                        <button class="quantity-btn">+</button>
+                    </div>
+                    <div class="item-price">$3.00</div>
+                    <button class="remove-item">×</button>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3 class="summary-title">Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$3.00</span>
+                </div>
+                <button class="checkout-btn">Check out</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Pilih semua elemen yang diperlukan
+            const quantityControls = document.querySelectorAll('.quantity-controls');
+            const subtotalElement = document.querySelector('.summary-row span:last-child');
+            const itemCountElement = document.querySelector('.item-count');
+            const shippingInfoElement = document.querySelector('.shipping-info');
+            const FREE_SHIPPING_THRESHOLD = 100; // Batas minimum untuk gratis ongkir
+    
+            // Fungsi untuk memperbarui perhitungan keranjang
+            function updateCartCalculations() {
+                let totalPrice = 0;
+                let totalItems = 0;
+                let totalProducts = 0;
+    
+                // Iterasi melalui item keranjang
+                quantityControls.forEach(control => {
+                    const quantityInput = control.querySelector('.quantity-input');
+                    const itemPriceElement = control.nextElementSibling;
+                    const basePrice = parseFloat(itemPriceElement.getAttribute('data-base-price') || itemPriceElement.textContent.replace('$', ''));
+                    
+                    // Hitung total item
+                    const quantity = parseInt(quantityInput.value);
+                    const itemTotal = quantity * basePrice;
+                    
+                    // Perbarui tampilan harga per item
+                    itemPriceElement.textContent = `$${itemTotal.toFixed(2)}`;
+                    
+                    // Perbarui total harga dan jumlah item
+                    totalPrice += itemTotal;
+                    totalItems += quantity;
+                    totalProducts++;
+                });
+    
+                // Perbarui subtotal dan jumlah item
+                subtotalElement.textContent = `$${totalPrice.toFixed(2)}`;
+                itemCountElement.textContent = `${totalItems} items`;
+
+                // Perbarui total produk di order summary
+                const totalProductsElement = document.querySelector('.total-products span:last-child');
+                totalProductsElement.textContent = `${totalProducts} products`;
+
+                // Perbarui informasi pengiriman gratis
+                const remainingForFreeShipping = FREE_SHIPPING_THRESHOLD - totalPrice;
+                if (remainingForFreeShipping > 0) {
+                    shippingInfoElement.textContent = `$${remainingForFreeShipping.toFixed(2)} away from free shipping!`;
+                } else {
+                    shippingInfoElement.textContent = `You've got free shipping!`;
+                }
+            }
+    
+            // Tambahkan event listener untuk kontrol kuantitas
+            quantityControls.forEach(control => {
+                const decreaseBtn = control.querySelector('.quantity-btn:first-child');
+                const increaseBtn = control.querySelector('.quantity-btn:last-child');
+                const quantityInput = control.querySelector('.quantity-input');
+                const removeBtn = control.parentElement.querySelector('.remove-item');
+    
+                // Kurangi kuantitas
+                decreaseBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                        updateCartCalculations();
+                    }
+                });
+    
+                // Tambah kuantitas
+                increaseBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue + 1;
+                    updateCartCalculations();
+                });
+    
+                // Hapus item
+                removeBtn.addEventListener('click', () => {
+                    control.closest('.cart-item').remove();
+                    updateCartCalculations();
+                });
+    
+                // Perbarui saat input manual
+                quantityInput.addEventListener('change', () => {
+                    // Pastikan nilai minimum adalah 1
+                    quantityInput.value = Math.max(1, parseInt(quantityInput.value) || 1);
+                    updateCartCalculations();
+                });
+            });
+
+    
+            // Tambahkan data-base-price saat inisialisasi
+            quantityControls.forEach(control => {
+                const itemPriceElement = control.nextElementSibling;
+                const basePrice = parseFloat(itemPriceElement.textContent.replace('$', ''));
+                itemPriceElement.setAttribute('data-base-price', basePrice);
+            });
+
+            // Tambahkan elemen total produk ke order summary
+            const orderSummary = document.querySelector('.order-summary');
+            const totalProductsDiv = document.createElement('div');
+            totalProductsDiv.className = 'summary-row total-products';
+            totalProductsDiv.innerHTML = `
+                <span>Total Products</span>
+                <span>0 products</span>
+            `;
+            orderSummary.insertBefore(totalProductsDiv, orderSummary.querySelector('.checkout-btn'));
+
+            // Kalkulasi awal
+            updateCartCalculations();
+
+            // Tambahkan fungsi validasi
+            function validateCart() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                if (cartItems.length === 0) {
+                    alert('Keranjang belanja Anda kosong!');
+                    return false;
+                }
+                return true;
+            }
+
+            // Event listener checkout yang baru
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            checkoutBtn.addEventListener('click', function() {
+                if (validateCart()) {
+                    // Mengubah warna ikon payment menjadi aktif
+                    const paymentStep = document.querySelector('.step:nth-child(3)');
+                    paymentStep.classList.add('active');
+                                        
+                    // Arahkan ke halaman checkout (perbaiki typo pada nama file)
+                    setTimeout(() => {
+                        window.location.href = 'chekcout.html';
+                    }, 500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

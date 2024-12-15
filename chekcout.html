@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="chekcout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <header class="checkout-header">
+      <h1><i class="fas fa-shopping-bag"></i> Checkout</h1>
+      <div class="steps">
+        <div class="step active">
+          <a href="chart_page.html"><i class="fas fa-cart-shopping"></i></a>
+          <span>Cart</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step active">
+          <i class="fas fa-credit-card"></i>
+          <span>Payment</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <i class="fas fa-check-circle"></i>
+          <span>Confirmation</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="checkout-content">
+      <div class="left-section">
+        <div class="section-card">
+          <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+          <form class="checkout-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Enter your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Enter your last name" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea id="address" placeholder="Street, block number, etc." required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter city" required>
+              </div>
+              <div class="form-group">
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" placeholder="Enter postal code" required>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="section-card">
+          <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+          <div class="payment-options">
+            <div class="payment-option">
+              <input type="radio" id="gpay" name="payment" value="gpay" required>
+              <label for="gpay">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Google_Pay_Logo.svg/512px-Google_Pay_Logo.svg.png" alt="Google Pay">
+              </label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" id="credit-card" name="payment" value="credit-card">
+              <label for="credit-card">
+                <i class="fas fa-credit-card"></i> Credit Card
+              </label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" id="paypal" name="payment" value="paypal">
+              <label for="paypal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/124px-PayPal.svg.png" alt="PayPal">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="section-card order-summary">
+          <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+          <div class="product-details">
+            <img src="nature-gift-gourmet.jpg" alt="Product Image">
+            <div class="product-info">
+              <h3>Nature's Gift Gourmet Loaf Style Succulent Lamb Tray Dog Food</h3>
+              <p class="product-quantity">Quantity: 1</p>
+              <p class="product-size">100g can</p>
+            </div>
+          </div>
+
+          <div class="discount-section">
+            <div class="discount-code">
+              <input type="text" id="discount-code" placeholder="Enter discount code">
+              <button class="apply-btn">Apply</button>
+            </div>
+          </div>
+
+          <div class="price-breakdown">
+            <div class="price-item">
+              <span>Subtotal</span>
+              <span>$1.50</span>
+            </div>
+            <div class="price-item">
+              <span>Shipping</span>
+              <span class="shipping-cost">Calculate at next step</span>
+            </div>
+            <div class="price-item total">
+              <span>Total</span>
+              <span>$1.50</span>
+            </div>
+          </div>
+
+          <button class="checkout-btn">
+            <i class="fas fa-lock"></i> Complete Purchase
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const inputs = document.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.classList.add('focused');
+        });
+        input.addEventListener('blur', function() {
+          if (!this.value) {
+            this.parentElement.classList.remove('focused');
+          }
+        });
+      });
+
+      const paymentOptions = document.querySelectorAll('.payment-option input');
+      paymentOptions.forEach(option => {
+        option.addEventListener('change', function() {
+          document.querySelectorAll('.payment-option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+          if (this.checked) {
+            this.closest('.payment-option').classList.add('selected');
+          }
+        });
+      });
+
+      // Menangani diskon
+      const discountInput = document.getElementById('discount-code');
+      const applyBtn = document.querySelector('.apply-btn');
+      const validDiscountCodes = ['HEMAT10', 'DISKON20', 'PROMO30'];
+
+      applyBtn.addEventListener('click', function() {
+        const code = discountInput.value.trim().toUpperCase();
+        if (validDiscountCodes.includes(code)) {
+          alert('Selamat! Kode diskon berhasil digunakan');
+          // Di sini bisa ditambahkan logika untuk mengurangi total harga
+        } else {
+          alert('Maaf, kode diskon tidak valid atau sudah kadaluarsa');
+        }
+      });
+
+      // Menangani tombol checkout
+      const checkoutBtn = document.querySelector('.checkout-btn');
+      checkoutBtn.addEventListener('click', function() {
+        const isFormValid = validateForm();
+        if (isFormValid) {
+          alert('Terima kasih! Pesanan Anda sedang diproses.\nSilakan cek email Anda untuk konfirmasi pembayaran.');
+          
+          // Mengubah warna ikon konfirmasi menjadi aktif
+          const confirmationStep = document.querySelector('.step:last-child');
+          confirmationStep.classList.add('active');
+          
+          // Mengarahkan ke halaman konfirmasi setelah delay 1 detik
+          setTimeout(() => {
+            window.location.href = 'UAS.html';
+          }, 3000);
+          
+        } else {
+          alert('Mohon lengkapi semua data yang diperlukan sebelum melanjutkan pembayaran.');
+        }
+      });
+
+      // Fungsi validasi form
+      function validateForm() {
+        const requiredInputs = document.querySelectorAll('input[required], textarea[required]');
+        let isValid = true;
+        requiredInputs.forEach(input => {
+          if (!input.value.trim()) {
+            isValid = false;
+          }
+        });
+        
+        // Cek apakah metode pembayaran sudah dipilih
+        const paymentSelected = document.querySelector('input[name="payment"]:checked');
+        if (!paymentSelected) {
+          isValid = false;
+        }
+        
+        return isValid;
+      }
+    });
+  </script>
+</body>
+</html>

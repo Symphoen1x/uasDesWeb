@@ -1,0 +1,271 @@
+body {
+    /* background-color: ; */
+    margin: 0;
+}
+
+.recommendation-bar {
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.recommendation-slider {
+    max-width: 1200px;
+    display: flex;
+    transition: transform 0.6s ease;
+    margin: 0 auto;
+}
+
+.recommendation-item {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    padding: 0;
+}
+
+
+.recommendation-item.active {
+    opacity: 1;
+    visibility: visible;
+    
+
+}
+
+
+
+.recommendation-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f8f9fa;
+    height: 350px;
+}
+
+.recommendation-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 24px;
+}
+
+.recommendation-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.recommendation-image {
+    flex: 1;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 0 8px 8px 0;
+}
+
+.recommendation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.article-categories {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.category-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.category-link:hover {
+    background-color: #e0e0e0;
+}
+
+.category-link.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.category-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.category-link:hover::after,
+.category-link.active::after {
+    width: 80%;
+}
+
+
+.article-grid {
+    margin-top: 20px;
+    max-width: 1200px;
+}
+
+.article-grid-item {
+    border: 1px solid #ccc;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 1230px) {
+    .recommendation-bar {
+        height: auto; /* Sesuaikan tinggi untuk perangkat lebih kecil */
+        padding: 10px 0;
+    }
+    .recommendation-item.active{
+        padding-left: 10px;
+        padding-right: 10px;
+        /* height: auto; */
+    }
+
+    .recommendation-content {
+        padding: 20px; /* Kurangi padding */
+    }
+
+    .recommendation-content h3 {
+        font-size: 20px; /* Sesuaikan ukuran font */
+    }
+
+    .recommendation-content p {
+        font-size: 14px; /* Sesuaikan ukuran font */
+    }
+
+    .article-grid {
+        margin-top: 10px; /* Kurangi margin atas */
+    }
+
+    .article-grid-item {
+        flex: 0 0 100%; /* Setiap item menjadi 100% lebar */
+    }
+}
+
+/* Media Queries untuk Mobile */
+@media (max-width: 768px) {
+    .recommendation-bar {
+        height: 300px; /* Tinggi yang lebih besar untuk konten mobile */
+    }
+
+    .recommendation-item {
+        flex-direction: column; /* Tumpuk konten dan gambar secara vertikal */
+    }
+
+    .recommendation-content {
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .recommendation-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .recommendation-content p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .recommendation-image {
+        height: 200px; /* Kurangi tinggi gambar */
+        width: 100%;
+        border-radius: 0;
+    }
+
+    /* Penyesuaian kategori */
+    .article-categories {
+        padding: 5px 0;
+        overflow-x: auto; /* Buat kategori bisa di-scroll horizontal */
+        white-space: nowrap;
+    }
+
+    .category-link {
+        margin: 0 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        display: inline-block;
+    }
+
+    /* Penyesuaian grid artikel */
+    .article-grid {
+        padding: 10px;
+    }
+
+    .col-md-6 {
+        padding: 8px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-text {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
+}
+
+/* Media Queries untuk HP Kecil */
+@media (max-width: 375px) {
+    .recommendation-bar {
+        height: 300px;
+    }
+
+    .recommendation-image {
+        height: 180px;
+    }
+
+    .recommendation-content h3 {
+        font-size: 16px;
+    }
+
+    .recommendation-content p {
+        font-size: 13px;
+    }
+
+    .category-link {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+}
+
+
