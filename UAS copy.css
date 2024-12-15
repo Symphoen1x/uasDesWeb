@@ -1,0 +1,806 @@
+.navbar{
+    background-color: #f8a595;
+}
+
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 60px;
+    position: relative;
+}
+
+.header-container::after{
+    content: "";
+    width: 400px;
+    position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #7ac400;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+}
+
+.tag {
+    margin: 0; 
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
+    color: #000;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.heart-icon {
+    color: #bbc4f0;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .header-container {
+        margin: 20px 0 40px;
+        gap: 10px;
+    }
+
+    .header-container::after {
+        width: 300px;
+        height: 3px;
+        bottom: -12px;
+    }
+
+    .tag {
+        font-size: 28px;
+    }
+
+    .heart-icon {
+        font-size: 28px;
+    }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    .header-container {
+        margin: 15px 0 30px;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .header-container::after {
+        width: 200px;
+        height: 2px;
+        bottom: -10px;
+    }
+
+    .tag {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .heart-icon {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+}
+
+
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.snippet-body {
+    min-height: 50vh;
+    padding: 20px;
+}
+
+.rating, .product-info {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.owl-carousel .owl-item {
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item .card {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.owl-carousel .owl-stage-outer {
+    overflow-y: auto !important;
+    padding-bottom: 40px;
+}
+
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.owl-carousel .owl-item .card .name {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.2);
+    color: #fff2e8;
+    white-space: nowrap;
+}
+
+.owl-carousel .owl-item .card {
+    opacity: 0.2;
+    transform: scale3d(0.8, 0.8, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .owl-item.active.center .card {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    height: 20px;
+    background: #2a6ba3 !important;
+    border-radius: 2px !important;
+    opacity: 0.8;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    height: 13px;
+    width: 13px;
+    opacity: 1;
+    transform: translateY(2px);
+    background: #83b8e7 !important;
+}
+
+@media(max-width: 700px) {
+    .owl-carousel .owl-item .card {
+        padding: 15px;
+    }
+    
+    .owl-carousel .owl-item img {
+        height: 120px;
+    }
+    
+    .owl-carousel .owl-item .card .name {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .container {
+        margin: 0px;
+        padding: 15px;
+    }
+    
+    .rating, .product-info {
+        font-size: 0.9rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .owl-carousel .owl-item .card {
+        padding: 10px;
+        /* width: 100%; */
+    }
+    
+    .owl-carousel .owl-item img {
+        height: 120px;
+    }
+    
+    .owl-carousel .owl-item .card .name {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+        bottom: -15px;
+    }
+    
+    .rating, .product-info {
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+} 
+
+
+
+
+.newsletter {
+    background-color: #f4c76c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.newsletter h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.newsletter .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #a3cf5b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #777;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.newsletter button:hover {
+    background-color: #fff2e8;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 15px;
+    }
+
+    .newsletter h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .newsletter .form-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    .newsletter input {
+        max-width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    .newsletter {
+        padding: 10px;
+    }
+
+    .newsletter h4 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+
+    .newsletter .form-container {
+        gap: 10px;
+    }
+
+    .newsletter input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .newsletter button {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+}
+
+
+/* Footer-top Styles */
+.footer-top{
+    background-color: #a3cf5b;
+    border-color: #e0e0e0;
+    display: flex;
+}
+
+.footer-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 1200px;
+    overflow: hidden;
+    
+}
+
+.footer-links {
+    display: flex;
+    border-color: #e0e0e0;
+    margin: 0 auto;
+    gap: 90px;
+
+}
+
+.footer-section{
+    margin: 50px 0px 50px 0px;
+    /* padding-left: 40px; */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #777;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #fff2e8;
+}
+
+.social-icons {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.social-icons li {
+    margin-right: 15px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+
+.social-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.social-icon a {
+    display: block;
+}
+
+/* Menambahkan media query untuk tablet */
+@media (max-width: 1230px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin: 30px 15px;
+        width: 100%;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Company Info Responsive */
+    .company-info {
+        text-align: center;
+        padding-right: 70px;
+        /* padding: 20px; */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .footer-logo {
+        width: 80px;
+    }
+
+    .company-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .company-address {
+        font-size: 13px;
+    }
+
+    /* WhatsApp Button Responsive */
+    .whatsapp-contact {
+        width: 100%;
+        padding-bottom: 40px;
+        padding-left: 70px;
+        /* padding: 15px; */
+    }
+
+    .whatsapp-btn {
+        width: 80%;
+        max-width: 300px;
+        padding: 12px 20px;
+    }
+
+    .whatsapp-btn i {
+        font-size: 28px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Menambahkan media query untuk HP */
+@media (max-width: 480px) {
+    .footer-top {
+        padding: 15px 0;
+    }
+    
+    .footer-section {
+        margin: 15px 10px;
+    }
+    
+    .footer-section h4 {
+        font-size: 15px;
+    }
+    
+    .footer-section ul li a {
+        font-size: 13px;
+    }
+    
+    .social-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Company Info Responsive */
+    .company-info {
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .footer-logo {
+        width: 60px;
+    }
+
+    .company-title {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .company-address {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* WhatsApp Button Responsive */
+    .whatsapp-contact {
+        padding: 10px;
+    }
+
+    .whatsapp-btn {
+        padding: 10px 15px;
+        width: 90%;
+    }
+
+    .whatsapp-btn i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .whatsapp-btn span {
+        font-size: 13px;
+    }
+
+    .whatsapp-number {
+        font-size: 12px;
+    }
+}
+
+/* Styling untuk company info di footer */
+.company-info {
+    /* padding: 30px; */
+    /* max-width: 500px; */
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-bottom: 40px;
+
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.footer-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.company-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.company-address {
+
+    font-style: normal;
+    font-size: 14px;
+    color: #666;
+    /* line-height: 1; */
+    /* padding-left: 10px; */
+}
+
+/* Styling untuk WhatsApp button */
+.whatsapp-contact {
+    padding-right: 70px;
+    /* padding: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 25px;
+    background: #25D366;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn i {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.whatsapp-btn span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.whatsapp-number {
+    font-size: 14px;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+
+
+
+
+
+/*Footer-bottom Styles */
+.footer-bottom {
+    background-color: #fff2e8; /* Warna latar belakang footer */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+
+/* Footer Copyright */
+.footer-copyright {
+    font-size: 14px;
+    color: #6c757d; /* Warna teks copyright */
+    text-align: center;
+    margin-top: 15px;
+}
+
+.footer-copyright a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    margin-left: 30px;
+    white-space: nowrap;
+}
+
+/* Footer Links */
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.links li {
+    margin-right: 30px;   /* Memberikan jarak antar item */
+    margin-bottom: 5px;    /* Memberikan jarak antar baris */
+}
+
+.links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links li a:hover {
+    color: #007bff; /* Warna saat hover pada link */
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Payment Icons */
+.icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.icons li {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.icons li:last-child {
+    border-right: none; /* Menghilangkan border pada item terakhir */
+}
+
+
+
+.global-image-wrapper {
+    display: block;
+    position: relative;
+    width: 52px; /* Ukuran gambar */
+    height: 22px; /* Ukuran gambar */
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+.global-image-wrapper img {
+    width: 52px;
+    height: 22px;
+    object-fit: contain; /* Menjaga rasio aspek gambar */
+}
+
+
+/* Responsif untuk tablet */
+@media (max-width: 1400px) {
+    .footer-content {
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .footer-copyright {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    .footer-content {
+        gap: 10px;
+    }
+
+    .links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .icons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        border-right: none;
+    }
+}
+
+.owl-carousel .item {
+    margin: 3px;
+}
+
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.owl-carousel .card {
+    margin: 10px;
+    padding: 15px;
+}
+
+.img-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.testimonial {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.rating, .product-info, .name {
+    margin-top: 10px;
+}
+

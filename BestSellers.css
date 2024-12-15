@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin: 30px 0 60px;
+    margin: 30px 0 10px;
     position: relative;
 }
 
@@ -43,7 +43,7 @@ body {
 /* Responsif untuk tablet */
 @media (max-width: 768px) {
     .header-container {
-        margin: 20px 0 40px;
+        margin: 20px 0 90px;
         gap: 10px;
     }
 
@@ -89,7 +89,7 @@ body {
 
 
 .carousel {
-	margin: 70px auto;
+	margin: 50px auto;
     padding-top: 50px;
     padding-left: 70px;
     padding-right: 70px;
@@ -168,7 +168,7 @@ body {
 	border-radius: 4px;
 	opacity: 0.8;
 	transform: translateY(-50%);
-    margin-top: 100px;
+    margin-top: 10px;
 }
 .carousel-control-prev {
 	left: 5px;
@@ -199,37 +199,6 @@ body {
 .carousel-control-next i {
 	margin-right: -4px;
 }		
-/* .carousel-indicators {
-	bottom: -60px;
-    z-index: 100;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-}
-.carousel-indicators li, .carousel-indicators li.active {
-	width: 12px;
-	height: 12px;
-	margin: 0;
-	border-radius: 50%;
-	border: none;
-	opacity: 1;
-	transition: all 0.3s ease;
-}
-.carousel-indicators li {	
-	background: #7ac400;
-	cursor: pointer;
-}
-.carousel-indicators li:hover {
-	background: #68a800;
-	transform: scale(1.1);
-}
-.carousel-indicators li.active {	
-	background: #68a800;
-	transform: scale(1.2);
-	box-shadow: 0 0 8px rgba(104, 168, 0, 0.5);
-} */
 .carousel .wish-icon {
 	position: absolute;
 	right: 10px;
@@ -293,33 +262,38 @@ body {
 @media (max-width: 930px) {
     .carousel {
         padding: 0 50px;
+        margin-top: 80px;
     }
-    
+
     /* Mengatur agar hanya 2 item per baris */
     .col-sm-3 {
         flex: 0 0 50%;
         max-width: 50%;
     }
     
+
     .container-control-prev-next {
         max-width: 100%;
-        top: 10px;
+        /* top: 10px; */
         position: sticky;
         z-index: 200;
     }
 
     .container-control-prev-next .carousel-control-prev {
         left: 0;
+        /* margin-top: 30px; */
     }
 
     .container-control-prev-next .carousel-control-next {
         right: 0;
+        /* margin-top: 30px; */
+
         
     }
     /* Menyesuaikan ukuran tombol navigasi */
     .BestSellers .carousel-control-prev,
     .BestSellers .carousel-control-next {
-        top: 0;
+        top: -50px;
         transform: none;
         z-index: 100;
     }
@@ -341,67 +315,84 @@ body {
         height: 160px;
     }
 }
-
 /* Responsif untuk HP */
 @media (max-width: 660px) {
+    /* Layout carousel */
     .carousel {
-        padding: 0 30px;
+        padding: 0 20px;
+        margin-top: 60px;
+        position: relative;
     }
     
-    /* Mengatur agar hanya 1 item per baris */
+    /* Single column layout */
     .col-sm-3 {
         flex: 0 0 100%;
         max-width: 100%;
+        padding: 0 10px;
     }
+
+    /* Navigation controls */
     .container-control-prev-next {
-        max-width: 100%;
-        top: 80px;
-        position: sticky;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         z-index: 200;
+        pointer-events: none;
+    }
+
+    .container-control-prev-next .carousel-control-prev,
+    .container-control-prev-next .carousel-control-next {
+        position: absolute;
+        top: 20%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(0,0,0,0.5);
+        border-radius: 50%;
+        pointer-events: auto;
     }
 
     .container-control-prev-next .carousel-control-prev {
-        left: 0;
+        left: -15px;
     }
 
     .container-control-prev-next .carousel-control-next {
-        right: 0;
+        right: -15px;
     }
-        /* Menyesuaikan ukuran tombol navigasi */
-    .BestSellers .carousel-control-prev,
-    .BestSellers .carousel-control-next {
-        top: 40px;
-        transform: none;
-        z-index: 100;
-    }
-    
-    .BestSellers .carousel-control-prev {
-        left: -20px;
-        top: -40px;
-    }
-    
-    .BestSellers .carousel-control-next {
-        right: -20px;
-        top: -40px;
-    }
-    
-    
-    /* Menyesuaikan ukuran item carousel */
+
+    /* Item styling */
     .carousel .thumb-wrapper {
-        padding: 20px 10px;
+        padding: 15px;
+        margin: 10px 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
+
     .carousel .item .img-box {
-        height: 140px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
+
+    .carousel .item .img-box img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
     .carousel .item h4 {
         font-size: 16px;
+        margin: 10px 0;
+        font-weight: 500;
     }
-    
+
+    /* Navigation icons */
     .carousel-control-prev i,
     .carousel-control-next i {
-        font-size: 24px;
+        font-size: 20px;
+        color: #fff;
     }
 }
-
