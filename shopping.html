@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
     <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>light user grid - Bootdey.com</title>
+    <title>Halaman Belanja</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
@@ -249,6 +249,10 @@ background:#F5F5F5;
             
             
         }
+.category-button:focus {
+    border: 1px solid #ffffff;
+    outline: none; 
+}
         
         
 /* Widget */
@@ -286,7 +290,7 @@ background:#F5F5F5;
     box-shadow: none;
 }
 
-/* checkbox */
+
 .widget .widget-content {
     margin-top: 10px;
 }
@@ -483,7 +487,6 @@ header {
     background-color: #f4f4f4;
 }
 
-/* Container untuk bagian atas header (Logo, Nama, Search Bar, Auth Links) */
 .header-top {
     display: flex;
     align-items: center;
@@ -491,36 +494,37 @@ header {
     padding: 20px 30px;
 }
 
-/* Logo dan Nama Website berdampingan lebih dekat */
 .logo-and-name {
     display: flex;
     align-items: center;
     padding-left: 27px;
 }
+
 .logo-link, .website-name-link {
-    text-decoration: none; /* Menghapus garis bawah pada link */
-    display: flex; /* Untuk menjaga elemen tetap dalam satu baris */
+    text-decoration: none;
+    display: flex;
     align-items: center;
     color: #000000;
 }
 
 .logo {
-    width: 50px; /* Ukuran logo */
+    width: 50px;
     height: auto;
     margin-right: 10px;
 }
 
 .website-name h1 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bold;
     color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .search-bar {
     position: relative;
     display: flex;
     align-items: center;
-    width: 450px; /* Ukuran lebar search bar */
+    width: 450px;
     margin-left: 10px; 
     padding-left: 30px;
 }
@@ -533,6 +537,44 @@ header {
     border-radius: 12px;
 }
 
+.popup {
+    position: absolute;
+    top: 60px; /* Adjust based on search bar position */
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popup ul li {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.popup ul li:hover {
+    background: #f0f0f0;
+}
+
+/* Style for search bar */
+.search-bar {
+    position: relative;
+}
+
 .search-icon {
     position: absolute;
     right: 10px;
@@ -540,7 +582,6 @@ header {
     height: auto;
 }
 
-/* Authentication Links (Login, Wishlist, Cart) berdampingan lebih dekat */
 .auth-links {
     display: flex;
     gap: 15px;
@@ -552,8 +593,6 @@ header {
     height: auto;
 }
 
-/* Styling untuk bagian bawah header (Kategori dan Link) */
-/* Container untuk bagian bawah header (Kategori dan Link) */
 .header-bottom {
     display: flex;
     align-items: center;
@@ -562,14 +601,12 @@ header {
     background-color: #fff;
 }
 
-/* Menyusun kategori, dropdown, dan brand secara sejajar */
 .categories-left {
     display: flex;
     align-items: center;
-    gap: 2px; /* Menambahkan jarak antar kategori */
+    gap: 2px;
 }
 
-/* Styling untuk kategori dropdown */
 .category-container {
     position: relative;
     margin-left: 10px;
@@ -585,6 +622,12 @@ header {
     cursor: pointer;
     display: inline-block;
 }
+
+.category-button:focus {
+    border: none;
+    outline: none; 
+}
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(60%);
@@ -595,10 +638,9 @@ header {
         opacity: 1;
     }
 }
-/* General Styles for Dropdowns */
 
 .category-dropdown {
-    display: none; /* Default hidden */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -608,9 +650,9 @@ header {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    opacity: 0; /* Start invisible */
-    transform: translateX(-100%); /* Start off-screen */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .category-dropdown ul {
@@ -619,6 +661,8 @@ header {
     padding: 0;
     width: 150%;
 }
+
+
 
 .category-dropdown ul li a {
     padding: 10px;
@@ -630,64 +674,58 @@ header {
 
 .category-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    color: #a3cf5b;
 }
 
-/* Menampilkan dropdown saat hover */
 .category-container:hover .category-dropdown {
-    display: block; /* Show the dropdown */
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Reset position */
-    animation: slideInFromLeft 0.3s ease; /* Apply animation */
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInFromLeft 0.3s ease;
 }
 
-/* Styling untuk kategori button dan panah */
 .category-button {
     padding: 10px 20px;
     font-size: 15px;
-    border: none; /* Menghapus border */
+    border: none;
     background-color: #fff;
     cursor: pointer;
-    display: inline-flex; /* Menggunakan flex agar teks dan anak panah bisa disusun dengan baik */
-    align-items: center; /* Vertikal center untuk teks dan anak panah */
-    position: relative; /* Menambahkan posisi relative agar anak panah dan garis dapat diatur */
-    overflow: hidden; /* Menyembunyikan bagian yang melampaui tombol */
-    transition: background-color 0.3s ease; /* Transisi untuk perubahan warna latar belakang */
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
-/* Styling untuk garis di bawah tombol */
 .category-button::after {
-    content: ''; /* Membuat pseudo-element */
+    content: '';
     position: absolute;
-    bottom: 0; /* Menempatkan garis di bagian bawah tombol */
+    bottom: 0;
     left: 0;
-    width: 0%; /* Garis tidak terlihat awalnya */
-    height: 2px; /* Tebal garis */
-    background-color: #a3cf5b; /* Warna garis */
-    transition: width 0.7s ease; /* Transisi untuk lebar garis */
+    width: 0%;
+    height: 2px;
+    background-color: #a3cf5b;
+    transition: width 0.7s ease;
 }
 
-/* Styling anak panah */
 .category-button .arrow {
-    font-size: 10px; /* Ukuran anak panah */
-    margin-left: 8px; /* Menambahkan jarak antara teks dan anak panah */
-    position: relative; /* Menjaga anak panah tetap pada posisi yang tepat */
+    font-size: 10px;
+    margin-left: 8px;
+    position: relative;
 }
 
-/* Hover effect untuk tombol kategori */
 .category-button:hover {
-    background-color: #ffffff; /* Warna latar belakang berubah saat hover */
+    background-color: #ffffff;
 }
 
 .category-button:hover .arrow {
-    transform: rotate(180deg); /* Mengubah arah panah saat hover */
+    transform: rotate(180deg);
 }
 
 .category-button:hover::after {
-    width: 100%; /* Garis akan melebar sepenuhnya ketika hover */
+    width: 100%;
 }
 
-/* Dropdown khusus untuk Kucing */
 #kucing-dropdown {
     padding: 20px;
     font-size: 14px;
@@ -695,12 +733,11 @@ header {
     top: 110%;
 }
 
-/* Dropdown khusus untuk Anjing */
 #anjing-dropdown {
     padding: 20px;
     font-size: 14px;
     padding-right: 15px;
-    top: 110%; /* Dropdown muncul di bawah tombol Anjing */
+    top: 110%;
 }
 
 #layanan-dropdown {
@@ -709,7 +746,7 @@ header {
     padding-right: 15px;
     top: 110%;
 }
-/* Dropdown khusus untuk Hewan Lain */
+
 #hewan-lain-dropdown {
     padding: 20px;
     font-size: 14px;
@@ -717,31 +754,28 @@ header {
     top: 110%;
 }
 
-/* Menambahkan anak panah ke kanan item dropdown di Hewan Lain */
 #hewan-lain-dropdown ul li a {
     padding: 10px;
-    display: flex;  /* Menggunakan flex untuk menata teks dan anak panah */
-    justify-content: space-between;  /* Menyebarkan teks dan anak panah ke kiri dan kanan */
+    display: flex;
+    justify-content: space-between;
     color: #333;
     text-decoration: none;
 }
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    color: #a3cf5b;
 }
 
-/* Menambahkan anak panah kanan hanya untuk dropdown Hewan Lain */
 #hewan-lain-dropdown ul li a::after {
-    content: '>';  /* Menambahkan tanda > sebagai anak panah */
+    content: '>';
     font-size: 12px;
-    color: #333;  /* Warna anak panah */
-    margin-left: 7px;  /* Jarak antara teks dan anak panah */
+    color: #333;
+    margin-left: 7px;
 }
 
-/* Hilangkan hover-based display logic untuk sub-dropdown */
 .sub-category-dropdown {
-    display: none; /* Tidak terlihat secara default */
+    display: none;
     position: absolute;
     top: 0;
     left: 100%;
@@ -753,8 +787,8 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 200;
     width: 200px;
-    opacity: 0; /* Tidak terlihat */
-    transform: translateX(100%); /* Muncul dari kanan */
+    opacity: 0;
+    transform: translateX(100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
     content: none;
 }
@@ -775,118 +809,117 @@ header {
 
 .sub-category-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
-    
+    color: #a3cf5b;
 }
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    color: #a3cf5b;
 }
 
-/* Mengubah warna anak panah di samping item saat hover */
 #hewan-lain-dropdown ul li a:hover::after {
-    color: #a3cf5b; /* Mengubah warna anak panah menjadi hijau */
+    color: #a3cf5b;
 }
-/* Menampilkan sub-dropdown ketika hover pada induk atau sub-dropdown */
+
 #hewan-lain-dropdown ul li:hover .sub-category-dropdown,
 #hewan-lain-dropdown ul li .sub-category-dropdown:hover {
-    display: block; /* Menampilkan sub-dropdown */
-    opacity: 1; /* Pastikan tetap terlihat */
-    transform: translateX(0); /* Pastikan posisi sesuai */
-    animation: slideInFromRight 0.3s ease; /* Tetap menggunakan animasi */
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+    animation: slideInFromRight 0.3s ease;
 }
 
-/* Memastikan kategori utama tetap menunjukkan sub-dropdown saat hover */
+
+
 #hewan-lain-dropdown ul li:hover .sub-category-dropdown {
-    display: block; /* Menampilkan sub-dropdown ketika kategori dihover */
-    opacity: 1; /* Menjadikan sub-dropdown terlihat */
-    transform: translateX(0); /* Menjaga posisi sub-dropdown */
-    animation: slideInFromRight 0.3s ease; /* Animasi untuk tampilan sub-dropdown */
+    display: block; 
+    opacity: 1; 
+    transform: translateX(0); 
+    animation: slideInFromRight 0.3s ease; 
 }
 
-/* Posisi sub-dropdown untuk Kelinci */
+
 #sub-category-dropdown-kelinci {
     top: 25px;
     padding: 20px;
-    right: 50%; /* Menempatkan sub-dropdown sedikit ke kanan */
+    right: 50%;
 }
 
-/* Posisi sub-dropdown untuk Hamster */
 #sub-category-dropdown-hamster {
     top: 50px;
     padding: 20px;
-    right: 50%; /* Menempatkan sub-dropdown sedikit ke kiri */
+    right: 50%; 
 }
 
-/* Posisi sub-dropdown untuk Burung */
 #sub-category-dropdown-burung {
     top: 90px;
     padding: 20px;
-    right: 50%; /* Menempatkan sub-dropdown sedikit ke kanan */
+    right: 50%;
 }
 
-/* Posisi sub-dropdown untuk Ikan */
 #sub-category-dropdown-ikan {
     top: 125px;
     padding: 20px;
-    right: 50%; /* Menempatkan sub-dropdown sedikit ke kiri */
+    right: 50%; 
 }
 
 .Brands button, .link button, .Blog button {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: bold;
-    color: #1a1a1a; /* Warna teks default */
-    border: none; /* Menghapus border */
-    background-color: #fff; /* Latar belakang putih */
-    cursor: pointer; /* Ubah pointer menjadi tangan untuk interaksi */
-    display: inline-flex; /* Flex untuk tata letak */
-    align-items: center; /* Vertikal center untuk teks */
-    position: relative; /* Agar garis dapat diatur */
-    overflow: hidden; /* Menyembunyikan elemen yang melampaui */
-    text-decoration: none; /* Menghilangkan garis bawah */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi untuk perubahan warna */
-    margin-left: 15px; /* Menambahkan jarak antara tombol */
+    color: #1a1a1a; 
+    border: none;
+    background-color: #fff;
+    cursor: pointer; 
+    display: inline-flex; 
+    align-items: center; 
+    position: relative; 
+    overflow: hidden;
+    text-decoration: none; 
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin-left: 15px; 
 }
 
-/* Menghilangkan margin pada tombol terakhir */
+.Brands button, .link button, .Blog button:focus {
+    border: none;
+    outline: none; 
+}
+
 .link button {
-    margin-right: 0; /* Menghapus margin kanan pada tombol terakhir */
+    margin-right: 0; 
 }
 
-/* Efek hover, mempertahankan tampilan tombol */
+
 .Brands button:hover, .link button:hover, .Blog button:hover {
-    color: #333; /* Tidak ada perubahan warna teks */
-    background-color: #ffffff; /* Latar belakang berubah sedikit agar terlihat ada efek */
+    color: #333;
+    background-color: #ffffff; 
 }
 
-/* Garis bawah yang muncul saat hover */
+
 .Brands button::after, .link button::after, .Blog button::after {
-    content: ''; /* Membuat pseudo-element */
+    content: ''; 
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0; /* Garis tidak terlihat awalnya */
-    height: 2px; /* Ketebalan garis */
-    background-color: #a3cf5b; /* Warna garis */
-    transition: width 0.7s ease; /* Transisi saat lebar garis berubah */
+    width: 0; 
+    height: 2px; 
+    background-color: #a3cf5b; 
+    transition: width 0.7s ease; 
 }
 
-/* Mengubah lebar garis saat hover */
+
 .Brands button:hover::after, .link button:hover::after, .Blog button:hover::after {
-    width: 100%; /* Garis penuh muncul saat hover */
+    width: 100%; 
 }
 
-/* Styling untuk container judul dan subjudul */
 .title-container {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f4f4f4; /* Warna latar belakang */
+    background-color: #f4f4f4;
     text-align: center;
     background-color: #fda116;
-   
 }
+
 
 .title-container .title h2 {
     font-size: 36px;
@@ -938,16 +971,19 @@ header {
             </a>
 
             <div class="search-bar">
-                <input type="text" placeholder="Cari produk...">
+                <input type="text" id="search-input" placeholder="Cari produk...">
                 <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+            </div>
+            
+            <!-- Popup untuk hasil pencarian -->
+            <div id="search-results" class="popup hidden">
+                <ul id="results-list"></ul>
             </div>
         </div>
 
         <div class="auth-links">
             
-            <a href="/wishlist" class="auth-icon">
-                <img src="img/dashboard/wishlist.png" alt="Wishlist">
-            </a>
+           
             <a href="chart_page.html" class="auth-icon">
                 <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
             </a>
@@ -956,9 +992,8 @@ header {
 
     <div class="header-bottom">
         <div class="categories-left">
-            <!-- Kategori Kucing -->
             <div class="category-container">
-              <a href="product-category/kucing/kucing.html">
+              <a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">
                 <button id="kucing-button" class="category-button">
                     Kucing <span class="arrow">&#9660;</span>
                 </button>
@@ -974,9 +1009,8 @@ header {
                 </div>
             </div>
 
-            <!-- Kategori Anjing -->
             <div class="category-container">
-              <a href="/product-category/anjing/">
+              <a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">
                 <button id="anjing-button" class="category-button">
                     Anjing <span class="arrow">&#9660;</span>
                 </button>
@@ -988,12 +1022,11 @@ header {
                         <li><a href="shopping.html?anjing_obat_vitamin=true">Obat & Vitamin</a></li>
                         <li><a href="shopping.html?anjing_toilet=true">Toilet</a></li>
                         <li><a href="shopping.html?anjing_kandang=true">Kandang</a></li>
-                        <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
+                        <li><a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">Lainnya >> </a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Kategori Hewan Lain -->
             <div class="category-container">
                 <button id="hewan-lain-button" class="category-button">
                     Hewan Lain <span class="arrow">&#9660;</span>
@@ -1001,7 +1034,7 @@ header {
                 <div id="hewan-lain-dropdown" class="category-dropdown">
                     <ul>
                         <li>
-                            <a href="/product-category/hewan-lain/kelinci/">Kelinci</a>
+                            <a href="shopping.html?kelinci_makanan_cemilan=true&kelinci_perawatan=true&kelinci_kandang=true">Kelinci</a>
                             <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="shopping.html?kelinci_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -1011,7 +1044,7 @@ header {
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/hamster/">Hamster</a>
+                            <a href="shopping.html?hamster_makanan=true&hamster_perawatan=true&hamster_kandang=true">Hamster</a>
                             <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="shopping.html?hamster_makanan=true">Makanan</a></li>
@@ -1021,7 +1054,7 @@ header {
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/burung/">Burung</a>
+                            <a href="shopping.html?burung_makanan_cemilan=true&burung_perawatan=true&burung_KandangStand=true">Burung</a>
                             <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="shopping.html?burung_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -1031,7 +1064,7 @@ header {
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/ikan/">Ikan</a>
+                            <a href="shopping.html?ikan_makanan_cemilan=true&ikan_lifesytle=true">Ikan</a>
                             <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
                                 <ul>
                                     <li><a href="shopping.html?ikan_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -1047,7 +1080,6 @@ header {
               <button onclick="window.location.href='blog.html';">Blog</button>
           </div>
 
-            <!-- Select for Brands -->
             <div class="Brands">
               <button onclick="window.location.href='brands.html';">Brand</button>
           </div>
@@ -1240,10 +1272,10 @@ header {
             </div>
         <div class="row">
             
-                <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
+                <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan" data-name="2X Royal Canin Hair Skin Care">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i300080-2x-royal-canin-hair-skin.jpg" alt="">
+                            <img class="img-fluid" src="produk_img/i300080-2x-royal-canin-hair-skin.jpg" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1253,6 +1285,7 @@ header {
                                 <div class="candidate-list-option">
                                     <ul class="list-unstyled">
                                         <li>2X Royal Canin Hair Skin Care Makanan Kucing Dewasa Dry 400gr</li>
+                                        
                                         <div class="container_keranjang">
                                             <div class="quantity">
                                                 <button onclick="decrement('quantity-1')">-</button>
@@ -1274,7 +1307,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i300325-2x-royal-canin-kitten-ma.png" alt="">
+                            <img class="img-fluid" src="produk_img/i300325-2x-royal-canin-kitten-ma.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1305,7 +1338,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i300104-2x-royal-canin-mother-ba.png" alt="">
+                            <img class="img-fluid" src="produk_img/i300104-2x-royal-canin-mother-ba.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1333,10 +1366,10 @@ header {
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
+                <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan" >
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/l800010-3x-royal-canin-instincti.png" alt="">
+                            <img class="img-fluid" src="produk_img/l800010-3x-royal-canin-instincti.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1367,7 +1400,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/l800043-6x-royal-canin-adult-mai.png" alt="">
+                            <img class="img-fluid" src="produk_img/l800043-6x-royal-canin-adult-mai.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1398,7 +1431,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/l800038-6x-royal-canin-instictiv.png" alt="">
+                            <img class="img-fluid" src="produk_img/l800038-6x-royal-canin-instictiv.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1429,7 +1462,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/l800040-6x-royal-canin-sterilise.png" alt="">
+                            <img class="img-fluid" src="produk_img/l800040-6x-royal-canin-sterilise.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1460,7 +1493,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i100013-beauty-cat-food-repack-1.png" alt="">
+                            <img class="img-fluid" src="produk_img/i100013-beauty-cat-food-repack-1.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1491,7 +1524,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i100285-bolt-cat-food-20kg-makan.png" alt="">
+                            <img class="img-fluid" src="produk_img/i100285-bolt-cat-food-20kg-makan.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1522,7 +1555,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i100283-bolt-salmon-cat-food-rep.png" alt="">
+                            <img class="img-fluid" src="produk_img/i100283-bolt-salmon-cat-food-rep.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1553,7 +1586,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/ii030033-bravery-adult-salmon-ca.png" alt="">
+                            <img class="img-fluid" src="produk_img/ii030033-bravery-adult-salmon-ca.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1584,7 +1617,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/ginee_20230224143250446_88695259.png" alt="">
+                            <img class="img-fluid" src="produk_img/ginee_20230224143250446_88695259.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1615,7 +1648,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/j100014-cat-milk-milkyvar-ecer-2.png" alt="">
+                            <img class="img-fluid" src="produk_img/j100014-cat-milk-milkyvar-ecer-2.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1646,7 +1679,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/i100084-cleo-kitten-ocean-fish-c.png" alt="">
+                            <img class="img-fluid" src="produk_img/i100084-cleo-kitten-ocean-fish-c.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1677,7 +1710,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_makanan-cemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/l100014-cici-cat-food-400gr-fres.png" alt="">
+                            <img class="img-fluid" src="produk_img/l100014-cici-cat-food-400gr-fres.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1711,7 +1744,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing//m200026-bioline-dental-water-pem.jpg" alt="">
+                            <img class="img-fluid" src="produk_img/m200026-bioline-dental-water-pem.jpg" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1742,7 +1775,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m300010-bioline-deodorizing-spra.png" alt="">
+                            <img class="img-fluid" src="produk_img/m300010-bioline-deodorizing-spra.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1773,7 +1806,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m300012-bioline-ear-care-50ml-pe.png" alt="">
+                            <img class="img-fluid" src="produk_img/m300012-bioline-ear-care-50ml-pe.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1804,7 +1837,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m400026-blow-pet-nail-trimmer-gu.png" alt="">
+                            <img class="img-fluid" src="produk_img/m400026-blow-pet-nail-trimmer-gu.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1835,7 +1868,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/a500010-bioline-pet-towel-handuk.png" alt="">
+                            <img class="img-fluid" src="produk_img/a500010-bioline-pet-towel-handuk.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1866,7 +1899,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m400024-blow-pet-nail-trimmer-la.png" alt="">
+                            <img class="img-fluid" src="produk_img/m400024-blow-pet-nail-trimmer-la.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1897,7 +1930,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m100113-blow-short-and-long-pin.png" alt="">
+                            <img class="img-fluid" src="produk_img/m100113-blow-short-and-long-pin.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1928,7 +1961,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m700041-boaam-animal-shampo-250.png" alt="">
+                            <img class="img-fluid" src="produk_img/m700041-boaam-animal-shampo-250.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1959,7 +1992,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/a600025-cature-anti-bacterial-we.png" alt="">
+                            <img class="img-fluid" src="produk_img/a600025-cature-anti-bacterial-we.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -1990,7 +2023,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_alat-kebersihan Anjing_alatKebersihan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/m700055-cature-purelab-series-wa.png" alt="">
+                            <img class="img-fluid" src="produk_img/m700055-cature-purelab-series-wa.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2025,7 +2058,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin Anjing_obatVitamin">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/w10100046-active-pro-healthy-gro.jpg" alt="">
+                            <img class="img-fluid" src="produk_img/w10100046-active-pro-healthy-gro.jpg" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2056,7 +2089,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin Anjing_obatVitamin">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/p000135-anti-itch-spray-obat-jam.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000135-anti-itch-spray-obat-jam.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2087,7 +2120,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/p000008-bio-tic-50gr-penghilang.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000008-bio-tic-50gr-penghilang.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2118,7 +2151,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin Anjing_obatVitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/p000012-biodin-antiseptik-spray.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000012-biodin-antiseptik-spray.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2149,7 +2182,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/h300045-bravecto-plus-spot-on-ca.png" alt="">
+                            <img class="img-fluid" src="produk_img/h300045-bravecto-plus-spot-on-ca.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2180,7 +2213,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/w000094-cat-fortan-90gr-multivit.png" alt="">
+                            <img class="img-fluid" src="produk_img/w000094-cat-fortan-90gr-multivit.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2211,7 +2244,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/p000038-cystaid-plus-1-strip-30.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000038-cystaid-plus-1-strip-30.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2242,7 +2275,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_obat-vitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/p000043-derma-cat-30-soft-gel-vi.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000043-derma-cat-30-soft-gel-vi.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2276,7 +2309,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d200110-acis-cat-litter-box-ls22.png" alt="">
+                            <img class="img-fluid" src="produk_img/d200110-acis-cat-litter-box-ls22.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2307,7 +2340,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d200033-alexandria-cat-litter-tr.png" alt="">
+                            <img class="img-fluid" src="produk_img/d200033-alexandria-cat-litter-tr.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2338,7 +2371,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d300049-beauty-sand-10-lt-pasir.png" alt="">
+                            <img class="img-fluid" src="produk_img/d300049-beauty-sand-10-lt-pasir.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2369,7 +2402,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/dd0030001-beauty-sand-cat-litter.png" alt="">
+                            <img class="img-fluid" src="produk_img/dd0030001-beauty-sand-cat-litter.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2400,7 +2433,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d100015-bioline-cat-litter-deodo.png" alt="">
+                            <img class="img-fluid" src="produk_img/d100015-bioline-cat-litter-deodo.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2431,7 +2464,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d10100097-cat-litter-box-36-bak.png" alt="">
+                            <img class="img-fluid" src="produk_img/d10100097-cat-litter-box-36-bak.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2462,7 +2495,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d200076-cat-litter-box-24-toilet.png" alt="">
+                            <img class="img-fluid" src="produk_img/d200076-cat-litter-box-24-toilet.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2493,7 +2526,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/d200097-cat-litter-box-27-toilet.png" alt="">
+                            <img class="img-fluid" src="produk_img/d200097-cat-litter-box-27-toilet.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2524,7 +2557,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product kucing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kucing/dd0020001-cat-litter-box-41-toil.png" alt="">
+                            <img class="img-fluid" src="produk_img/dd0020001-cat-litter-box-41-toil.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2559,7 +2592,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/i400139-2x-royal-canin-xsmall-ad.png" alt="">
+                            <img class="img-fluid" src="produk_img/i400139-2x-royal-canin-xsmall-ad.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2590,7 +2623,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l900007-3x-royal-canin-maxi-adul.png" alt="">
+                            <img class="img-fluid" src="produk_img/l900007-3x-royal-canin-maxi-adul.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2621,7 +2654,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l900008-3x-royal-canin-maxi-pupp.png" alt="">
+                            <img class="img-fluid" src="produk_img/l900008-3x-royal-canin-maxi-pupp.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2652,7 +2685,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l900011-3x-royal-canin-mini-agei.png" alt="">
+                            <img class="img-fluid" src="produk_img/l900011-3x-royal-canin-mini-agei.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2683,7 +2716,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l200018-alps-pate-loaf-dog-canne.png" alt="">
+                            <img class="img-fluid" src="produk_img/l200018-alps-pate-loaf-dog-canne.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2714,7 +2747,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/i200020-bolt-dog-food-repack-1-k.png" alt="">
+                            <img class="img-fluid" src="produk_img/i200020-bolt-dog-food-repack-1-k.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2745,7 +2778,7 @@ header {
                  <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/i200020-bolt-dog-food-repack-1-k.png" alt="">
+                            <img class="img-fluid" src="produk_img/i200020-bolt-dog-food-repack-1-k.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2776,7 +2809,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/ginee_20230624132541135_79268883.png" alt="">
+                            <img class="img-fluid" src="produk_img/ginee_20230624132541135_79268883.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2807,7 +2840,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/ii0040047-bravery-dog-food-mediu.png" alt="">
+                            <img class="img-fluid" src="produk_img/ii0040047-bravery-dog-food-mediu.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2838,7 +2871,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l500002-cesar-prime-beef-vegetab.png" alt="">
+                            <img class="img-fluid" src="produk_img/l500002-cesar-prime-beef-vegetab.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2869,7 +2902,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l700004-cesar-prime-chicken-vege.png" alt="">
+                            <img class="img-fluid" src="produk_img/l700004-cesar-prime-chicken-vege.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2900,7 +2933,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l500001-cesar-prime-lamb-100gr-m.png" alt="">
+                            <img class="img-fluid" src="produk_img/l500001-cesar-prime-lamb-100gr-m.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2931,7 +2964,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/de3a5c48-1cf6-4cda-9a17-3f65ec29.png" alt="">
+                            <img class="img-fluid" src="produk_img/de3a5c48-1cf6-4cda-9a17-3f65ec29.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2962,7 +2995,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/i400008-dogfood-royal-canin-cihu.png" alt="">
+                            <img class="img-fluid" src="produk_img/i400008-dogfood-royal-canin-cihu.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -2993,7 +3026,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/l400002-happy-dog-cans-buffalo-p.png" alt="">
+                            <img class="img-fluid" src="produk_img/l400002-happy-dog-cans-buffalo-p.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3024,7 +3057,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/i400169-happy-dog-naturcroq-juni.png" alt="">
+                            <img class="img-fluid" src="produk_img/i400169-happy-dog-naturcroq-juni.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3058,7 +3091,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_obatVitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/p000001-abitraz-10cc-desinfektan.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000001-abitraz-10cc-desinfektan.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3089,7 +3122,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_obatVitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/w000007-body-fat-50-gr-dog-pengg.png" alt="">
+                            <img class="img-fluid" src="produk_img/w000007-body-fat-50-gr-dog-pengg.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3120,7 +3153,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_obatVitamin ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/p000228-calcidox-premium-golden.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000228-calcidox-premium-golden.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3154,7 +3187,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/318725_2000x.png" alt="">
+                            <img class="img-fluid" src="produk_img/318725_2000x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3185,7 +3218,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_toilet ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/pampets-pet-diapers-xs_1800x_72f.png" alt="">
+                            <img class="img-fluid" src="produk_img/pampets-pet-diapers-xs_1800x_72f.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3219,7 +3252,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/b200002-dog-cage-single-door-d01.png" alt="">
+                            <img class="img-fluid" src="produk_img/b200002-dog-cage-single-door-d01.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3250,7 +3283,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/b200005-kandang-pagar-warna-warn.png" alt="">
+                            <img class="img-fluid" src="produk_img/b200005-kandang-pagar-warna-warn.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3281,7 +3314,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Anjing_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_anjing/b200031-kandang-kucing-anjing-60.png" alt="">
+                            <img class="img-fluid" src="produk_img/b200031-kandang-kucing-anjing-60.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3315,7 +3348,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/u200073-briter-bunny-1kg-makanan.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200073-briter-bunny-1kg-makanan.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3346,7 +3379,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/u200017-hatory-rabbit-25-kg-pele.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200017-hatory-rabbit-25-kg-pele.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3377,7 +3410,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/u200058-vitakraft-menu-vital-rab.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200058-vitakraft-menu-vital-rab.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3408,7 +3441,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_makananCemilan Hamster_makanan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/u200058-vitakraft-rabbit-hay-vit.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200058-vitakraft-rabbit-hay-vit.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3442,7 +3475,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/p000226-bunnstress-30-ml-obat-an.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000226-bunnstress-30-ml-obat-an.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3473,7 +3506,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/p000250-fungi-k-spray-60-ml-obat.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000250-fungi-k-spray-60-ml-obat.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3505,7 +3538,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/p000249-fungizol-kelinci-125-ml.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000249-fungizol-kelinci-125-ml.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3536,7 +3569,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/p000265-ketrixin-10-ml-obat-tete.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000265-ketrixin-10-ml-obat-tete.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3569,7 +3602,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/317390_04_1800x.png" alt="">
+                            <img class="img-fluid" src="produk_img/317390_04_1800x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3601,7 +3634,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Kelinci_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_kelinci/315474_fdcbe06e-b797-48ea-bd4f-9.png" alt="">
+                            <img class="img-fluid" src="produk_img/315474_fdcbe06e-b797-48ea-bd4f-9.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3636,7 +3669,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_makanan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/u200041-makanan-hamster-jolly-fu.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200041-makanan-hamster-jolly-fu.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3667,7 +3700,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_makanan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/4897014970186-makanan-hamster-pe.png" alt="">
+                            <img class="img-fluid" src="produk_img/4897014970186-makanan-hamster-pe.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3698,7 +3731,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_makanan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/u200107-vitakraft-menu-for-hamst.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200107-vitakraft-menu-for-hamst.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3729,7 +3762,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_makanan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/u200015-hamsfood-hamster-gerbil.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200015-hamsfood-hamster-gerbil.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3763,7 +3796,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/p000225-bio-dex-hamster-10-ml-pr.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000225-bio-dex-hamster-10-ml-pr.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3794,7 +3827,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/p000253-fat-mino-10-ml-vitamin-p.png" alt="">
+                            <img class="img-fluid" src="produk_img/p000253-fat-mino-10-ml-vitamin-p.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3828,7 +3861,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/317382_01_8cf324d2-a9ac-4210-810.png" alt="">
+                            <img class="img-fluid" src="produk_img/317382_01_8cf324d2-a9ac-4210-810.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3859,7 +3892,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product Hamster_kandang ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_hamster/317381_01_2000x.png" alt="">
+                            <img class="img-fluid" src="produk_img/317381_01_2000x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3894,7 +3927,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/u200056-vitakraft-amazonian-750g.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200056-vitakraft-amazonian-750g.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3925,7 +3958,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_makananCemilan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/u200030-vitakraft-premium-menu-c.png" alt="">
+                            <img class="img-fluid" src="produk_img/u200030-vitakraft-premium-menu-c.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3959,7 +3992,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/Untitled-2_2000x.png" alt="">
+                            <img class="img-fluid" src="produk_img/Untitled-2_2000x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -3990,7 +4023,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/natural-pet-silvergiene-multi-pu.png" alt="">
+                            <img class="img-fluid" src="produk_img/natural-pet-silvergiene-multi-pu.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4021,7 +4054,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_perawatan ">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/vitakraft-menu-vital-1kg-parrot.png" alt="">
+                            <img class="img-fluid" src="produk_img/vitakraft-menu-vital-1kg-parrot.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4055,7 +4088,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product burung_KandangStand">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_burung/150264_1800x.jpg" alt="">
+                            <img class="img-fluid" src="produk_img/150264_1800x.jpg" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4089,7 +4122,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product ikan_makananCemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_ikan/107372_1800x.png" alt="">
+                            <img class="img-fluid" src="produk_img/107372_1800x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4122,7 +4155,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product ikan_makananCemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_ikan/classica-saikoh-fish-food-large.png" alt="">
+                            <img class="img-fluid" src="produk_img/classica-saikoh-fish-food-large.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4155,7 +4188,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product ikan_makananCemilan">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_ikan/102445_1800x.png" alt="">
+                            <img class="img-fluid" src="produk_img/102445_1800x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4191,7 +4224,7 @@ header {
                 <div class="col-sm-6 col-lg-4 mb-4 product ikan_lifesytle">
                     <div class="candidate-list candidate-grid">
                         <div class="candidate-list-image">
-                            <img class="img-fluid" src="produk_ikan/classica-xl-food-timer-724_1800x.png" alt="">
+                            <img class="img-fluid" src="produk_img/classica-xl-food-timer-724_1800x.png" alt="">
                         </div>
                         <div class="candidate-list-details">
                             <div class="candidate-list-info">
@@ -4252,10 +4285,8 @@ header {
     
 
 window.onload = function() {
-    // Menangkap parameter query string dari URL
     const urlParams = new URLSearchParams(window.location.search);
 
-    // Memeriksa apakah parameter tertentu ada di URL dan centang checkbox yang sesuai
     if (urlParams.has('kucing_makanan_cemilan') && urlParams.get('kucing_makanan_cemilan') === 'true') {
         document.getElementById('kucing_makananCemilan').checked = true;
     }
@@ -4336,12 +4367,12 @@ window.onload = function() {
         document.getElementById('ikan_lifesytle').checked = true;
     }
 
-    // Menyembunyikan atau menampilkan produk berdasarkan checkbox yang dicentang
+
     filterProducts();
 };
-var currentPage = 1; // Halaman saat ini
+var currentPage = 1; 
 var productsPerPage = 9;
-// Menambahkan event listener pada checkbox
+
 document.getElementById("kucing_makananCemilan").addEventListener("change", filterProducts);
 document.getElementById("kucing_alatKebersihan").addEventListener("change", filterProducts);
 document.getElementById("kucing_obatVitamin").addEventListener("change", filterProducts);
@@ -4367,10 +4398,11 @@ document.getElementById("burung_KandangStand").addEventListener("change", filter
 
 document.getElementById("ikan_makananCemilan").addEventListener("change", filterProducts);
 document.getElementById("ikan_lifesytle").addEventListener("change", filterProducts);
-// Tambahkan event listener untuk kategori lainnya sesuai kebutuhan
+
 
 function filterProducts() {
-    // Mengambil status dari setiap checkbox
+    
+
     var kucing_makananCemilanChecked = document.getElementById("kucing_makananCemilan").checked;
     var kucing_alatKebersihanChecked = document.getElementById("kucing_alatKebersihan").checked;
     var kucing_obatVitaminChecked = document.getElementById("kucing_obatVitamin").checked;
@@ -4396,14 +4428,13 @@ function filterProducts() {
 
     var ikan_makananCemilanChecked = document.getElementById("ikan_makananCemilan").checked;
     var ikan_lifesytleChecked = document.getElementById("ikan_lifesytle").checked;
-    // Tambahkan status kategori lainnya sesuai kebutuhan
 
-    // Mengambil semua produk
+
+
     var products = document.querySelectorAll(".product");
 
 
 
-    // Loop melalui semua produk dan sembunyikan/tampilkan berdasarkan kategori
     products.forEach(function(product) {
         var iskucing_MakananCemilan = product.classList.contains("kucing_makanan-cemilan");
         var iskucing_AlatKebersihan = product.classList.contains("kucing_alat-kebersihan");
@@ -4432,7 +4463,6 @@ function filterProducts() {
         var isikan_MakananCemilan = product.classList.contains("ikan_makananCemilan");
         var isikan_Lifesytle = product.classList.contains("ikan_lifesytle");
 
-        // Menentukan apakah produk harus ditampilkan atau disembunyikan
         if (
         (iskucing_MakananCemilan && kucing_makananCemilanChecked) ||
         (iskucing_AlatKebersihan && kucing_alatKebersihanChecked) ||
@@ -4460,26 +4490,25 @@ function filterProducts() {
         (isikan_MakananCemilan && ikan_makananCemilanChecked) ||
         (isikan_Lifesytle && ikan_lifesytleChecked)
     ) {
-        product.style.display = "block"; // Menampilkan produk
+        product.style.display = "block";
     } else {
-        product.style.display = "none"; // Menyembunyikan produk
+        product.style.display = "none"; 
     }
+    
 });
 
 updateResultsText();
 }
 
 function updateResultsText() {
-    var productsVisible = document.querySelectorAll(".product[style*='display: block']").length; // Hitung jumlah produk yang ditampilkan
-    var totalProducts = document.querySelectorAll(".product").length; // Total produk
+    var productsVisible = document.querySelectorAll(".product[style*='display: block']").length;
+    var totalProducts = document.querySelectorAll(".product").length;
 
     var resultsText = document.querySelector('.results-text');
     
-    // Jika tidak ada produk yang ditampilkan
     if (productsVisible === 0) {
         resultsText.textContent = `Menampilkan 0-0 dari 0 hasil`;
     } else {
-        // Jika ada produk yang ditampilkan, atur rentang dengan benar
         var start = 1;
         var end = productsVisible;
         resultsText.textContent = `Menampilkan ${start}-${end} dari ${totalProducts} hasil`;
@@ -4505,42 +4534,87 @@ function decrement(id) {
 </script>
  <script>
         function addToCart(productName, productPrice, quantity, imageName) {
-            // Buat objek produk
+        
             const product = {
                 name: productName,
                 price: productPrice,
                 quantity: quantity,
-                image: imageName // Menyimpan nama gambar
+                image: imageName
             };
 
-            // Ambil data keranjang dari localStorage
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-            // Tambahkan produk ke keranjang
             cart.push(product);
 
-            // Simpan kembali ke localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
 
-            // Tampilkan notifikasi atau lakukan hal lain sesuai kebutuhan
             alert(`${productName} ditambahkan ke keranjang!`);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const addToCartButtons = document.querySelectorAll('.btn-keranjang_shopping');
 
-            addToCartButtons.forEach((button, index) => {
+            addToCartButtons.forEach((button) => {
                 button.addEventListener('click', () => {
-                    const productName = button.closest('.candidate-list').querySelector('.candidate-list-title h5').textContent.trim();
-                    const productPrice = parseFloat(button.closest('.candidate-list').querySelector('.candidate-list-title h5').textContent.replace('Rp', '').replace('.', '').trim());
+                    const productName = button.closest('.candidate-list').querySelector('.candidate-list-option li').textContent.trim();
+                    const productPrice = parseFloat(button.closest('.candidate-list').querySelector('.text_tombol_shop').textContent.replace('Rp', '').replace('.', '').trim());
                     const quantity = parseInt(button.closest('.container_keranjang').querySelector('input').value);
                     const imageName = button.closest('.candidate-list').querySelector('img').getAttribute('src').split('/').pop();
 
-                    // Panggil fungsi addToCart untuk menambahkan produk ke keranjang
                     addToCart(productName, productPrice, quantity, imageName);
                 });
             });
         });
+
+    </script>
+
+    <script>
+        // Ambil elemen input dan tambahkan event listener untuk "input"
+document.getElementById("search-input").addEventListener("input", filterProducts);
+
+function filterProducts() {
+    const input = document.getElementById("search-input");
+    const filter = input.value.toLowerCase();
+    const resultsPopup = document.getElementById("search-results");
+    const resultsList = document.getElementById("results-list");
+    const products = document.querySelectorAll(".product");
+
+    // Kosongkan daftar hasil sebelumnya
+    resultsList.innerHTML = "";
+
+    if (filter) {
+        // Cari produk yang cocok
+        let found = false;
+        products.forEach(product => {
+            const productName = product.getAttribute("data-name").toLowerCase();
+            if (productName.includes(filter)) {
+                found = true;
+
+                // Tambahkan item ke hasil
+                const resultItem = document.createElement("li");
+                resultItem.textContent = product.getAttribute("data-name");
+                resultItem.onclick = () => {
+                    // Scroll ke produk terkait
+                    product.scrollIntoView({ behavior: "smooth", block: "center" });
+                    resultsPopup.classList.add("hidden");
+                };
+                resultsList.appendChild(resultItem);
+            }
+        });
+
+        // Tampilkan atau sembunyikan popup berdasarkan hasil
+        if (found) {
+            resultsPopup.classList.remove("hidden");
+        } else {
+            resultsPopup.classList.add("hidden");
+        }
+    } else {
+        // Sembunyikan popup jika input kosong
+        resultsPopup.classList.add("hidden");
+    }
+}
+
+
     </script>
 
 

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="checkout-container">
+    <header class="checkout-header">
+      <h1><i class="fas fa-shopping-bag"></i> Checkout</h1>
+      <div class="steps">
+        <div class="step active">
+          <a href="chart_page.html"><i class="fas fa-cart-shopping"></i></a>
+          <span>Cart</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step active">
+          <i class="fas fa-credit-card"></i>
+          <span>Pembayaran</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <i class="fas fa-check-circle"></i>
+          <span>Konfirmasi</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="checkout-content">
+      <div class="left-section">
+        <div class="section-card">
+          <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+          <form class="checkout-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">Nama Depan</label>
+                <input type="text" id="first-name" placeholder="Masukkan nama depan anda" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Nama Belakang</label>
+                <input type="text" id="last-name" placeholder="Masukkan nama belakang anda" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Masukkan Email " required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Nomer Telepon</label>
+              <input type="tel" id="phone" placeholder="Masukkan nomer telepon" required>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Alamat</label>
+              <textarea id="address" placeholder="Jalan, nomor blok, dll." required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="city">Kota</label>
+                <input type="text" id="city" placeholder="Masukkan Kota anda" required>
+              </div>
+              <div class="form-group">
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" placeholder="Masukkan code postal" required>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="section-card">
+          <h2><i class="fas fa-credit-card"></i> Metode Pembayaran</h2>
+          <div class="payment-options">
+            <div class="payment-option">
+              <input type="radio" id="gpay" name="payment" value="gpay" required>
+              <label for="gpay">
+                <img src="data:image/png;base64,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" alt="Google Pay">
+              </label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" id="credit-card" name="payment" value="credit-card">
+              <label for="credit-card">
+                <i class="fas fa-credit-card"></i> Kartu Kredit
+              </label>
+            </div>
+            <div class="payment-option">
+              <input type="radio" id="paypal" name="payment" value="paypal">
+              <label for="paypal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/124px-PayPal.svg.png" alt="PayPal">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="section-card order-summary">
+          <h2><i class="fas fa-receipt"></i> Ringkasan Pemesanan</h2>
+          <div class="product-details">
+           
+            <div class="product-info">
+              
+            </div>
+          </div>
+
+          <div class="discount-section">
+            <div class="discount-code">
+              <input type="text" id="discount-code" placeholder="Masukan kode diskon">
+              <button class="apply-btn">Apply</button>
+            </div>
+          </div>
+
+          <div class="price-breakdown">
+            <div class="price-item">
+              <span>Subtotal</span>
+              <span>$1.50</span>
+            </div>
+            <div class="price-item">
+              <span>Shipping</span>
+              <span class="shipping-cost">Calculate at next step</span>
+            </div>
+            <div class="price-item total">
+              <span>Total</span>
+              <span>$1.50</span>
+            </div>
+          </div>
+
+          <button class="checkout-btn">
+            <i class="fas fa-lock"></i> Pembelian Berhasil!
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      
+      const orderSummaryElement = document.querySelector('.order-summary .product-details');
+      const totalPriceElement = document.querySelector('.price-breakdown .total span:last-child');
+      const subtotalElement = document.querySelector('.price-breakdown .price-item span:last-child');
+
+      let totalPrice = 0;
+
+      cart.forEach(product => {
+        const productElement = document.createElement('div');
+        productElement.classList.add('product-detail');
+
+        productElement.innerHTML = `
+          <img src="produk_img/${product.image}" alt="${product.name}">
+          <div class="product-info">
+            <h3>${product.name}</h3>
+            <p class="product-quantity">Jumlah: ${product.quantity}</p>
+            
+            <p class="product-price">Rp ${(product.price * product.quantity).toLocaleString()}</p>
+          </div>
+        `;
+
+        orderSummaryElement.appendChild(productElement);
+        totalPrice += product.price * product.quantity;
+      });
+
+      subtotalElement.textContent = `Rp ${totalPrice.toLocaleString()}`;
+      totalPriceElement.textContent = `Rp ${totalPrice.toLocaleString()}`;
+
+      const inputs = document.querySelectorAll('input, textarea');
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.classList.add('focused');
+        });
+        input.addEventListener('blur', function() {
+          if (!this.value) {
+            this.parentElement.classList.remove('focused');
+          }
+        });
+      });
+
+      const paymentOptions = document.querySelectorAll('.payment-option input');
+      paymentOptions.forEach(option => {
+        option.addEventListener('change', function() {
+          document.querySelectorAll('.payment-option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+          if (this.checked) {
+            this.closest('.payment-option').classList.add('selected');
+          }
+        });
+      });
+
+      const discountInput = document.getElementById('discount-code');
+      const applyBtn = document.querySelector('.apply-btn');
+      const validDiscountCodes = ['HEMAT10', 'DISKON20', 'PROMO30'];
+
+      applyBtn.addEventListener('click', function() {
+        const code = discountInput.value.trim().toUpperCase();
+        if (validDiscountCodes.includes(code)) {
+          alert('Selamat! Kode diskon berhasil digunakan');
+        } else {
+          alert('Maaf, kode diskon tidak valid atau sudah kadaluarsa');
+        }
+      });
+
+      const checkoutBtn = document.querySelector('.checkout-btn');
+      checkoutBtn.addEventListener('click', function() {
+        const isFormValid = validateForm();
+        if (isFormValid) {
+          alert('Terima kasih! Pesanan Anda sedang diproses.\nSilakan cek email Anda untuk konfirmasi pembayaran.');
+
+          const confirmationStep = document.querySelector('.step:last-child');
+          confirmationStep.classList.add('active');
+          
+          setTimeout(() => {
+            window.location.href = 'UAS.html';
+          }, 3000);
+          
+        } else {
+          alert('Mohon lengkapi semua data yang diperlukan sebelum melanjutkan pembayaran.');
+        }
+      });
+
+      function validateForm() {
+        const requiredInputs = document.querySelectorAll('input[required], textarea[required]');
+        let isValid = true;
+        requiredInputs.forEach(input => {
+          if (!input.value.trim()) {
+            isValid = false;
+          }
+        });
+
+        const paymentSelected = document.querySelector('input[name="payment"]:checked');
+        if (!paymentSelected) {
+          isValid = false;
+        }
+        
+        return isValid;
+      }
+    });
+</script>
+
+</body>
+</html>
