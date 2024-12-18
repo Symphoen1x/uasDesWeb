@@ -6,18 +6,18 @@
     <title>Best Selling Brands</title>
     <link rel="stylesheet" href="brand_page.css">
     <link rel="stylesheet" href="UAS.css">
-    <link rel="stylesheet" href="UAS copy.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <header>
         <div class="header-top">
             <div class="logo-and-name">
-                <a href="/" class="logo">
+                <a href="UAS.html" class="logo">
                     <img src="logo.png" alt="Logo Petshop">
                 </a>
-                <div class="website-name">
-                    <h1>Critter Haven</h1>
-                </div>
+                <a href="UAS.html" class="website-name-link">
+                  <h1>Critter Haven</h1>
+              </a>
     
                 <div class="search-bar">
                     <input type="text" placeholder="Cari produk...">
@@ -26,13 +26,8 @@
             </div>
     
             <div class="auth-links">
-                <a href="/login" class="auth-icon">
-                    <img src="img/dashboard/login.png" alt="Login">
-                </a>
-                <a href="/wishlist" class="auth-icon">
-                    <img src="img/dashboard/wishlist.png" alt="Wishlist">
-                </a>
-                <a href="/cart" class="auth-icon">
+                
+                <a href="chart_page.html" class="auth-icon">
                     <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
                 </a>
             </div>
@@ -40,44 +35,41 @@
     
         <div class="header-bottom">
             <div class="categories-left">
-                <!-- Kategori Kucing -->
                 <div class="category-container">
-                  <a href="product-category/kucing/kucing.html">
+                  <a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">
                     <button id="kucing-button" class="category-button">
                         Kucing <span class="arrow">&#9660;</span>
                     </button>
                   </a>
                     <div id="kucing-dropdown" class="category-dropdown">
                         <ul>
-                            <li><a href="product-category/kucing/makanan-cemilan.html">Makanan dan Cemilan</a></li>
-                            <li><a href="/product-category/kucing/alat-kebersihan/">Alat Kebersihan</a></li>
-                            <li><a href="/product-category/kucing/obat-vitamin/">Obat dan Vitamin</a></li>
-                            <li><a href="/product-category/kucing/toilet/">Toilet</a></li>
-                            <li><a href="/product-category/kucing/lainnya/">Lainnya >> </a></li>
+                            <li><a href="shopping.html?kucing_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                          <li><a href="shopping.html?kucing_alat_kebersihan=true">Alat Kebersihan</a></li>
+                          <li><a href="shopping.html?kucing_obat_vitamin=true">Obat & Vitamin</a></li>
+                          <li><a href="shopping.html?kucing_toilet=true">Toilet</a></li>
+                          <li><a href="shopping.html?kucing_lainnya=true">Lainnya >> </a></li>
                         </ul>
                     </div>
                 </div>
     
-                <!-- Kategori Anjing -->
                 <div class="category-container">
-                  <a href="/product-category/anjing/">
+                  <a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">
                     <button id="anjing-button" class="category-button">
                         Anjing <span class="arrow">&#9660;</span>
                     </button>
                   </a>
                     <div id="anjing-dropdown" class="category-dropdown">
                         <ul>
-                            <li><a href="/product-category/anjing/makanan-cemilan/">Makanan dan Cemilan</a></li>
-                            <li><a href="/product-category/anjing/alat-kebersihan/">Alat Kebersihan</a></li>
-                            <li><a href="/product-category/anjing/obat-vitamin/">Obat dan Vitamin</a></li>
-                            <li><a href="/product-category/anjing/toilet/">Toilet</a></li>
-                            <li><a href="/product-category/anjing/kandang-tempat-tidur/">Kandang dan Tempat Tidur</a></li>
-                            <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
+                            <li><a href="shopping.html?anjing_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                            <li><a href="shopping.html?anjing_alat_kebersihan=true">Alat Kebersihan</a></li>
+                            <li><a href="shopping.html?anjing_obat_vitamin=true">Obat & Vitamin</a></li>
+                            <li><a href="shopping.html?anjing_toilet=true">Toilet</a></li>
+                            <li><a href="shopping.html?anjing_kandang=true">Kandang</a></li>
+                            <li><a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">Lainnya >> </a></li>
                         </ul>
                     </div>
                 </div>
     
-                <!-- Kategori Hewan Lain -->
                 <div class="category-container">
                     <button id="hewan-lain-button" class="category-button">
                         Hewan Lain <span class="arrow">&#9660;</span>
@@ -85,41 +77,41 @@
                     <div id="hewan-lain-dropdown" class="category-dropdown">
                         <ul>
                             <li>
-                                <a href="/product-category/hewan-lain/kelinci/">Kelinci</a>
+                                <a href="shopping.html?kelinci_makanan_cemilan=true&kelinci_perawatan=true&kelinci_kandang=true">Kelinci</a>
                                 <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
                                     <ul>
-                                        <li><a href="/product-category/kelinci/makanan-cemilan/">Makanan & Cemilan</a></li>
-                                        <li><a href="/product-category/kelinci/kesehatan-perawatan/">Kesehatan dan Perawatan</a></li>
-                                        <li><a href="/product-category/kelinci/kandang-habitat/">Kandang & Habitat</a></li>
+                                        <li><a href="shopping.html?kelinci_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                        <li><a href="shopping.html?kelinci_perawatan=true">Perawatan</a></li>
+                                        <li><a href="shopping.html?kelinci_kandang=true">Kandang</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="/product-category/hewan-lain/hamster/">Hamster</a>
+                                <a href="shopping.html?hamster_makanan=true&hamster_perawatan=true&hamster_kandang=true">Hamster</a>
                                 <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
                                     <ul>
-                                        <li><a href="/product-category/hamster/makanan-jerami/">Makanan & Jerami</a></li>
-                                        <li><a href="/product-category/hamster/kesehatan/">Kesehatan dan Perawatan</a></li>
-                                        <li><a href="/product-category/hamster/kandang-habitat/">Kandang & Habitat</a></li>
+                                        <li><a href="shopping.html?hamster_makanan=true">Makanan</a></li>
+                                        <li><a href="shopping.html?hamster_perawatan=true">Perawatan</a></li>
+                                        <li><a href="shopping.html?hamster_kandang=true">Kandang</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="/product-category/hewan-lain/burung/">Burung</a>
+                                <a href="shopping.html?burung_makanan_cemilan=true&burung_perawatan=true&burung_KandangStand=true">Burung</a>
                                 <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
                                     <ul>
-                                        <li><a href="/product-category/burung/makanan-cemilan/">Makanan & Cemilan</a></li>
-                                        <li><a href="/product-category/burung/perawatan-kesehatan-vitamin/">Perawatan Kesehatan & Vitamin</a></li>
-                                        <li><a href="/product-category/burung/kandang-stand/">Kandang & Stand</a></li>
+                                        <li><a href="shopping.html?burung_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                        <li><a href="shopping.html?burung_perawatan=true">Perawatan</a></li>
+                                        <li><a href="shopping.html?burung_KandangStand=true">Kandang & Stand</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li>
-                                <a href="/product-category/hewan-lain/ikan/">Ikan</a>
+                                <a href="shopping.html?ikan_makanan_cemilan=true&ikan_lifesytle=true">Ikan</a>
                                 <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
                                     <ul>
-                                        <li><a href="/product-category/ikan/makanan-cemilan/">Makanan & Cemilan</a></li>
-                                        <li><a href="/product-category/ikan/lifestyle/">Lifestyle</a></li>
+                                        <li><a href="shopping.html?ikan_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                        <li><a href="shopping.html?ikan_lifesytle=true">Lifestyle</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -127,14 +119,13 @@
                     </div>
                 </div>
     
-                <!-- Select for Brands -->
-                <div class="Brands">
-                  <button onclick="window.location.href='brands.html';">Brand</button>
-              </div>
-              
-              <div class="link">
-                  <button onclick="window.location.href='/link';">Link</button>
-              </div>
+                <div class="Blog">
+                    <button onclick="window.location.href='article_page.html';">Blog</button>
+                </div>
+      
+                  <div class="Brands">
+                    <button onclick="window.location.href='brand_page.html';">Brand</button>
+                </div>
               
               
             </div>
@@ -514,25 +505,25 @@
                 </div>
 
                 <div class="footer-section">
-                  <h4>SHOP</h4>
+                  <h4>Toko</h4>
                   <ul>
-                    <li><a href="#">Best Sellers</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Dog</a></li>
-                    <li><a href="#">Cat</a></li>
-                    <li><a href="#">Rabbit</a></li>
-                    <li><a href="#">Aquatic Pets</a></li>
+                    <li><a href="UAS.html">Best Sellers</a></li>
+                    <li><a href="UAS.html">New Arrivals</a></li>
+                    <li><a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">Anjing</a></li>
+                    <li><a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">Kucing</a></li>
+                    <li><a href="shopping.html?kelinci_makanan_cemilan=true&kelinci_perawatan=true&kelinci_kandang=true">Kelinci</a></li>
+                    <li><a href="shopping.html?ikan_makanan_cemilan=true&ikan_lifesytle=true">Ikan</a></li>
                   </ul>
                 </div>
                 <div class="footer-section">
-                  <h4>ABOUT US</h4>
+                  <h4>Tentang Kami</h4>
                   <ul>
                     <li><a href="#">Our Story</a></li>
                     <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">News</a></li>
+                    <li><a href="article_page.html">Berita</a></li>
                     <li><a href="#">Awards</a></li>
                     <li><a href="#">Grants</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="article_page.html">Blog</a></li>
                   </ul>
                 </div>
                 <div class="footer-section">
@@ -540,7 +531,7 @@
                   <ul>
                     <li><a href="#">Customer Service</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Kontak</a></li>
           
                   </ul>
                 </div>
@@ -561,7 +552,7 @@
             <div class="whatsapp-contact">
                 <a href="https://wa.me/628123456789" class="whatsapp-btn">
                     <i class='bx bxl-whatsapp'></i>
-                    <span>Chat with Us</span>
+                    <span>Chat dengan Kami</span>
                     <div class="whatsapp-number">08123456789</div>
                 </a>
             </div>
@@ -661,3 +652,6 @@
     </script>
 </body>
 </html>
+
+
+

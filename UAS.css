@@ -12,10 +12,17 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #f4f4f4;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Container untuk bagian atas header (Logo, Nama, Search Bar, Auth Links) */
+
+
 .header-top {
     display: flex;
     align-items: center;
@@ -978,4 +985,4 @@ header {
     }
 }
   
-  
+ 
