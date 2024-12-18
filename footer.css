@@ -340,7 +340,7 @@ footer{
     border-color: #e0e0e0;
     display: flex;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -427,6 +427,10 @@ footer{
 
 /* Menambahkan media query untuk tablet dan HP */
 @media (max-width: 1230px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
     .footer-links {
         flex-direction: column;
         width: 100%;
