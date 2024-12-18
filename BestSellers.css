@@ -1,0 +1,429 @@
+body {
+	background: #e2eaef;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 10px;
+    position: relative;
+}
+
+.header-container::after{
+    content: "";
+    width: 400px;
+    position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	border-radius: 1px;
+	background: #7ac400;
+	left: 0;
+	right: 0;
+	bottom: -15px;
+}
+
+.tag {
+    margin: 0; 
+    font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emojifont-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji', cursive;
+    color: #000;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.heart-icon {
+    color: #bbc4f0;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    .header-container {
+        margin: 20px 0 90px;
+        gap: 10px;
+    }
+
+    .header-container::after {
+        width: 300px;
+        height: 3px;
+        bottom: -12px;
+    }
+
+    .tag {
+        font-size: 28px;
+    }
+
+    .heart-icon {
+        font-size: 28px;
+    }
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+    .header-container {
+        margin: 15px 0 30px;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .header-container::after {
+        width: 200px;
+        height: 2px;
+        bottom: -10px;
+    }
+
+    .tag {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .heart-icon {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+}
+
+
+.carousel {
+	margin: 50px auto;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+	max-width: 1200px;
+}
+.carousel .item {
+	color: #747d89;
+	min-height: 325px;
+	text-align: center;
+	overflow: hidden;
+}
+.carousel .thumb-wrapper {
+	padding: 35px 25px;
+	background: #fff;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+.carousel .item .img-box {
+	height: 180px;
+	margin-bottom: 20px;
+	width: 100%;
+	position: relative;
+}
+.carousel .item img {	
+	max-width: 100%;
+	max-height: 100%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+.carousel .item h4 {
+	font-size: 18px;
+}
+.carousel .item h4, .carousel .item p, .carousel .item ul {
+	margin-bottom: 5px;
+}
+.carousel .thumb-content .btn {
+	color: #7ac400;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: none;
+	border: 1px solid #7ac400;
+	padding: 6px 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	border-radius: 20px;
+}
+.carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
+	color: #fff;
+	background: #7ac400;
+	box-shadow: none;
+}
+.carousel .thumb-content .btn i {
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 5px;
+}
+.carousel .item-price {
+	font-size: 13px;
+	padding: 2px 0;
+}
+.carousel .item-price strike {
+	opacity: 0.7;
+	margin-right: 5px;
+}
+.carousel-control-prev, .carousel-control-next {
+	height: 44px;
+	width: 40px;
+	background: #7ac400;	
+	border-radius: 4px;
+	opacity: 0.8;
+	transform: translateY(-50%);
+    margin-top: 10px;
+}
+.carousel-control-prev {
+	left: 5px;
+}
+.carousel-control-next {
+	right: 5px;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+	background: #78bf00;
+	opacity: 1;
+}
+.carousel-control-prev i, .carousel-control-next i {
+	font-size: 36px;
+	position: absolute;
+	top: 50%;
+	display: inline-block;
+	margin: -19px 0 0 0;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	color: #fff;
+	text-shadow: none;
+	font-weight: bold;
+}
+.carousel-control-prev i {
+	margin-left: -2px;
+}
+.carousel-control-next i {
+	margin-right: -4px;
+}		
+.carousel .wish-icon {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 99;
+	cursor: pointer;
+	font-size: 16px;
+	color: #abb0b8;
+}
+.carousel .wish-icon .fa-heart {
+	color: #ff6161;
+}
+.star-rating li {
+	padding: 0;
+}
+.star-rating i {
+	font-size: 14px;
+	color: #ffc000;
+}
+.col-sm-3 {
+	margin-bottom: 10px;
+}
+
+.BestSellers {
+    position: relative;
+}
+
+
+/* View All Button Style */
+.view-all-container-best {
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+    /* z-index: 100; */
+    bottom: 10px;
+
+}
+
+.view-all-btn-best {
+    background: #7ac400;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 8px;
+    transition: background 0.3s ease;
+    margin: 0 auto;
+
+}
+
+.view-all-btn:hover {
+    background: #68a800;
+}
+
+
+
+/* Menambahkan media query untuk tablet */
+@media (max-width: 930px) {
+    .carousel {
+        padding: 0 50px;
+        margin-top: 80px;
+    }
+
+    /* Pengaturan strict untuk 2 kolom */
+    .carousel .row > div[class*='col-'] {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    /* Override bootstrap default */
+    .col-sm-3 {
+        -ms-flex: 0 0 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        padding: 0 10px;
+    }
+
+    /* Memastikan row berfungsi dengan benar */
+    .carousel .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin: 0 -10px;
+    }
+
+    /* Pengaturan container dan kontrol lainnya tetap sama */
+    .container-control-prev-next {
+        max-width: 100%;
+        z-index: 200;
+    }
+
+    .container-control-prev-next .carousel-control-prev {
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .container-control-prev-next .carousel-control-next {
+        right: 0;
+        
+    }
+    /* Menyesuaikan ukuran tombol navigasi */
+    .BestSellers .carousel-control-prev,
+    .BestSellers .carousel-control-next {
+        top: -50px;
+        transform: none;
+        z-index: 100;
+    }
+    
+    .BestSellers .carousel-control-prev {
+        left: -10px;
+    }
+    
+    .BestSellers .carousel-control-next {
+        right: -10px;
+    }
+    
+    /* Menyesuaikan ukuran item carousel */
+    .carousel .thumb-wrapper {
+        padding: 25px 15px;
+    }
+    
+    .carousel .item .img-box {
+        height: 160px;
+    }
+}
+/* Responsif untuk HP */
+@media (max-width: 660px) {
+    /* Layout carousel */
+    .carousel {
+        padding: 0 10px;
+        margin-top: 60px;
+        position: relative;
+        width: 90%;
+    }
+    
+    /* Single column layout */
+    .col-sm-3 {
+        flex: 0 0 200% !important;
+        max-width: 200% !important;
+        width: 200% !important;
+        padding: 0 5px;
+        /* margin: 0 auto; */
+        margin-right: 160px;
+    }
+    
+    /* Tambahkan styling untuk thumb-wrapper */
+    .carousel .thumb-wrapper {
+        width: 300px;
+        margin: 10px auto;
+    }
+    
+    /* Memastikan row berfungsi dengan benar */
+    .carousel .row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    /* Navigation controls */
+    .container-control-prev-next {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 200;
+        pointer-events: none;
+    }
+
+    .container-control-prev-next .carousel-control-prev,
+    .container-control-prev-next .carousel-control-next {
+        position: absolute;
+        top: 20%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: #00000080;
+        border-radius: 50%;
+        pointer-events: auto;
+        margin-top: 0px;
+    }
+
+   
+    .container-control-prev-next .carousel-control-prev {
+        left: -15px;
+    }
+
+    .container-control-prev-next .carousel-control-next {
+        right: -15px;
+    }
+
+    /* Item styling */
+    .carousel .thumb-wrapper {
+        padding: 15px;
+        margin: 10px 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .carousel .item .img-box {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carousel .item .img-box img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .carousel .item h4 {
+        font-size: 16px;
+        margin: 10px 0;
+        font-weight: 500;
+    }
+
+    /* Navigation icons */
+    .carousel-control-prev i,
+    .carousel-control-next i {
+        font-size: 20px;
+        color: #fff;
+    }
+}

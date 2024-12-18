@@ -1077,16 +1077,14 @@ header {
             </div>
 
             <div class="Blog">
-              <button onclick="window.location.href='blog.html';">Blog</button>
+              <button onclick="window.location.href='article_page.html';">Blog</button>
           </div>
 
             <div class="Brands">
               <button onclick="window.location.href='brands.html';">Brand</button>
           </div>
           
-          <div class="link">
-              <button onclick="window.location.href='/link';">Link</button>
-          </div>
+          
           
           
         </div>
@@ -4568,54 +4566,7 @@ function decrement(id) {
 
     </script>
 
-    <script>
-        // Ambil elemen input dan tambahkan event listener untuk "input"
-document.getElementById("search-input").addEventListener("input", filterProducts);
 
-function filterProducts() {
-    const input = document.getElementById("search-input");
-    const filter = input.value.toLowerCase();
-    const resultsPopup = document.getElementById("search-results");
-    const resultsList = document.getElementById("results-list");
-    const products = document.querySelectorAll(".product");
-
-    // Kosongkan daftar hasil sebelumnya
-    resultsList.innerHTML = "";
-
-    if (filter) {
-        // Cari produk yang cocok
-        let found = false;
-        products.forEach(product => {
-            const productName = product.getAttribute("data-name").toLowerCase();
-            if (productName.includes(filter)) {
-                found = true;
-
-                // Tambahkan item ke hasil
-                const resultItem = document.createElement("li");
-                resultItem.textContent = product.getAttribute("data-name");
-                resultItem.onclick = () => {
-                    // Scroll ke produk terkait
-                    product.scrollIntoView({ behavior: "smooth", block: "center" });
-                    resultsPopup.classList.add("hidden");
-                };
-                resultsList.appendChild(resultItem);
-            }
-        });
-
-        // Tampilkan atau sembunyikan popup berdasarkan hasil
-        if (found) {
-            resultsPopup.classList.remove("hidden");
-        } else {
-            resultsPopup.classList.add("hidden");
-        }
-    } else {
-        // Sembunyikan popup jika input kosong
-        resultsPopup.classList.add("hidden");
-    }
-}
-
-
-    </script>
 
 
 

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Selling Brands</title>
+    <link rel="stylesheet" href="brand_page.css">
+    <link rel="stylesheet" href="UAS.css">
+    <link rel="stylesheet" href="UAS copy.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo-and-name">
+                <a href="/" class="logo">
+                    <img src="logo.png" alt="Logo Petshop">
+                </a>
+                <div class="website-name">
+                    <h1>Critter Haven</h1>
+                </div>
+    
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari produk...">
+                    <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+                </div>
+            </div>
+    
+            <div class="auth-links">
+                <a href="/login" class="auth-icon">
+                    <img src="img/dashboard/login.png" alt="Login">
+                </a>
+                <a href="/wishlist" class="auth-icon">
+                    <img src="img/dashboard/wishlist.png" alt="Wishlist">
+                </a>
+                <a href="/cart" class="auth-icon">
+                    <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
+                </a>
+            </div>
+        </div>
+    
+        <div class="header-bottom">
+            <div class="categories-left">
+                <!-- Kategori Kucing -->
+                <div class="category-container">
+                  <a href="product-category/kucing/kucing.html">
+                    <button id="kucing-button" class="category-button">
+                        Kucing <span class="arrow">&#9660;</span>
+                    </button>
+                  </a>
+                    <div id="kucing-dropdown" class="category-dropdown">
+                        <ul>
+                            <li><a href="product-category/kucing/makanan-cemilan.html">Makanan dan Cemilan</a></li>
+                            <li><a href="/product-category/kucing/alat-kebersihan/">Alat Kebersihan</a></li>
+                            <li><a href="/product-category/kucing/obat-vitamin/">Obat dan Vitamin</a></li>
+                            <li><a href="/product-category/kucing/toilet/">Toilet</a></li>
+                            <li><a href="/product-category/kucing/lainnya/">Lainnya >> </a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Kategori Anjing -->
+                <div class="category-container">
+                  <a href="/product-category/anjing/">
+                    <button id="anjing-button" class="category-button">
+                        Anjing <span class="arrow">&#9660;</span>
+                    </button>
+                  </a>
+                    <div id="anjing-dropdown" class="category-dropdown">
+                        <ul>
+                            <li><a href="/product-category/anjing/makanan-cemilan/">Makanan dan Cemilan</a></li>
+                            <li><a href="/product-category/anjing/alat-kebersihan/">Alat Kebersihan</a></li>
+                            <li><a href="/product-category/anjing/obat-vitamin/">Obat dan Vitamin</a></li>
+                            <li><a href="/product-category/anjing/toilet/">Toilet</a></li>
+                            <li><a href="/product-category/anjing/kandang-tempat-tidur/">Kandang dan Tempat Tidur</a></li>
+                            <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Kategori Hewan Lain -->
+                <div class="category-container">
+                    <button id="hewan-lain-button" class="category-button">
+                        Hewan Lain <span class="arrow">&#9660;</span>
+                    </button>
+                    <div id="hewan-lain-dropdown" class="category-dropdown">
+                        <ul>
+                            <li>
+                                <a href="/product-category/hewan-lain/kelinci/">Kelinci</a>
+                                <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
+                                    <ul>
+                                        <li><a href="/product-category/kelinci/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                        <li><a href="/product-category/kelinci/kesehatan-perawatan/">Kesehatan dan Perawatan</a></li>
+                                        <li><a href="/product-category/kelinci/kandang-habitat/">Kandang & Habitat</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/product-category/hewan-lain/hamster/">Hamster</a>
+                                <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
+                                    <ul>
+                                        <li><a href="/product-category/hamster/makanan-jerami/">Makanan & Jerami</a></li>
+                                        <li><a href="/product-category/hamster/kesehatan/">Kesehatan dan Perawatan</a></li>
+                                        <li><a href="/product-category/hamster/kandang-habitat/">Kandang & Habitat</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/product-category/hewan-lain/burung/">Burung</a>
+                                <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
+                                    <ul>
+                                        <li><a href="/product-category/burung/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                        <li><a href="/product-category/burung/perawatan-kesehatan-vitamin/">Perawatan Kesehatan & Vitamin</a></li>
+                                        <li><a href="/product-category/burung/kandang-stand/">Kandang & Stand</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/product-category/hewan-lain/ikan/">Ikan</a>
+                                <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
+                                    <ul>
+                                        <li><a href="/product-category/ikan/makanan-cemilan/">Makanan & Cemilan</a></li>
+                                        <li><a href="/product-category/ikan/lifestyle/">Lifestyle</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Select for Brands -->
+                <div class="Brands">
+                  <button onclick="window.location.href='brands.html';">Brand</button>
+              </div>
+              
+              <div class="link">
+                  <button onclick="window.location.href='/link';">Link</button>
+              </div>
+              
+              
+            </div>
+        </div>
+    </header>
+    <div class="top-banner">
+        <h1>All Brands</h1>
+    </div>
+    <div class="container">
+        <!-- Judul Halaman -->
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="brandSearch" placeholder="Cari brand...">
+        </div>
+
+        <!-- Navigasi Alfabet -->
+        <div class="alphabet-nav">
+            <a href="#section-#">#</a>
+            <a href="#section-A">A</a>
+            <a href="#section-B">B</a>
+            <a href="#section-C">C</a>
+            <a href="#section-D">D</a>
+            <a href="#section-E">E</a>
+            <a href="#section-F">F</a>
+            <a href="#section-G">G</a>
+            <a href="#section-H">H</a>
+            <a href="#section-I">I</a>
+            <a href="#section-J">J</a>
+            <a href="#section-K">K</a>
+            <a href="#section-L">L</a>
+            <a href="#section-M">M</a>
+            <a href="#section-N">N</a>
+            <a href="#section-O">O</a>
+            <a href="#section-P">P</a>
+            <a href="#section-Q">Q</a>
+            <a href="#section-R">R</a>
+            <a href="#section-S">S</a>
+            <a href="#section-T">T</a>
+            <a href="#section-U">U</a>
+            <a href="#section-V">V</a>
+            <a href="#section-W">W</a>
+            <a href="#section-X">X</a>
+            <a href="#section-Y">Y</a>
+            <a href="#section-Z">Z</a>
+        </div>
+
+        <!-- Daftar Brand -->
+        <div class="brands-container">
+            <div id="section-#" class="brand-section">
+                <h2>#</h2>
+                <ul>
+                    <li>2gather</li>
+                    <li>8in1</li>
+                </ul>
+            </div>
+
+            <div id="section-A" class="brand-section">
+                <h2>A</h2>
+                <ul>
+                    <li>Aatas Cat</li>
+                    <li>Acana</li>
+                    <li>Accurate</li>
+                    <li>Adams</li>
+                    <li>Adaptil</li>
+                    <li>Afp</li>
+                    <li>Afreschi</li>
+                    <li>Aixia</li>
+                    <li>Aixing</li>
+                    <li>Alice Pets' Farm</li>
+                    <li>Alpha Paw</li>
+                    <li>Amy & Carol</li>
+                    <li>Anee-affetto</li>
+                    <li>Aristo-cats</li>
+                    <li>AVA</li>
+                </ul>
+            </div>
+
+            <div id="section-B" class="brand-section">
+                <h2>B</h2>
+                <ul>
+                    <li>Bark & Purr</li>
+                    <li>Beaphar</li>
+                    <li>Bearing</li>
+                    <li>Bio-Groom</li>
+                    <li>Bioline</li>
+                    <li>Bistro</li>
+                    <li>Black Hawk</li>
+                    <li>Blue Bay</li>
+                    <li>Bonnie</li>
+                    <li>Brabanconne</li>
+                </ul>
+            </div>
+
+            <div id="section-C" class="brand-section">
+                <h2>C</h2>
+                <ul>
+                    <li>Canagan</li>
+                    <li>Canine Caviar</li>
+                    <li>Cat's Best</li>
+                    <li>Catit</li>
+                    <li>Cesar</li>
+                    <li>Ciao</li>
+                    <li>Cindy Recipe</li>
+                    <li>Cozy Pet</li>
+                </ul>
+            </div>
+
+            <div id="section-D" class="brand-section">
+                <h2>D</h2>
+                <ul>
+                    <li>Daily Delight</li>
+                    <li>Dentalife</li>
+                    <li>Doggy Dolly</li>
+                    <li>Doggyman</li>
+                    <li>Dr. Clauder's</li>
+                    <li>Dr. Pet</li>
+                </ul>
+            </div>
+
+            <div id="section-E" class="brand-section">
+                <h2>E</h2>
+                <ul>
+                    <li>Eagle Pack</li>
+                    <li>Earthborn</li>
+                    <li>Easy Walk</li>
+                    <li>Eheim</li>
+                    <li>Eukanuba</li>
+                </ul>
+            </div>
+
+            <div id="section-F" class="brand-section">
+                <h2>F</h2>
+                <ul>
+                    <li>Fancy Feast</li>
+                    <li>Feline Natural</li>
+                    <li>Felix</li>
+                    <li>Ferplast</li>
+                    <li>Fish4Dogs</li>
+                    <li>Flexi</li>
+                    <li>Forcans</li>
+                    <li>Frontline</li>
+                </ul>
+            </div>
+
+            <div id="section-G" class="brand-section">
+                <h2>G</h2>
+                <ul>
+                    <li>Gentle Giant</li>
+                    <li>GiGwi</li>
+                    <li>Gourmet</li>
+                    <li>Greenies</li>
+                    <li>Growl</li>
+                </ul>
+            </div>
+
+            <div id="section-H" class="brand-section">
+                <h2>H</h2>
+                <ul>
+                    <li>Happy Dog</li>
+                    <li>Hills</li>
+                    <li>Holistic Select</li>
+                    <li>Honey Care</li>
+                    <li>Hunter</li>
+                </ul>
+            </div>
+
+            <div id="section-I" class="brand-section">
+                <h2>I</h2>
+                <ul>
+                    <li>Inaba</li>
+                    <li>Instinct</li>
+                    <li>Isle of Dogs</li>
+                    <li>Ivory Coat</li>
+                </ul>
+            </div>
+
+            <div id="section-J" class="brand-section">
+                <h2>J</h2>
+                <ul>
+                    <li>JerHigh</li>
+                    <li>Jerhigh</li>
+                    <li>Julius K9</li>
+                </ul>
+            </div>
+
+            <div id="section-K" class="brand-section">
+                <h2>K</h2>
+                <ul>
+                    <li>K9 Natural</li>
+                    <li>Kangaroo</li>
+                    <li>Kit Cat</li>
+                    <li>Kong</li>
+                </ul>
+            </div>
+
+            <div id="section-L" class="brand-section">
+                <h2>L</h2>
+                <ul>
+                    <li>Lakse Kronch</li>
+                    <li>Litter Genie</li>
+                    <li>Litter Locker</li>
+                    <li>Lotus</li>
+                </ul>
+            </div>
+
+            <div id="section-M" class="brand-section">
+                <h2>M</h2>
+                <ul>
+                    <li>Marineland</li>
+                    <li>Merrick</li>
+                    <li>Milk-Bone</li>
+                    <li>Monge</li>
+                    <li>My Love</li>
+                </ul>
+            </div>
+
+            <div id="section-N" class="brand-section">
+                <h2>N</h2>
+                <ul>
+                    <li>Natural Balance</li>
+                    <li>Nature's Gift</li>
+                    <li>Nature's Variety</li>
+                    <li>Neko Birbz</li>
+                    <li>Nutrience</li>
+                    <li>Nylabone</li>
+                </ul>
+            </div>
+
+            <div id="section-O" class="brand-section">
+                <h2>O</h2>
+                <ul>
+                    <li>Odour Buster</li>
+                    <li>Omega</li>
+                    <li>Orijen</li>
+                    <li>Oxbow</li>
+                </ul>
+            </div>
+
+            <div id="section-P" class="brand-section">
+                <h2>P</h2>
+                <ul>
+                    <li>Pedigree</li>
+                    <li>Petstages</li>
+                    <li>Petware</li>
+                    <li>Plaque Off</li>
+                    <li>Pro Plan</li>
+                </ul>
+            </div>
+
+            <div id="section-Q" class="brand-section">
+                <h2>Q</h2>
+                <ul>
+                    <li>Quattro</li>
+                    <li>Quick Tag</li>
+                </ul>
+            </div>
+
+            <div id="section-R" class="brand-section">
+                <h2>R</h2>
+                <ul>
+                    <li>Raid All</li>
+                    <li>Raw Rawr</li>
+                    <li>Royal Canin</li>
+                    <li>Ruffwear</li>
+                </ul>
+            </div>
+
+            <div id="section-S" class="brand-section">
+                <h2>S</h2>
+                <ul>
+                    <li>Science Diet</li>
+                    <li>Scratch</li>
+                    <li>Seresto</li>
+                    <li>Sheba</li>
+                    <li>SmartHeart</li>
+                    <li>Solid Gold</li>
+                </ul>
+            </div>
+
+            <div id="section-T" class="brand-section">
+                <h2>T</h2>
+                <ul>
+                    <li>Taste of the Wild</li>
+                    <li>Temptations</li>
+                    <li>Trixie</li>
+                    <li>True Love</li>
+                </ul>
+            </div>
+
+            <div id="section-U" class="brand-section">
+                <h2>U</h2>
+                <ul>
+                    <li>Ultra Pet</li>
+                    <li>Unleashed</li>
+                    <li>Up Country</li>
+                </ul>
+            </div>
+
+            <div id="section-V" class="brand-section">
+                <h2>V</h2>
+                <ul>
+                    <li>Vetalogica</li>
+                    <li>VitaPet</li>
+                    <li>Vitakraft</li>
+                </ul>
+            </div>
+
+            <div id="section-W" class="brand-section">
+                <h2>W</h2>
+                <ul>
+                    <li>Wellness</li>
+                    <li>Whiskas</li>
+                    <li>Wild Earth</li>
+                    <li>World's Best</li>
+                </ul>
+            </div>
+
+            <div id="section-X" class="brand-section">
+                <h2>X</h2>
+                <ul>
+                    <li>X-Cite</li>
+                    <li>Xdog</li>
+                </ul>
+            </div>
+
+            <div id="section-Y" class="brand-section">
+                <h2>Y</h2>
+                <ul>
+                    <li>Yamato</li>
+                    <li>Yappy</li>
+                    <li>Yeowww!</li>
+                </ul>
+            </div>
+
+            <div id="section-Z" class="brand-section">
+                <h2>Z</h2>
+                <ul>
+                    <li>Zeal</li>
+                    <li>Zenoaq</li>
+                    <li>Ziwi Peak</li>
+                    <li>Zupreem</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <!-- Footer Navigation -->
+          <div class="footer-top">
+            <!-- Bagian Kiri - Info Perusahaan -->
+            <div class="company-info">
+                <div class="logo-container">
+                    <img src="https://placehold.co/100x100" alt="Critter Haven Logo" class="footer-logo">
+                </div>
+                <div class="company-details">
+                    <h3 class="company-title">Online Pet Shop Indonesia | Critter Haven</h3>
+                    <address class="company-address">
+                        Jl. Peliharaan Sejahtera No. 123<br>
+                        Kebayoran Baru, Jakarta Selatan<br>
+                        DKI Jakarta, 12170
+                    </address>
+                </div>
+            </div>
+
+            <!-- Bagian Tengah - Links yang sudah ada -->
+            <div class="footer-links">
+                <div class="footer-section">
+                  <h4>Online Shop</h4>
+                  <ul>
+                    <li><a href="#">TokoPedia</a></li>
+                    <li><a href="#">Shopee</a></li>
+                    <li><a href="#">Bukalapak</a></li>
+                    <li><a href="#">Blibli</a></li>
+                    <li><a href="#">Lazada</a></li>
+                  </ul>
+                </div>
+
+                <div class="footer-section">
+                  <h4>SHOP</h4>
+                  <ul>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Dog</a></li>
+                    <li><a href="#">Cat</a></li>
+                    <li><a href="#">Rabbit</a></li>
+                    <li><a href="#">Aquatic Pets</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h4>ABOUT US</h4>
+                  <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Grants</a></li>
+                    <li><a href="#">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h4>SUPPORT</h4>
+                  <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+          
+                  </ul>
+                </div>
+                <div class="footer-section">
+                  <h4>FOLLOW US</h4>
+                  <ul class="social-icons">
+                    <li class="social-icon"><a href="#">
+                      <img src="https://img.icons8.com/?size=100&id=LL0Q6sp9VyLo&format=png&color=000000" alt="Facebook"></a></li>
+                    <li class="social-icon"><a href="#">
+                      <img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000" alt="Instagram"></a></li>
+                    <li class="social-icon"><a href="#">
+                      <img src="https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=000000" alt="Tiktod"></a></li>
+                  </ul>
+                </div>
+            </div>
+
+            <!-- Bagian Kanan - WhatsApp Contact -->
+            <div class="whatsapp-contact">
+                <a href="https://wa.me/628123456789" class="whatsapp-btn">
+                    <i class='bx bxl-whatsapp'></i>
+                    <span>Chat with Us</span>
+                    <div class="whatsapp-number">08123456789</div>
+                </a>
+            </div>
+          </div>
+        <div class="footer-bottom">
+            <div class="footer-content">
+                <!-- Footer Copyright -->
+                <div class="footer-copyright">
+                    © 2024 Pets' Station. All Rights Reserved.
+                </div>
+                <!-- Payment Icons -->
+
+
+                <!-- Footer Links -->
+                <ul class="links">
+                    <li><a href="/policies/refund-policy" title="Refund Policy" class="p4">Refund Policy</a></li>
+                    <li><a href="/policies/shipping-policy" title="Shipping Policy" class="p4">Shipping Policy</a></li>
+                    <li><a href="/policies/terms-of-service" title="Terms & Conditions" class="p4">Terms & Conditions</a></li>
+                    <li><a href="/policies/privacy-policy" title="Privacy Policy" class="p4">Privacy Policy</a></li>
+                </ul>
+                
+                <ul class="icons">
+                    <li>
+                        <div class="global-image-wrapper">
+                            <a href="#">
+                                <img src="id-11134258-7rasi-m3elgeem4oo3e8.png" alt="idk">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="global-image-wrapper">
+                            <a href="#">
+                                <img src="pu52ce48.png" alt="idk">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="global-image-wrapper">
+                            <a href="#">
+                                <img src="id-11134258-7rasg-m3elfigsva7j31.png" alt="idk">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="global-image-wrapper">
+                            <a href="#">
+                                <img src="vwkexmkf.png" alt="idk">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+        
+    </footer> 
+
+    <script>
+        document.getElementById('brandSearch').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const brandItems = document.querySelectorAll('.brand-section ul li');
+            const brandSections = document.querySelectorAll('.brand-section');
+
+            brandItems.forEach(item => {
+                const brandName = item.textContent.toLowerCase();
+                if (brandName.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Sembunyikan section yang tidak memiliki item yang cocok
+            brandSections.forEach(section => {
+                const visibleItems = section.querySelectorAll('ul li[style="display: block"]');
+                if (visibleItems.length === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        });
+
+        // Tambahkan script untuk sticky navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.alphabet-nav');
+            if (window.innerWidth > 768) { // Hanya aktif di desktop
+                if (window.scrollY > 300) {
+                    nav.classList.add('sticky');
+                } else {
+                    nav.classList.remove('sticky');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

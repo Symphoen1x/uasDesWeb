@@ -78,29 +78,28 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartContainer = document.querySelector('.cart-main');
-    const itemCountElement = document.querySelector('.item-count');
-    const subtotalElement = document.querySelector('.summary-row span:last-child');
-    const shippingInfoElement = document.querySelector('.shipping-info');
-    const notificationElement = document.querySelector('.notification'); // Tambahkan elemen notifikasi di HTML
-    const FREE_SHIPPING_THRESHOLD = 100;
-
-    function renderCartItems() {
-        const header = document.querySelector('.cart-table-header');
-        const existingItems = document.querySelectorAll('.cart-item');
-
-        // Hapus produk lama untuk re-render
-        existingItems.forEach(item => item.remove());
-
-        let totalPrice = 0;
-        let totalItems = 0;
-
-        cart.forEach((product, index) => {
-            const itemElement = document.createElement('div');
-            itemElement.className = 'cart-item';
-
-            itemElement.innerHTML = `
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.querySelector('.cart-main');
+            const itemCountElement = document.querySelector('.item-count');
+            const subtotalElement = document.querySelector('.summary-row span:last-child');
+            const shippingInfoElement = document.querySelector('.shipping-info');
+            const FREE_SHIPPING_THRESHOLD = 100000; // Ubah threshold sesuai kebutuhan
+            
+            function renderCartItems() {
+                const header = document.querySelector('.cart-table-header');
+                const existingItems = document.querySelectorAll('.cart-item');
+    
+                // Hapus elemen produk lama untuk re-render
+                existingItems.forEach(item => item.remove());
+    
+                let totalPrice = 0;
+                let totalItems = 0;
+    
+                cart.forEach((product, index) => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'cart-item';
+    
+                    itemElement.innerHTML = `
                 <div class="item-info">
                     <div class="cart-item-image">
                         <img src="produk_img/${product.image}" alt="${product.name}">
@@ -118,90 +117,76 @@
                 <div class="item-price">Rp ${(product.price * product.quantity).toLocaleString()}</div>
                 <button class="remove-item">&times;</button>
             `;
-
-            // Tambahkan listener untuk button +/- dan input
-            const decreaseBtn = itemElement.querySelector('.quantity-btn:first-child');
-            const increaseBtn = itemElement.querySelector('.quantity-btn:last-child');
-            const quantityInput = itemElement.querySelector('.quantity-input');
-            const removeBtn = itemElement.querySelector('.remove-item');
-
-            decreaseBtn.addEventListener('click', () => {
-                if (product.quantity > 1) {
-                    product.quantity--;
-                    saveCart();
-                    renderCartItems();
+    
+                    // Tambahkan listener untuk button +/- dan input
+                    const decreaseBtn = itemElement.querySelector('.quantity-btn:first-child');
+                    const increaseBtn = itemElement.querySelector('.quantity-btn:last-child');
+                    const quantityInput = itemElement.querySelector('.quantity-input');
+                    const removeBtn = itemElement.querySelector('.remove-item');
+    
+                    decreaseBtn.addEventListener('click', () => {
+                        if (product.quantity > 1) {
+                            product.quantity--;
+                            saveCart();
+                            renderCartItems();
+                        }
+                    });
+    
+                    increaseBtn.addEventListener('click', () => {
+                        product.quantity++;
+                        saveCart();
+                        renderCartItems();
+                    });
+    
+                    quantityInput.addEventListener('change', () => {
+                        const newQuantity = Math.max(1, parseInt(quantityInput.value) || 1);
+                        product.quantity = newQuantity;
+                        saveCart();
+                        renderCartItems();
+                    });
+    
+                    removeBtn.addEventListener('click', () => {
+                        cart.splice(index, 1);
+                        saveCart();
+                        renderCartItems();
+                    });
+    
+                    // Tambahkan elemen produk setelah header
+                    header.insertAdjacentElement('afterend', itemElement);
+    
+                    totalPrice += product.price * product.quantity;
+                    totalItems += product.quantity;
+                });
+    
+                // Perbarui subtotal dan jumlah item
+                subtotalElement.textContent = `Rp ${totalPrice.toLocaleString()}`;
+                itemCountElement.textContent = `${totalItems} items`;
+    
+                const remainingForFreeShipping = FREE_SHIPPING_THRESHOLD - totalPrice;
+                shippingInfoElement.textContent = remainingForFreeShipping > 0
+                    ? `Rp ${remainingForFreeShipping.toLocaleString()} lagi untuk gratis ongkir!`
+                    : 'Gratis ongkir telah tercapai!';
+            }
+    
+            function saveCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
+    
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            checkoutBtn.addEventListener('click', () => {
+                if (cart.length === 0) {
+                    alert('Keranjang Anda Kosong!');
+                    return;
                 }
-            });
-
-            increaseBtn.addEventListener('click', () => {
-                product.quantity++;
+                // Simpan data keranjang ke localStorage sebelum redirect
                 saveCart();
-                renderCartItems();
+                window.location.href = 'checkout.html';
             });
-
-            quantityInput.addEventListener('change', () => {
-                const newQuantity = Math.max(1, parseInt(quantityInput.value) || 1);
-                product.quantity = newQuantity;
-                saveCart();
-                renderCartItems();
-            });
-
-            removeBtn.addEventListener('click', () => {
-                itemElement.style.transition = "opacity 0.3s ease-out, transform 0.3s ease-out";
-                itemElement.style.opacity = "0";
-                itemElement.style.transform = "translateX(-20px)";
-                setTimeout(() => {
-                    cart.splice(index, 1);
-                    saveCart();
-                    renderCartItems();
-                }, 300); // Hapus item setelah animasi selesai
-            });
-
-            // Tambahkan elemen produk setelah header
-            header.insertAdjacentElement('afterend', itemElement);
-
-            totalPrice += product.price * product.quantity;
-            totalItems += product.quantity;
+    
+            renderCartItems();
         });
-
-        // Perbarui subtotal dan jumlah item
-        subtotalElement.textContent = `Rp ${totalPrice.toLocaleString()}`;
-        itemCountElement.textContent = `${totalItems} items`;
-
-        const remainingForFreeShipping = FREE_SHIPPING_THRESHOLD - totalPrice;
-        shippingInfoElement.textContent = remainingForFreeShipping > 0
-            ? `Rp ${remainingForFreeShipping.toLocaleString()} dari berbelanja!`
-            : ``;
-    }
-
-    function saveCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-
-    const checkoutBtn = document.querySelector('.checkout-btn');
-    checkoutBtn.addEventListener('click', () => {
-    if (cart.length === 0) {
-        showNotification('Keranjang Anda Kosong!');
-        return;
-    }
-    // Save the cart to localStorage before redirecting to the checkout page
-    localStorage.setItem('cart', JSON.stringify(cart));
-    window.location.href = 'checkout.html';
-});
-
-
-    function showNotification(message) {
-        notificationElement.textContent = message;
-        notificationElement.style.display = 'block';
-        setTimeout(() => {
-            notificationElement.style.display = 'none';
-        }, 3000);
-    }
-
-    renderCartItems();
-});
-
     </script>
+    
     
 
 

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Blog Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="article_page.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+</head>
+<body>
+    <!-- Recommendation Article Bar -->
+    <div class="recommendation-bar">
+        <div class="recommendation-slider">
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art1.html'">
+                    <h3>Jasa Penitipan Hewan- Critter Haven</h3>
+                    <p>Selamat datang di blog Critter Haven! Kami tahu betapa pentingnya kenyamanan dan kebahagiaan sahabat kecil Anda. Dalam artikel kali ini, kami ingin memperkenalkan layanan unggulan kami: <strong>Jasa Penitipan Hewan</strong>.</p>
+                </div>
+                
+            </div>
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art2.html'">
+                    <h3>Tips Membuat Kucing Betah di Kandang</h3>
+                    <p>Hai Sahabat Critter! Kucing adalah makhluk yang penuh rasa ingin tahu, tetapi ada kalanya mereka harus merasa nyaman di kandang—baik untuk perjalanan, perawatan, atau alasan lainnya. Untuk itu, yuk kita simak beberapa tips sederhana agar si meong kesayanganmu betah di kandang:</p>
+                </div>
+                
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art3.html'">
+                    <h3>Traveling Bersama Hewan Peliharaan</h3>
+                    <p>Hai Sahabat Critter!</p>
+                    <p>Traveling bersama hewan peliharaan bisa menjadi pengalaman seru sekaligus menantang. Tapi jangan khawatir, dengan persiapan yang matang, perjalananmu bisa lancar dan menyenangkan. Yuk, simak tips berikut supaya traveling bareng si kesayangan jadi bebas repot!</p>
+                </div>
+                
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art4.html'">
+                    <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
+                    <p>Tahukah kamu?</p>
+                    <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>
+                </div>
+                
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art5.html'">
+                    <h3>Mengatasi Tear Stain pada Kucing dan Anjing</h3>
+                    <p>Hai Sahabat Critter!</p>
+                    <p>Apakah kucing atau anjing kesayanganmu memiliki noda kecokelatan atau merah di sekitar area mata? Itu disebut tear stain, dan meskipun umum terjadi, penting untuk mengetahui penyebab dan cara mengatasinya. Yuk, kita bahas bersama!</p>
+                </div>
+                
+            </div>
+
+            <div class="recommendation-item">
+                <div class="recommendation-content" onclick="window.location.href='art6.html'">
+                    <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
+                    <p>Tahukah kamu?</p>
+                    <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>   
+                </div>
+                
+            </div>
+
+            <!-- Ulangi struktur yang sama untuk item 2-8 -->
+        </div>
+    </div>
+
+    <!-- Article Categories Navigation -->
+    <nav class="article-categories">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="category-link" data-category="all">All</a>
+                    <a href="#" class="category-link" data-category="education">Education & tips</a>
+                    <a href="#" class="category-link" data-category="grooming">Grooming</a>
+                    <a href="#" class="category-link" data-category="lifestyle">Lifestyle</a>
+                    <a href="#" class="category-link" data-category="dental">Dental</a>
+                    <a href="#" class="category-link" data-category="raw-feeding">Raw feeding</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Grid -->
+    <div class="container article-grid">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="dental">
+                    <div class="card-body">
+                        <h5 class="card-title">Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h5>
+                        <p class="card-text">Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>
+                        <a href="art4.html" class="btn btn-primary" data-category="dental">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="dental">
+                    <div class="card-body">
+                        <h5 class="card-title">Mencegah Plak pada Gigi Anjing</h5>
+                        <p class="card-text">Pelajari cara efektif mencegah plak pada gigi anjing kesayanganmu dengan menggunakan produk perawatan gigi yang tepat dan rutin membersihkan gigi mereka.</p>
+                        <a href="#" class="btn btn-primary" data-category="grooming">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="dental">
+                    <div class="card-body">
+                        <h5 class="card-title">Kapan Harus ke Dokter Gigi Hewan</h5>
+                        <p class="card-text">Pelajari kapan harus ke dokter gigi hewan untuk menjaga kesehatan gigi dan mulut kesayanganmu. Mengetahui tanda-tanda masalah gigi pada hewan peliharaan sangat penting untuk mencegah komplikasi lebih lanjut.</p>
+                        <a href="#" class="btn btn-primary" data-category="lifestyle">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="dental">
+                    <div class="card-body">
+                        <h5 class="card-title">Makanan yang Baik untuk Gigi Anjing</h5>
+                        <p class="card-text">Makanan yang baik untuk gigi anjing adalah makanan yang kaya akan protein dan rendah kadar lemak. Makanan yang baik untuk gigi anjing adalah makanan yang kaya akan protein dan rendah kadar lemak.</p>
+                        <a href="#" class="btn btn-primary" data-category="raw-feeding">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="lifestyle">
+                    <div class="card-body">
+                        <h5 class="card-title">Traveling Bersama Hewan Peliharaan</h5>
+                        <p class="card-text">Traveling bersama hewan peliharaan bisa menjadi pengalaman seru sekaligus menantang. Tapi jangan khawatir, dengan persiapan yang matang, perjalananmu bisa lancar dan menyenangkan.</p>
+                        <a href="art7.html" class="btn btn-primary" data-category="lifestyle">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="dental">
+                    <div class="card-body">
+                        <h5 class="card-title">Mencegah Plak pada Gigi Anjing</h5>
+                        <p class="card-text">Pelajari cara efektif mencegah plak pada gigi anjing kesayanganmu.</p>
+                        <a href="#" class="btn btn-primary" data-category="grooming">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="education">
+                    <div class="card-body">
+                        <h5 class="card-title">Mengatasi Tear Stain pada Kucing dan Anjing</h5>
+                        <p class="card-text">Hai Sahabat Critter!</p>
+                        <p class="card-text">Apakah kucing atau anjing kesayanganmu memiliki noda kecokelatan atau merah di sekitar area mata? Itu disebut tear stain, dan meskipun umum terjadi, penting untuk mengetahui penyebab dan cara mengatasinya. Yuk, kita bahas bersama!</p>
+                        <a href="art5.html" class="btn btn-primary" data-category="dental">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Perawatan Kucing Hamil</h5>
+                        <p class="card-text">Hai Sahabat Critter!</p>
+                        <p class="card-text">Kucingmu sedang hamil? Selamat! Masa kehamilan adalah waktu istimewa yang membutuhkan perhatian ekstra. Untuk memastikan ibu kucing tetap sehat dan nyaman selama hamil, yuk simak tips dan triknya di bawah ini!</p>
+                        <a href="art8.html" class="btn btn-primary" data-category="education">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Articles (3 tambahan) -->
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="education">
+                    <div class="card-body">
+                        <h5 class="card-title">Melatih Anjing: Perintah Dasar</h5>
+                        <p class="card-text">Metode speed reading untuk meningkatkan pemahaman.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="education">
+                    <div class="card-body">
+                        <h5 class="card-title">Memahami Bahasa Tubuh Anjing</h5>
+                        <p class="card-text">Panduan dasar untuk memulai karir di dunia coding.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="education">
+                    <div class="card-body">
+                        <h5 class="card-title">Sosialisasi Anjing yang Tepat</h5>
+                        <p class="card-text">Cara mengembangkan kemampuan menulis akademik.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grooming Articles (4 tambahan) -->
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Cara Memandikan Anjing dengan Benar</h5>
+                        <p class="card-text">Panduan lengkap merawat rambut untuk pria.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Tips Merawat Bulu Anjing</h5>
+                        <p class="card-text">Tips memilih aroma parfum sesuai kepribadian.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Peralatan Grooming yang Wajib Dimiliki</h5>
+                        <p class="card-text">Cara merawat dan membentuk jenggot dengan benar.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="grooming">
+                    <div class="card-body">
+                        <h5 class="card-title">Jadwal Grooming yang Tepat</h5>
+                        <p class="card-text">Panduan mix and match pakaian pria kekinian.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lifestyle Articles (4 tambahan) -->
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="lifestyle">
+                    <div class="card-body">
+                        <h5 class="card-title">Hobi yang Menghasilkan dengan Hewan Peliharaan</h5>
+                        <p class="card-text">Cara mengubah hobi merawat hewan peliharaan menjadi sumber penghasilan.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="lifestyle">
+                    <div class="card-body">
+                        <h5 class="card-title">Tips Traveling dengan Hewan Peliharaan</h5>
+                        <p class="card-text">Panduan liburan bersama hewan peliharaan agar tetap nyaman dan aman.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="lifestyle">
+                    <div class="card-body">
+                        <h5 class="card-title">Cara Merawat Kucing di Rumah</h5>
+                        <p class="card-text">Tips dan trik merawat kucing agar tetap sehat dan bahagia di rumah.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="lifestyle">
+                    <div class="card-body">
+                        <h5 class="card-title">Manfaat Bermain dengan Hewan Peliharaan</h5>
+                        <p class="card-text">Bermain dengan hewan peliharaan tidak hanya menyenangkan, tetapi juga bermanfaat untuk kesehatan mental dan fisik.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- raw-feeding Articles (4 tambahan) -->
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="raw-feeding">
+                    <div class="card-body">
+                        <h5 class="card-title">Jasa Penitipan Hewan</h5>
+                        <p class="card-text">Selamat datang di blog Critter Haven! Kami tahu betapa pentingnya kenyamanan dan kebahagiaan sahabat kecil Anda. Dalam artikel kali ini, kami ingin memperkenalkan layanan unggulan kami: <strong>Jasa Penitipan Hewan</strong>.</p>
+                        <a href="art1.html" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="raw-feeding">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Raw Food untuk Anjing</h5>
+                        <p class="card-text">Panduan menyusun menu makanan sehat.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="raw-feeding">
+                    <div class="card-body">
+                        <h5 class="card-title">Manfaat Raw Feeding</h5>
+                        <p class="card-text">Cara mengelola stress di kehidupan modern.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card" data-category="raw-feeding">
+                    <div class="card-body">
+                        <h5 class="card-title">Transisi ke Raw Food</h5>
+                        <p class="card-text">Tips mendapatkan kualitas tidur terbaik.</p>
+                        <a href="#" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h4>Get exclusive early access to new products, special offers, and more — sign up now!</h4>
+        <form id="newsletter-form">
+          <div class="form-container">
+            <input type="text" id="Username" placeholder="Enter your username" required>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+  
+      <footer>
+          <!-- Footer Navigation -->
+          <div class="footer-top">
+              <!-- Bagian Kiri - Info Perusahaan -->
+              <div class="company-info">
+                  <div class="logo-container">
+                      <img src="https://placehold.co/100x100" alt="Critter Haven Logo" class="footer-logo">
+                  </div>
+                  <div class="company-details">
+                      <h3 class="company-title">Online Pet Shop Indonesia | Critter Haven</h3>
+                      <address class="company-address">
+                          Jl. Peliharaan Sejahtera No. 123<br>
+                          Kebayoran Baru, Jakarta Selatan<br>
+                          DKI Jakarta, 12170
+                      </address>
+                  </div>
+              </div>
+  
+              <!-- Bagian Tengah - Links yang sudah ada -->
+              <div class="footer-links">
+                  <div class="footer-section">
+                    <h4>Online Shop</h4>
+                    <ul>
+                      <li><a href="#">TokoPedia</a></li>
+                      <li><a href="#">Shopee</a></li>
+                      <li><a href="#">Bukalapak</a></li>
+                      <li><a href="#">Blibli</a></li>
+                      <li><a href="#">Lazada</a></li>
+                    </ul>
+                  </div>
+  
+                  <div class="footer-section">
+                    <h4>SHOP</h4>
+                    <ul>
+                      <li><a href="#">Best Sellers</a></li>
+                      <li><a href="#">New Arrivals</a></li>
+                      <li><a href="#">Dog</a></li>
+                      <li><a href="#">Cat</a></li>
+                      <li><a href="#">Rabbit</a></li>
+                      <li><a href="#">Aquatic Pets</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-section">
+                    <h4>ABOUT US</h4>
+                    <ul>
+                      <li><a href="#">Our Story</a></li>
+                      <li><a href="#">Our Mission</a></li>
+                      <li><a href="#">News</a></li>
+                      <li><a href="#">Awards</a></li>
+                      <li><a href="#">Grants</a></li>
+                      <li><a href="#">Blog</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <ul>
+                      <li><a href="#">Customer Service</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Contact Us</a></li>
+            
+                    </ul>
+                  </div>
+                  <div class="footer-section">
+                    <h4>FOLLOW US</h4>
+                    <ul class="social-icons">
+                      <li class="social-icon"><a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=LL0Q6sp9VyLo&format=png&color=000000" alt="Facebook"></a></li>
+                      <li class="social-icon"><a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000" alt="Instagram"></a></li>
+                      <li class="social-icon"><a href="#">
+                        <img src="https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=000000" alt="Tiktod"></a></li>
+                    </ul>
+                  </div>
+              </div>
+  
+              <!-- Bagian Kanan - WhatsApp Contact -->
+              <div class="whatsapp-contact">
+                  <a href="https://wa.me/628123456789" class="whatsapp-btn">
+                      <i class='bx bxl-whatsapp'></i>
+                      <span>Chat with Us</span>
+                      <div class="whatsapp-number">08123456789</div>
+                  </a>
+              </div>
+          </div>
+          <div class="footer-bottom">
+              <div class="footer-content">
+                  <!-- Footer Copyright -->
+                  <div class="footer-copyright">
+                      © 2024 Critter Haven. All Rights Reserved.
+                  </div>
+                  <!-- Payment Icons -->
+  
+  
+                  <!-- Footer Links -->
+                  <ul class="links">
+                      <li><a href="/policies/refund-policy" title="Refund Policy" class="p4">Refund Policy</a></li>
+                      <li><a href="/policies/shipping-policy" title="Shipping Policy" class="p4">Shipping Policy</a></li>
+                      <li><a href="/policies/terms-of-service" title="Terms & Conditions" class="p4">Terms & Conditions</a></li>
+                      <li><a href="/policies/privacy-policy" title="Privacy Policy" class="p4">Privacy Policy</a></li>
+                  </ul>
+                  
+                  <ul class="icons">
+                      <li>
+                          <div class="global-image-wrapper">
+                              <a href="#">
+                                  <img src="id-11134258-7rasi-m3elgeem4oo3e8.png" alt="idk">
+                              </a>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="global-image-wrapper">
+                              <a href="#">
+                                  <img src="pu52ce48.png" alt="idk">
+                              </a>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="global-image-wrapper">
+                              <a href="#">
+                                  <img src="id-11134258-7rasg-m3elfigsva7j31.png" alt="idk">
+                              </a>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="global-image-wrapper">
+                              <a href="#">
+                                  <img src="vwkexmkf.png" alt="idk">
+                              </a>
+                          </div>
+                      </li>
+                  </ul>
+  
+              </div>
+          </div>
+      </footer> 
+  
+
+    <!-- Bootstrap JS and Recommendation Slider Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.recommendation-slider');
+            const items = slider.querySelectorAll('.recommendation-item');
+            let currentIndex = 0;
+            const totalItems = items.length;
+
+            // Tampilkan item pertama
+            items[0].classList.add('active');
+
+            function slideNext() {
+                // Hapus kelas active dari item sekarang
+                items[currentIndex].classList.remove('active');
+                
+                // Hitung index berikutnya
+                currentIndex = (currentIndex + 1) % totalItems;
+                
+                // Geser slider
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Tambah kelas active ke item berikutnya
+                items[currentIndex].classList.add('active');
+            }
+
+            // Jalankan slide setiap 5 detik
+            setInterval(slideNext, 5000);
+
+            // Fungsi untuk menangani tampilan kategori mobile
+            function setupMobileCategories() {
+                const categoryLinks = document.querySelectorAll('.category-link');
+                const mediaQuery = window.matchMedia('(max-width: 825px)');
+                
+                function handleMobileView() {
+                    if (mediaQuery.matches) {
+                        // Buat elemen dropdown untuk mobile
+                        const mobileDropdown = document.createElement('div');
+                        mobileDropdown.className = 'category-mobile-dropdown';
+                        mobileDropdown.innerHTML = `
+                            <button class="category-toggle">
+                                Pilih Kategori
+                                <span class="dropdown-icon">▼</span>
+                            </button>
+                            <div class="category-menu"></div>
+                        `;
+
+                        // Masukkan sebelum nav categories yang existing
+                        const articleCategories = document.querySelector('.article-categories');
+                        articleCategories.insertBefore(mobileDropdown, articleCategories.firstChild);
+
+                        // Pindahkan semua link kategori ke dalam menu dropdown
+                        const categoryMenu = mobileDropdown.querySelector('.category-menu');
+                        categoryLinks.forEach(link => {
+                            const clone = link.cloneNode(true);
+                            categoryMenu.appendChild(clone);
+                            
+                            // Tambahkan event listener untuk setiap link di mobile
+                            clone.addEventListener('click', handleCategoryClick);
+                        });
+
+                        // Toggle dropdown saat tombol diklik
+                        const categoryToggle = mobileDropdown.querySelector('.category-toggle');
+                        categoryToggle.addEventListener('click', function() {
+                            categoryMenu.classList.toggle('show');
+                            this.classList.toggle('active');
+                        });
+
+                        // Tutup dropdown saat klik di luar
+                        document.addEventListener('click', function(e) {
+                            if (!mobileDropdown.contains(e.target)) {
+                                categoryMenu.classList.remove('show');
+                                categoryToggle.classList.remove('active');
+                            }
+                        });
+                    } else {
+                        // Hapus dropdown mobile jika ada
+                        const mobileDropdown = document.querySelector('.category-mobile-dropdown');
+                        if (mobileDropdown) {
+                            mobileDropdown.remove();
+                        }
+                    }
+                }
+
+                // Jalankan saat pertama kali load
+                handleMobileView();
+
+                // Jalankan setiap kali ukuran window berubah
+                mediaQuery.addListener(handleMobileView);
+            }
+
+            // Fungsi untuk menangani klik kategori
+            function handleCategoryClick(e) {
+                e.preventDefault();
+                
+                // Hapus kelas active dari semua link
+                document.querySelectorAll('.category-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Tambah kelas active ke link yang diklik
+                this.classList.add('active');
+                
+                // Update text tombol toggle jika dalam mode mobile
+                const categoryToggle = document.querySelector('.category-toggle');
+                if (categoryToggle) {
+                    categoryToggle.textContent = this.textContent;
+                    document.querySelector('.category-menu').classList.remove('show');
+                    categoryToggle.classList.remove('active');
+                }
+                
+                // Filter artikel
+                const selectedCategory = this.getAttribute('data-category');
+                const articles = document.querySelectorAll('.card');
+                
+                articles.forEach(article => {
+                    const articleCategory = article.getAttribute('data-category');
+                    if (selectedCategory === 'all') {
+                        article.closest('.col-md-6').style.display = 'block';
+                    } else {
+                        article.closest('.col-md-6').style.display = 
+                            articleCategory === selectedCategory ? 'block' : 'none';
+                    }
+                });
+            }
+
+            // Inisialisasi kategori mobile
+            setupMobileCategories();
+
+            // Tambahkan event listener untuk kategori desktop
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', handleCategoryClick);
+            });
+        });
+    </script>

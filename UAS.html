@@ -6,9 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Online Pet Shop Indonesia | Critter Haven</title>
   <link rel="stylesheet" href="UAS.css">
+  <link rel="stylesheet" href="offers.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="BestSellers.css">
+  <link rel="stylesheet" href="brand_new.css">
+
+  <link rel="stylesheet" href="footer.css">
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="newArr.css">
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <!-- nda kode nduwur iki nko hapus rpp, aku gur nempel gen footerku ra rusak -->
+
   <header>
     <div class="header-top">
         <div class="logo-and-name">
@@ -27,9 +48,7 @@
 
         <div class="auth-links">
             
-            <a href="/wishlist" class="auth-icon">
-                <img src="img/dashboard/wishlist.png" alt="Wishlist">
-            </a>
+            
             <a href="chart_page.html" class="auth-icon">
                 <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
             </a>
@@ -40,7 +59,7 @@
         <div class="categories-left">
             <!-- Kategori Kucing -->
             <div class="category-container">
-              <a href="product-category/kucing/kucing.html">
+              <a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">
                 <button id="kucing-button" class="category-button">
                     Kucing <span class="arrow">&#9660;</span>
                 </button>
@@ -51,14 +70,14 @@
                       <li><a href="shopping.html?kucing_alat_kebersihan=true">Alat Kebersihan</a></li>
                       <li><a href="shopping.html?kucing_obat_vitamin=true">Obat & Vitamin</a></li>
                       <li><a href="shopping.html?kucing_toilet=true">Toilet</a></li>
-                      <li><a href="shopping.html?kucing_lainnya=true">Lainnya >> </a></li>
+                      <li><a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">Lainnya >> </a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Kategori Anjing -->
             <div class="category-container">
-              <a href="/product-category/anjing/">
+              <a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">
                 <button id="anjing-button" class="category-button">
                     Anjing <span class="arrow">&#9660;</span>
                 </button>
@@ -70,7 +89,7 @@
                       <li><a href="shopping.html?anjing_obat_vitamin=true">Obat & Vitamin</a></li>
                       <li><a href="shopping.html?anjing_toilet=true">Toilet</a></li>
                       <li><a href="shopping.html?anjing_kandang=true">Kandang</a></li>
-                        <li><a href="/product-category/anjing/lainnya/">Lainnya >> </a></li>
+                        <li><a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">Lainnya >> </a></li>
                     </ul>
                 </div>
             </div>
@@ -83,7 +102,7 @@
                 <div id="hewan-lain-dropdown" class="category-dropdown">
                     <ul>
                         <li>
-                            <a href="/product-category/hewan-lain/kelinci/">Kelinci</a>
+                            <a href="shopping.html?kelinci_makanan_cemilan=true&kelinci_perawatan=true&kelinci_kandang=true">Kelinci</a>
                             <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
                                 <ul>
                                   <li><a href="shopping.html?kelinci_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -93,7 +112,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/hamster/">Hamster</a>
+                            <a href="shopping.html?hamster_makanan=true&hamster_perawatan=true&hamster_kandang=true">Hamster</a>
                             <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
                               <ul>
                                 <li><a href="shopping.html?hamster_makanan=true">Makanan</a></li>
@@ -103,7 +122,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/burung/">Burung</a>
+                            <a href="shopping.html?burung_makanan_cemilan=true&burung_perawatan=true&burung_KandangStand=true">Burung</a>
                             <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
                               <ul>
                                 <li><a href="shopping.html?burung_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -113,7 +132,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="/product-category/hewan-lain/ikan/">Ikan</a>
+                            <a href="shopping.html?ikan_makanan_cemilan=true&ikan_lifesytle=true">Ikan</a>
                             <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
                               <ul>
                                 <li><a href="shopping.html?ikan_makanan_cemilan=true">Makanan & Cemilan</a></li>
@@ -126,7 +145,7 @@
             </div>
 
             <div class="Blog">
-              <button onclick="window.location.href='blog.html';">Blog</button>
+              <button onclick="window.location.href='article_page.html';">Blog</button>
           </div>
 
             <!-- Select for Brands -->
@@ -134,9 +153,7 @@
               <button onclick="window.location.href='brands.html';">Brand</button>
           </div>
           
-          <div class="link">
-              <button onclick="window.location.href='/link';">Link</button>
-          </div>
+          
           
           
         </div>
@@ -155,11 +172,9 @@
     </a>
     </div>
     <!-- GIF animasi di sebelah kanan konten teks -->
-    <div class="gif-container">
-      <img src="img/dashboard/animasi_2.gif" alt="Animasi GIF" class="gif-animation">
-    </div>
+    
   </div>
-  <img src="img/dashboard/header.png" alt="Deskripsi Gambar" class="full-width-image">
+  <img src="img/dashboard/tempaleheader.png" alt="Deskripsi Gambar" class="full-width-image">
 </div>
 
 <div class="Kategori-Belanja">
@@ -203,9 +218,9 @@
       <div class="form-group">
         <label for="concern">Pilih Kebutuhan:</label>
         <select id="concern" name="concern" class="form-control">
-          <option value="diet-nutrition">Diet and Nutrition</option>
-          <option value="skin-issues">Skin Issues</option>
-          <option value="grooming">Grooming</option>
+          <option value="diet-nutrition">Makanan dan Nutrisi</option>
+          <option value="skin-issues">Masalah Kulit</option>
+          <option value="grooming">Masalah Jamur</option>
         </select>
        
       </div>
@@ -216,7 +231,988 @@
 </div>
 
 
+<div class="BestSellers">
+  <div class="container-xl">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header-container">
+          <h2 class="tag">Save on our Best sellers </h2>
+          <div class="heart-icon fas fa-heart"></div>
+        </div>
 
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="item carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                    <img src="produk_img/i300104-2x-royal-canin-mother-ba.png" class="img-fluid" alt="">									
+                  </div>
+                  <div class="thumb-content">
+                    <h4>2X Royal Canin Mother & Babycat Makanan Induk & Bayi Kucing Dry 400gr</h4>									
+                    <div class="star-rating">
+                      <ul class="list-inline">
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                    </div>
+                    <p>(123 review)</p>
+                    <p class="item-price"><strike>Rp189.200</strike> <b>Rp143.530</b></p>
+                    <a href="#" class="btn btn-primary"
+                    data-name="2X Royal Canin Mother & Babycat Makanan Induk & Bayi Kucing Dry 400gr" 
+                    data-price="143530" 
+                    data-image="i300104-2x-royal-canin-mother-ba.png">Tambah ke Keranjang</a>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                        <img src="produk_img/l800043-6x-royal-canin-adult-mai.png" class="img-fluid" alt="6X Royal Canin Adult Maine Coon Makanan Kucing Dewasa Wet 85gr">
+                    </div>
+                    <div class="thumb-content">
+                        <h4>6X Royal Canin Adult Maine Coon Makanan Kucing Dewasa Wet 85gr</h4>									
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p>(123 review)</p>
+                        <p class="item-price"><strike>Rp158.000</strike> <b>Rp138.000</b></p>
+                        <a href="#" class="btn btn-primary add-to-cart" 
+                           data-name="6X Royal Canin Adult Maine Coon Makanan Kucing Dewasa Wet 85gr" 
+                           data-price="138000" 
+                           data-image="l800043-6x-royal-canin-adult-mai.png">Tambah ke Keranjang</a>
+                    </div>						
+                </div>
+            </div>
+              
+            <div class="col-sm-3">
+              <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                      <img src="produk_img/l400002-happy-dog-cans-buffalo-p.png" class="img-fluid" alt="Happy Dog Cans (Buffalo Pure 400gr)">
+                  </div>
+                  <div class="thumb-content">
+                      <h4>Happy Dog Cans (Buffalo Pure 400gr)</h4>
+                      <div class="star-rating">
+                          <ul class="list-inline">
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                          </ul>
+                      </div>
+                      <p>(123 review)</p>
+                      <p class="item-price"><strike>Rp59.000</strike> <b>Rp55.000</b></p>
+                      <a href="#" class="btn btn-primary add-to-cart" 
+                         data-name="Happy Dog Cans (Buffalo Pure 400gr)" 
+                         data-price="55000" 
+                         data-image="l400002-happy-dog-cans-buffalo-p.png">Tambah ke Keranjang</a>
+                  </div>						
+              </div>
+          </div>
+                        
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="produk_img/p000001-abitraz-10cc-desinfektan.png" class="img-fluid" alt="ABITRAZ 10cc – desinfektan hewan">
+                </div>
+                <div class="thumb-content">
+                    <h4>ABITRAZ 10cc – desinfektan hewan</h4>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p>(123 review)</p>
+                    <p class="item-price"><b>Rp34.000</b></p>
+                    <a href="#" class="btn btn-primary add-to-cart" 
+                       data-name="ABITRAZ 10cc – desinfektan hewan" 
+                       data-price="34000" 
+                       data-image="p000001-abitraz-10cc-desinfektan.png">Tambah ke Keranjang</a>
+                </div>						
+            </div>
+        </div>
+        
+            </div>
+          </div>
+          <div class="item carousel-item">
+            <div class="row">
+              <div class="col-sm-3" product>
+                <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                        <img src="produk_img/p000228-calcidox-premium-golden.png" class="img-fluid" alt="Calcidox Premium Golden Hill Pet-Cal Supplement for Dogs [40 Kapsul]">
+                    </div>
+                    <div class="thumb-content">
+                        <h4>Calcidox Premium Golden Hill Pet-Cal Supplement for Dogs [40 Kapsul]</h4>
+                        <p class="item-price"><strike>Rp39.900</strike> <span><b>Rp29.900</b></span></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p>(123 review)</p>
+                        <a href="#" class="btn btn-primary add-to-cart" 
+                           data-name="Calcidox Premium Golden Hill Pet-Cal Supplement for Dogs [40 Kapsul]" 
+                           data-price="29900" 
+                           data-image="p000228-calcidox-premium-golden.png">Tambah ke Keranjang</a>
+                    </div>						
+                </div>
+            </div>
+            
+            <div class="col-sm-3" product>
+              <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                      <img src="produk_img/Untitled-2_2000x.png" class="img-fluid" alt="Suplemen Kesehatan Gel Kalahealth Probiotixs Plus Untuk Hewan Peliharaan">
+                  </div>
+                  <div class="thumb-content">
+                      <h4>Suplemen Kesehatan Gel Kalahealth Probiotixs Plus Untuk Hewan Peliharaan</h4>
+                      <p class="item-price"><strike>Rp249.350</strike> <span><b>Rp234.000</b></span></p>
+                      <div class="star-rating">
+                          <ul class="list-inline">
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                          </ul>
+                      </div>
+                      <p>(123 review)</p>
+                      <a href="#" class="btn btn-primary add-to-cart" 
+                         data-name="Suplemen Kesehatan Gel Kalahealth Probiotixs Plus Untuk Hewan Peliharaan" 
+                         data-price="234000" 
+                         data-image="Untitled-2_2000x.png">Tambah ke Keranjang</a>
+                  </div>						
+              </div>
+          </div>
+          
+          <div class="col-sm-3" product>
+            <div class="thumb-wrapper">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="produk_img/m700055-cature-purelab-series-wa.png" class="img-fluid" alt="Cature PureLab Series – Waterless Paw Cleaning Foam">
+                </div>
+                <div class="thumb-content">
+                    <h4>Cature PureLab Series – Waterless Paw Cleaning Foam</h4>
+                    <p class="item-price"><span>Rp101.000</span></p>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                    </div>
+                    <p>(123 review)</p>
+                    <a href="#" class="btn btn-primary add-to-cart" 
+                       data-name="Cature PureLab Series – Waterless Paw Cleaning Foam" 
+                       data-price="101000" 
+                       data-image="m700055-cature-purelab-series-wa.png">Tambah ke Keranjang</a>
+                </div>						
+            </div>
+        </div>
+        
+        <div class="col-sm-3" product>
+          <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                  <img src="produk_img/i200020-bolt-dog-food-repack-1-k.png" class="img-fluid" alt="BOLT Dog Food">
+              </div>
+              <div class="thumb-content">
+                  <h4>BOLT Dog Food ( Repack ) 1 kg – Makanan Kering Anjing</h4>
+                  <p class="item-price"><span>Rp19.000</span></p>
+                  <div class="star-rating">
+                      <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                  </div>
+                  <p>(123 review)</p>
+                  <a href="#" class="btn btn-primary add-to-cart" 
+                     data-name="BOLT Dog Food ( Repack ) 1 kg – Makanan Kering Anjing" 
+                     data-price="19000" 
+                     data-image="i200020-bolt-dog-food-repack-1-k.png">Tambah ke Keranjang</a>
+                </div>						
+            </div>
+        </div>
+                
+            </div>
+          </div>
+          <div class="item carousel-item" >
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                        <img src="produk_img/ii0040047-bravery-dog-food-mediu.png" class="img-fluid" alt="Bravery Dog Food">
+                    </div>
+                    <div class="thumb-content">
+                        <h4>Bravery Dog Food Medium/Large Adult Lamb 4kg – Makanan Anjing Dewasa</h4>
+                        <p class="item-price"><span>Rp480.000</span></p>
+                        <div class="star-rating">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                            </ul>
+                        </div>
+                        <p>(123 review)</p>
+                        <a href="#" class="btn btn-primary add-to-cart" 
+                           data-name="Bravery Dog Food Medium/Large Adult Lamb 4kg – Makanan Anjing Dewasa" 
+                           data-price="480000" 
+                           data-image="ii0040047-bravery-dog-food-mediu.png">Tambah ke Keranjang</a>
+                    </div>						
+                </div>
+            </div>
+            
+            <div class="col-sm-3">
+              <div class="thumb-wrapper">
+                  <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                  <div class="img-box">
+                      <img src="produk_img/l700004-cesar-prime-chicken-vege.png" class="img-fluid" alt="Cesar Prime Chicken & Vegetables">
+                  </div>
+                  <div class="thumb-content">
+                      <h4>Cesar Prime Chicken & Vegetables 100 gr – Makanan Anjing</h4>
+                      <p class="item-price"><span>Rp20.000</span></p>
+                      <div class="star-rating">
+                          <ul class="list-inline">
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                              <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                          </ul>
+                      </div>
+                      <p>(123 review)</p>
+                      <a href="#" class="btn btn-primary add-to-cart" 
+                         data-name="Cesar Prime Chicken & Vegetables 100 gr – Makanan Anjing" 
+                         data-price="20000" 
+                         data-image="l700004-cesar-prime-chicken-vege.png">Tambah Ke Keranjang</a>
+                  </div>						
+              </div>
+          </div>
+          
+          <div class="col-sm-3">
+            <div class="thumb-wrapper">
+                <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                <div class="img-box">
+                    <img src="produk_img/317381_01_2000x.png" class="img-fluid" alt="Kandang Hamster Carno (Biru)">
+                </div>
+                <div class="thumb-content">
+                    <h4>Kandang Hamster Carno (Biru)</h4>
+                    <p class="item-price"><strike>Rp489.000</strike> <span>Rp478.000</span></p>
+                    <div class="star-rating">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                            <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                        </ul>
+                    </div>
+                    <p>(123 review)</p>
+                    <a href="#" class="btn btn-primary add-to-cart" 
+                       data-name="Kandang Hamster Carno (Biru)" 
+                       data-price="478000" 
+                       data-image="317381_01_2000x.png">Tambah Ke Keranjang</a>
+                </div>						
+            </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="thumb-wrapper">
+              <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+              <div class="img-box">
+                  <img src="produk_img/u200056-vitakraft-amazonian-750g.png" class="img-fluid" alt="Vitakraft Amazonian 750gr – Makanan Burung">
+              </div>
+              <div class="thumb-content">
+                  <h4>Vitakraft Amazonian 750gr – Makanan Burung</h4>
+                  <p class="item-price"><strike>Rp152.000</strike> <span>Rp125.000</span></p>
+                  <div class="star-rating">
+                      <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                      </ul>
+                  </div>
+                  <p>(123 review)</p>
+                  <a href="#" class="btn btn-primary add-to-cart" 
+                     data-name="Vitakraft Amazonian 750gr – Makanan Burung" 
+                     data-price="125000" 
+                     data-image="u200056-vitakraft-amazonian-750g.png">Tambah Ke Keranjang</a>
+                </div>						
+            </div>
+        </div>
+      
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="header-container">
+  <h2 class="tag">Shop all offers  </h2>
+  <div class="heart-icon fas fa-heart"></div>
+</div>
+<div class="container">
+  <div class="col-xs-12 col-md-6 bootstrap snippets bootdeys">
+    <!-- product -->
+    <div class="product-content product-wrap clearfix">
+      <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="produk_img/u200056-vitakraft-amazonian-750g.png" alt="194x228" class="img-responsive"> 
+              <span class="tag2 hot">
+                HOT
+              </span> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="product-deatil">
+              <h5 class="name">
+                <a href="#">
+                  Vitakraft Amazonian 750gr – Makanan Burung <span>Makanan & Cemilan</span>
+                </a>
+              </h5>
+              <p class="price-container">
+                <span>Rp125.000</span>
+              </p>
+              <span class="tag1"></span> 
+          </div>
+          
+          <div class="product-info smart-form">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6"> 
+                <a href="#" class="btn btn-success text-white add-to-cart"
+                data-name="Vitakraft Amazonian 750gr – Makanan Burung" 
+                data-price="125000" 
+                data-image="u200056-vitakraft-amazonian-750g.png">Tambah Ke Keranjang</a></a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="rating">
+                  <label for="stars-rating-5"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-4"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-3"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-2"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-1"><i class="fa fa-star text-primary"></i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product -->
+  </div>
+  <div class="col-xs-12 col-md-6 bootstrap snippets bootdeys">
+    <!-- product -->
+    <div class="product-content product-wrap clearfix">
+      <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="produk_img/l800043-6x-royal-canin-adult-mai.png" alt="194x228" class="img-responsive"> 
+              <span class="tag2 hot">
+                HOT
+              </span> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="product-deatil">
+              <h5 class="name">
+                <a href="#">
+                  6X Royal Canin Adult Maine Coon Makanan Kucing Dewasa Wet 85gr <span>Makanan & Cemilan</span>
+                </a>
+              </h5>
+              <p class="price-container">
+                <span>Rp138.000</span>
+              </p>
+              <span class="tag1"></span> 
+          </div>
+          
+          <div class="product-info smart-form">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6"> 
+                <a href="#" class="btn btn-success text-white add-to-cart"
+                   data-name="6X Royal Canin Adult Maine Coon Makanan Kucing Dewasa Wet 85gr"
+                   data-price="138000"
+                   data-image="l800043-6x-royal-canin-adult-mai.png">
+                   Tambah Ke Keranjang
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="rating">
+                  <label for="stars-rating-5"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-4"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-3"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-2"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-1"><i class="fa fa-star text-primary"></i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product -->
+  </div>
+  <div class="col-xs-12 col-md-6 bootstrap snippets bootdeys">
+    <!-- product -->
+    <div class="product-content product-wrap clearfix">
+      <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="produk_img/i300104-2x-royal-canin-mother-ba.png" alt="194x228" class="img-responsive"> 
+              <span class="tag2 hot">
+                HOT
+              </span> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="product-deatil">
+              <h5 class="name">
+                <a href="#">
+                  2X Royal Canin Mother & Babycat Makanan Induk & Bayi Kucing Dry 400gr <span>Makanan & Cemilan</span>
+                </a>
+              </h5>
+              <p class="price-container">
+                <span>Rp143.530</span>
+              </p>
+              <span class="tag1"></span> 
+          </div>
+          
+          <div class="product-info smart-form">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <a href="javascript:void(0);" class="btn btn-success text-white add-to-cart"
+                   data-name="2X Royal Canin Mother & Babycat Makanan Induk & Bayi Kucing Dry 400gr"
+                   data-price="143530"
+                   data-image="i300104-2x-royal-canin-mother-ba.png">
+                   Tambahkan Ke Keranjang
+                </a>
+              </div>
+        
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="rating">
+                  <label for="stars-rating-5"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-4"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-3"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-2"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-1"><i class="fa fa-star text-primary"></i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product -->
+  </div>
+  <div class="col-xs-12 col-md-6 bootstrap snippets bootdeys ">
+    <!-- product -->
+    <div class="product-content product-wrap clearfix">
+      <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="produk_img/l400002-happy-dog-cans-buffalo-p.png" alt="194x228" class="img-responsive"> 
+              <span class="tag2 hot">
+                HOT
+              </span> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="product-deatil">
+              <h5 class="name">
+                <a href="#">
+                  Happy Dog Cans (Buffalo Pure 400gr) <span>Makanan & Cemilan</span>
+                </a>
+              </h5>
+              <p class="price-container">
+                <span>Rp55.000</span>
+              </p>
+              <span class="tag1"></span> 
+          </div>
+          
+          <div class="product-info smart-form">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6"> 
+                <a href="javascript:void(0);" class="btn btn-success text-white add-to-cart"
+                   data-name="Happy Dog Cans (Buffalo Pure 400gr)"
+                   data-price="55000"
+                   data-image="l400002-happy-dog-cans-buffalo-p.png">
+                   Tambahkan Ke Keranjang
+                </a>
+              </div>
+        
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="rating">
+                  <label for="stars-rating-5"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-4"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-3"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-2"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-1"><i class="fa fa-star text-primary"></i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product -->
+  </div>
+  
+  <!-- Buat product di bawah melebar dua kolom dan sedikit lebih tinggi 1.5 kali dari yang lain. -->
+  <div class="col-xs-12 col-md-12 bootstrap snippets bootdeys">
+    <!-- product -->
+    <div class="product-content product-wrap clearfix">
+      <div class="row">
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <div class="product-image"> 
+              <img src="produk_img/l900007-3x-royal-canin-maxi-adul.png" alt="194x228" class="img-responsive"> 
+              <span class="tag2 hot">
+                HOT
+              </span> 
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12 col-xs-12">
+          <div class="product-deatil">
+              <h5 class="name">
+                <a href="#">
+                  3X Royal Canin Maxi Adult Makanan Anjing Dewasa Wet 140gr <span>Makanan & Cemilan</span>
+                </a>
+              </h5>
+              <p class="price-container">
+                <span>Rp72.000</span>
+              </p>
+              <span class="tag1"></span> 
+          </div>
+          
+          <div class="product-info smart-form">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6"> 
+                <a href="javascript:void(0);" class="btn btn-success text-white add-to-cart"
+                   data-name="3X Royal Canin Maxi Adult Makanan Anjing Dewasa Wet 140gr"
+                   data-price="72000"
+                   data-image="l900007-3x-royal-canin-maxi-adul.png">
+                   Tambah Ke Keranjang
+                </a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="rating">
+                  <label for="stars-rating-5"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-4"><i class="fa fa-star"></i></label>
+                  <label for="stars-rating-3"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-2"><i class="fa fa-star text-primary"></i></label>
+                  <label for="stars-rating-1"><i class="fa fa-star text-primary"></i></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end product -->
+  </div>
+</div>
+
+<div class="header-container">
+  <h2 class="tag">Explore Our New Article </h2>
+  <div class="heart-icon fas fa-heart"></div>
+</div>
+
+<section id="team" class="pb-5">
+  <div class="container">
+      <div class="row">
+          <!-- Team member 1 -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip">
+                  <div class="mainflip flip-0">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="imagePetArt/i1.png" alt="card image"></p>
+                                  <h4 class="card-title">Jasa Penitipan Hewan- Critter Haven</h4>
+                                  <p class="card-text">Percayakan hewan kesayangan Anda kepada kami untuk perawatan dan perhatian terbaik selama Anda bepergian.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside" onclick="window.location.href='article_page.html'">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                                  <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                              <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="imagePetArt/i2.png" alt="card image"></p>
+                                  <h4 class="card-title">Tips Membuat Kucing Betah di Kandang</h4>
+                                  <p class="card-text">Pelajari rahasia membuat kucing Anda merasa nyaman dan bahagia di kandangnya dengan tips-tips praktis yang sudah teruji!</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside" onclick="window.location.href='article_page.html'">
+                          <div class="card">
+                            <div class="card-body text-center mt-4">
+                              <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                              <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                              <ul class="list-inline">
+                                  <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                          <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      </a>
+                                  </li>
+                              </ul>
+                            </div>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4 ">
+              <div class="image-flip">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="imagePetArt/i3.png" alt="card image"></p>
+                                  <h4 class="card-title">Traveling Bersama Hewan Peliharaan</h4>
+                                  <p class="card-text">Temukan tips dan trik lengkap untuk mewujudkan petualangan yang menyenangkan bersama hewan peliharaan kesayangan Anda!</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside" onclick="window.location.href='article_page.html'">
+                          <div class="card">
+                            <div class="card-body text-center mt-4">
+                              <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                              <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                              <ul class="list-inline">
+                                  <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                          <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                      </a>
+                                  </li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class="img-fluid" src="imagePetArt/i4.png" alt="card image"></p>
+                                  <h4 class="card-title">Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h4>
+                                  <p class="card-text">Temukan cara mudah untuk merawat gigi hewan kesayangan Anda dengan dental snack yang lezat dan menyehatkan!</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside" onclick="window.location.href='article_page.html'">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                                  <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                              <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class="img-fluid" src="imagePetArt/i5.png" alt="card image"></p>
+                                  <h4 class="card-title">Mengatasi Tear Stain pada Kucing dan Anjing - Critter Haven  </h4>
+                                  <p class="card-text">Temukan solusi efektif untuk mengatasi noda tear stain pada mata hewan kesayangan Anda dengan tips dan perawatan yang tepat.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                                  <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                              <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- ./Team member -->
+          <!-- Team member -->
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class="img-fluid" src="imagePetArt/i6.png" alt="card image"></p>
+                                  <h4 class="card-title">Perawatan Kucing Hamil y - Critter Haven</h4>
+                                  <p class="card-text">Kucingmu sedang hamil? Selamat! Masa kehamilan adalah waktu istimewa yang membutuhkan perhatian ekstra.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title">Ingin tahu lebih lanjut?</h4>
+                                  <p class="card-text">Klik tombol dibawah untuk melihat informasi selengkapnya</p>
+                                  <ul class="list-inline">
+                                      <li class="list-inline-item">
+                                          <a class="social-icon text-xs-center" target="_blank" href="article_page.html">
+                                              <a href="article_page.html" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="newsletter">
+  <h4>Get exclusive early access to new products, special offers, and more — sign up now!</h4>
+  <form id="newsletter-form">
+    <div class="form-container">
+      <input type="text" id="Username" placeholder="Enter your username" required>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </div>
+  </form>
+</div>
+
+<footer>
+    <!-- Footer Navigation -->
+    <div class="footer-top">
+        <!-- Bagian Kiri - Info Perusahaan -->
+        <div class="company-info">
+            <div class="logo-container">
+                <img src="https://placehold.co/100x100" alt="Critter Haven Logo" class="footer-logo">
+            </div>
+            <div class="company-details">
+                <h3 class="company-title">Online Pet Shop Indonesia | Critter Haven</h3>
+                <address class="company-address">
+                    Jl. Peliharaan Sejahtera No. 123<br>
+                    Kebayoran Baru, Jakarta Selatan<br>
+                    DKI Jakarta, 12170
+                </address>
+            </div>
+        </div>
+
+        <!-- Bagian Tengah - Links yang sudah ada -->
+        <div class="footer-links">
+            <div class="footer-section">
+              <h4>Online Shop</h4>
+              <ul>
+                <li><a href="#">TokoPedia</a></li>
+                <li><a href="#">Shopee</a></li>
+                <li><a href="#">Bukalapak</a></li>
+                <li><a href="#">Blibli</a></li>
+                <li><a href="#">Lazada</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h4>SHOP</h4>
+              <ul>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Dog</a></li>
+                <li><a href="#">Cat</a></li>
+                <li><a href="#">Rabbit</a></li>
+                <li><a href="#">Aquatic Pets</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>ABOUT US</h4>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Grants</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>SUPPORT</h4>
+              <ul>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact Us</a></li>
+      
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>FOLLOW US</h4>
+              <ul class="social-icons">
+                <li class="social-icon"><a href="#">
+                  <img src="https://img.icons8.com/?size=100&id=LL0Q6sp9VyLo&format=png&color=000000" alt="Facebook"></a></li>
+                <li class="social-icon"><a href="#">
+                  <img src="https://img.icons8.com/?size=100&id=RhYNENh5cxlS&format=png&color=000000" alt="Instagram"></a></li>
+                <li class="social-icon"><a href="#">
+                  <img src="https://img.icons8.com/?size=100&id=K6KK5ISTAWwE&format=png&color=000000" alt="Tiktod"></a></li>
+              </ul>
+            </div>
+        </div>
+
+        <!-- Bagian Kanan - WhatsApp Contact -->
+        <div class="whatsapp-contact">
+            <a href="https://wa.me/628123456789" class="whatsapp-btn">
+                <i class='bx bxl-whatsapp'></i>
+                <span>Chat with Us</span>
+                <div class="whatsapp-number">08123456789</div>
+            </a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-content">
+            <!-- Footer Copyright -->
+            <div class="footer-copyright">
+                © 2024 Pets' Station. All Rights Reserved.
+            </div>
+            <!-- Payment Icons -->
+
+
+            <!-- Footer Links -->
+            <ul class="links">
+                <li><a href="/policies/refund-policy" title="Refund Policy" class="p4">Refund Policy</a></li>
+                <li><a href="/policies/shipping-policy" title="Shipping Policy" class="p4">Shipping Policy</a></li>
+                <li><a href="/policies/terms-of-service" title="Terms & Conditions" class="p4">Terms & Conditions</a></li>
+                <li><a href="/policies/privacy-policy" title="Privacy Policy" class="p4">Privacy Policy</a></li>
+            </ul>
+            
+            <ul class="icons">
+                <li>
+                    <div class="global-image-wrapper">
+                        <a href="#">
+                            <img src="id-11134258-7rasi-m3elgeem4oo3e8.png" alt="idk">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="global-image-wrapper">
+                        <a href="#">
+                            <img src="pu52ce48.png" alt="idk">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="global-image-wrapper">
+                        <a href="#">
+                            <img src="id-11134258-7rasg-m3elfigsva7j31.png" alt="idk">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="global-image-wrapper">
+                        <a href="#">
+                            <img src="vwkexmkf.png" alt="idk">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</footer> 
 
 
 
@@ -504,18 +1500,30 @@ function changeCategory(category) {
 <script>
   const concernOptions = {
     Kucing: [
-      { value: "diet-nutrition", text: "Diet and Nutrition" },
-      { value: "skin-issues", text: "Skin Issues" },
-      { value: "grooming", text: "Grooming" }
+      { value: "diet-nutrition", text: "Makanan dan Nutrisi" },
+      { value: "skin-issues", text: "Masalah Kulit" },
+      { value: "grooming", text: "Masalah Jamur" }
     ],
     Anjing: [
-        { value: "training-behavior", text: "Training and Behavior" },
-        { value: "health", text: "Health" },
-        { value: "diet-nutrition", text: "Diet and Nutrition" }
+        { value: "diet-nutrition", text: "Makanan dan Nutrisi" },
+        { value: "skin-issues", text: "Pembersih Telinga" },
+        { value: "grooming", text: "Suplemen" }
+    ],
+    Kelinci: [
+        { value: "diet-nutrition", text: "Cemilan dan Jerami" },
+        { value: "skin-issues", text: "Masalah Jamur" }
       ],
-      Hamster: [
-        { value: "exercise", text: "Exercise" },
-        { value: "diet-nutrition", text: "Diet and Nutrition" }
+    Hamster: [
+        { value: "diet-nutrition", text: "Cemilan dan Jerami" },
+        { value: "skin-issues", text: "Antibiotik" }
+      ],
+    Burung: [
+        { value: "diet-nutrition", text: "Makanan" },
+        { value: "skin-issues", text: "Suplemen Kesehatan" }
+      ],
+    Ikan: [
+        { value: "diet-nutrition", text: "Pelet" },
+        { value: "skin-issues", text: "Food Timer" }
       ],
     // Tambahkan kategori lain sesuai kebutuhan...
   };
@@ -557,15 +1565,39 @@ function changeCategory(category) {
     }
 
     if (category === "Kucing" && concern === "diet-nutrition") {
-      window.location.href = "shopping.html";
-    } else if (category === "Anjing" && concern === "training-behavior") {
-      window.location.href = "Training.html";
-    } else if (category === "Anjing" && concern === "health") {
-      window.location.href = "Health.html";
-    } else if (category === "Hamster" && concern === "exercise") {
-      window.location.href = "Exercise.html";
+      window.location.href = "shopping.html?kucing_makanan_cemilan=true";
+    } else if (category === "Kucing" && concern === "skin-issues") {
+      window.location.href = "shopping.html?kucing_alat_kebersihan=true";
+    } else if (category === "Kucing" && concern === "grooming") {
+      window.location.href = "shopping.html?kucing_obat_vitamin=true";
+
+    } else if (category === "Anjing" && concern === "diet-nutrition") {
+      window.location.href = "shopping.html?anjing_makanan_cemilan=true";
+    } else if (category === "Anjing" && concern === "skin-issues") {
+      window.location.href = "shopping.html?anjing_alat_kebersihan=true";
+    } else if (category === "Anjing" && concern === "grooming") {
+      window.location.href = "shopping.html?anjing_obat_vitamin=true";
+
+    } else if (category === "Kelinci" && concern === "diet-nutrition") {
+      window.location.href = "shopping.html?kelinci_makanan_cemilan=true";
+    } else if (category === "Kelinci" && concern === "skin-issues") {
+      window.location.href = "shopping.html?kelinci_perawatan=true";
+
     } else if (category === "Hamster" && concern === "diet-nutrition") {
-      window.location.href = "HamsterNutrition.html";
+      window.location.href = "shopping.html?hamster_makanan=true";
+    } else if (category === "Hamster" && concern === "skin-issues") {
+      window.location.href = "hopping.html?hamster_perawatan=true";
+
+    } else if (category === "Burung" && concern === "diet-nutrition") {
+      window.location.href = "shopping.html?burung_makanan_cemilan=true";
+    } else if (category === "Burung" && concern === "skin-issues") {
+      window.location.href = "shopping.html?burung_perawatan=true";
+
+    
+    } else if (category === "Ikan" && concern === "diet-nutrition") {
+      window.location.href = "shopping.html?ikan_makanan_cemilan=true";
+    } else if (category === "Ikan" && concern === "skin-issues") {
+      window.location.href = "shopping.html?ikan_lifesytle=true";
     } else {
       alert("Halaman untuk kombinasi ini belum tersedia.");
     }
@@ -573,16 +1605,134 @@ function changeCategory(category) {
 </script>
 
 <script>
-  function showAllProducts() {
-      // Create a query string that indicates all products should be shown
-      const queryString = 'show_all=true';
-  
-      // Redirect to shopping.html with the query string
-      window.location.href = "shopping.html?" + queryString;
-  }
-  </script>
+  $(document).ready(function(){
+    $(".wish-icon i").click(function(){
+      $(this).toggleClass("fa-heart fa-heart-o");
+    });
+  });	
+</script>
 
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript'>
+    $(document).ready(function () {
+        var silder = $(".owl-carousel");
+        silder.owlCarousel({
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: false,
+            items: 1,
+            stagePadding: 20,
+            center: true,
+            nav: false,
+            margin: 50,
+            dots: true,
+            loop: true,
+            responsive: {
+                0: { items: 1 },
+                480: { items: 2 }, 
+                575: { items: 2 },
+                768: { items: 2 },
+                991: { items: 3 },
+                1200: { items: 4 }
+            }
+        });
+    });
+</script>
+<script type='text/javascript'>
+    var myLink = document.querySelector('a[href="#"]');
+    myLink.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
+</script>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    const footerSections = document.querySelectorAll('.footer-section');
+    
+    footerSections.forEach(section => {
+        const heading = section.querySelector('h4');
+        
+        heading.addEventListener('click', () => {
+            // Menutup accordion lain yang sedang terbuka
+            footerSections.forEach(otherSection => {
+                if (otherSection !== section) {
+                    otherSection.classList.remove('active');
+                }
+            });
+            
+            // Toggle accordion yang diklik
+            section.classList.toggle('active');
+        });
+    });
+});
+</script>
+<script>
+        function addToCart(productName, productPrice, quantity, imageName) {
+    const product = {
+        name: productName,
+        price: productPrice,
+        quantity: quantity,
+        image: imageName
+    };
+
+    // Ambil keranjang dari localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Periksa apakah produk sudah ada di keranjang
+    const existingProductIndex = cart.findIndex(item => item.name === productName);
+
+    if (existingProductIndex > -1) {
+        // Update jumlah produk jika sudah ada
+        cart[existingProductIndex].quantity += quantity;
+    } else {
+        // Tambahkan produk baru jika belum ada
+        cart.push(product);
+    }
+
+    // Simpan kembali ke localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert(`${productName} ditambahkan ke keranjang!`);
+}
+
+
+    </script>
   
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Tambahkan listener ke semua tombol 'Tambah ke Keranjang'
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const product = {
+                    name: button.getAttribute('data-name'),
+                    price: parseInt(button.getAttribute('data-price')),
+                    image: button.getAttribute('data-image'),
+                    quantity: 1
+                };
+
+                // Periksa apakah produk sudah ada di keranjang
+                const existingProduct = cart.find(item => item.name === product.name);
+                if (existingProduct) {
+                    existingProduct.quantity++;
+                } else {
+                    cart.push(product);
+                }
+
+                // Simpan ke localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                // Notifikasi sukses
+                alert(`${product.name} berhasil ditambahkan ke keranjang!`);
+            });
+        });
+    });
+</script>
+
+
 </body>
 </html>
 
