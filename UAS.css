@@ -45,9 +45,9 @@ header {
 }
 
 .logo {
-    width: 50px; /* Ukuran logo */
-    height: auto;
-    margin-right: 10px;
+    width: 75px; /* Ukuran logo */
+    height: 70px;
+    margin-right: 15px;
 }
 
 .website-name h1 {
