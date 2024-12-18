@@ -30,7 +30,6 @@ header {
     padding: 20px 30px;
 }
 
-/* Logo dan Nama Website berdampingan lebih dekat */
 .logo-and-name {
     display: flex;
     align-items: center;
@@ -38,8 +37,8 @@ header {
 }
 
 .logo-link, .website-name-link {
-    text-decoration: none; /* Menghapus garis bawah pada link */
-    display: flex; /* Untuk menjaga elemen tetap dalam satu baris */
+    text-decoration: none; 
+    display: flex;
     align-items: center;
     color: #000000;
 }
@@ -56,11 +55,7 @@ header {
     color: #333;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.website-name-link h1 {
-    margin: 0; /* Removes any default margin around the heading */
-    font-size: 2rem; /* Adjust font size as needed */
-    font-weight: bold;
-}
+
 .search-bar {
     position: relative;
     display: flex;
