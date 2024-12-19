@@ -967,6 +967,18 @@ header {
     .logo {
         width: 40px;
     }
+    .logo-and-name img{
+        width: 70px;
+        height: 50px;
+        margin-left: -10px;
+    }
+    .logo-and-name h1{
+        font-size: 20px;
+    }
+    .search-bar .search-icon{
+        width: 20px;
+        height: 20px;
+    }
 
     .Kategori-Belanja-button {
         width: 100%;
