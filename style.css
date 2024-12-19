@@ -15,7 +15,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #B9E5E8;
+    background-color: #f7f7f7;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -119,9 +119,9 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid #ddd;
+    border: 1px solid #7AB2D3;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #7AB2D3;
     cursor: pointer;
     display: inline-block;
 }
@@ -150,8 +150,8 @@ header {
     top: 100%;
     left: 0;
     width: 200px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
@@ -176,8 +176,8 @@ header {
 }
 
 .category-dropdown ul li a:hover {
-    background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    background-color:  #ffffff;
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
 /* Menampilkan dropdown saat hover */
@@ -193,7 +193,8 @@ header {
     padding: 10px 20px;
     font-size: 15px;
     border: none; /* Menghapus border */
-    background-color: #fff;
+    background-color: #7AB2D3;
+    color: rgb(245, 245, 245);
     cursor: pointer;
     display: inline-flex; /* Menggunakan flex agar teks dan anak panah bisa disusun dengan baik */
     align-items: center; /* Vertikal center untuk teks dan anak panah */
@@ -204,14 +205,14 @@ header {
 
 /* Styling untuk garis di bawah tombol */
 .category-button::after {
-    content: ''; /* Membuat pseudo-element */
+    content: ''; 
     position: absolute;
-    bottom: 0; /* Menempatkan garis di bagian bawah tombol */
+    bottom: 0;
     left: 0;
-    width: 0%; /* Garis tidak terlihat awalnya */
-    height: 2px; /* Tebal garis */
-    background-color: #a3cf5b; /* Warna garis */
-    transition: width 0.7s ease; /* Transisi untuk lebar garis */
+    width: 0%; 
+    height: 2px; 
+    background-color: #141414; 
+    transition: width 0.7s ease; 
 }
 
 /* Styling anak panah */
@@ -223,7 +224,8 @@ header {
 
 /* Hover effect untuk tombol kategori */
 .category-button:hover {
-    background-color: #ffffff; /* Warna latar belakang berubah saat hover */
+    background-color: #7AB2D3;
+    color: #ffffff; /* Warna latar belakang berubah saat hover */
 }
 
 .category-button:hover .arrow {
@@ -267,15 +269,15 @@ header {
 /* Menambahkan anak panah ke kanan item dropdown di Hewan Lain */
 #hewan-lain-dropdown ul li a {
     padding: 10px;
-    display: flex;  /* Menggunakan flex untuk menata teks dan anak panah */
-    justify-content: space-between;  /* Menyebarkan teks dan anak panah ke kiri dan kanan */
+    display: flex;  
+    justify-content: space-between;  
     color: #333;
     text-decoration: none;
 }
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
 /* Menambahkan anak panah kanan hanya untuk dropdown Hewan Lain */
@@ -288,7 +290,7 @@ header {
 
 /* Hilangkan hover-based display logic untuk sub-dropdown */
 .sub-category-dropdown {
-    display: none; /* Tidak terlihat secara default */
+    display: none;
     position: absolute;
     top: 0;
     left: 100%;
@@ -328,12 +330,12 @@ header {
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b; /* Warna teks berubah saat hover */
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
 /* Mengubah warna anak panah di samping item saat hover */
 #hewan-lain-dropdown ul li a:hover::after {
-    color: #a3cf5b; /* Mengubah warna anak panah menjadi hijau */
+    color: #7AB2D3; /* Mengubah warna anak panah menjadi hijau */
 }
 /* Menampilkan sub-dropdown ketika hover pada induk atau sub-dropdown */
 #hewan-lain-dropdown ul li:hover .sub-category-dropdown,
@@ -391,28 +393,28 @@ header {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: bold;
-    color: #1a1a1a; /* Warna teks default */
-    border: none; /* Menghapus border */
-    background-color: #fff; /* Latar belakang putih */
-    cursor: pointer; /* Ubah pointer menjadi tangan untuk interaksi */
-    display: inline-flex; /* Flex untuk tata letak */
-    align-items: center; /* Vertikal center untuk teks */
-    position: relative; /* Agar garis dapat diatur */
-    overflow: hidden; /* Menyembunyikan elemen yang melampaui */
+    color: rgb(245, 245, 245); 
+    border: none; 
+    background-color: #7AB2D3; 
+    cursor: pointer; 
+    display: inline-flex;
+    align-items: center; 
+    position: relative; 
+    overflow: hidden; 
     text-decoration: none; /* Menghilangkan garis bawah */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transisi untuk perubahan warna */
-    margin-left: 15px; /* Menambahkan jarak antara tombol */
+    transition: color 0.3s ease, background-color 0.3s ease; 
+    margin-left: 15px; 
 }
 
-/* Menghilangkan margin pada tombol terakhir */
+
 .link button {
-    margin-right: 0; /* Menghapus margin kanan pada tombol terakhir */
+    margin-right: 0;
 }
 
-/* Efek hover, mempertahankan tampilan tombol */
+
 .Brands button:hover, .link button:hover, .Blog button:hover {
-    color: #333; /* Tidak ada perubahan warna teks */
-    background-color: #ffffff; /* Latar belakang berubah sedikit agar terlihat ada efek */
+    color: #ffffff; 
+    background-color: #7AB2D3; 
 }
 
 
@@ -423,7 +425,7 @@ header {
     left: 0;
     width: 0; 
     height: 2px;
-    background-color: #a3cf5b; 
+    background-color: #141414; 
     transition: width 0.7s ease; 
 }
 
@@ -696,7 +698,7 @@ header {
     border: none; 
     border-bottom: 2px solid #ccc; 
     border-radius: 0; 
-    background-color: #B9E5E8;
+    background-color: #7AB2D3;
     color: #707070;
     cursor: pointer;
     width: 100%;

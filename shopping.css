@@ -478,11 +478,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #f4f4f4;
+    background-color: #f7f7f7;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+
+
 
 .header-top {
     display: flex;
@@ -498,7 +500,7 @@ header {
 }
 
 .logo-link, .website-name-link {
-    text-decoration: none;
+    text-decoration: none; 
     display: flex;
     align-items: center;
     color: #000000;
@@ -521,7 +523,7 @@ header {
     position: relative;
     display: flex;
     align-items: center;
-    width: 450px;
+    width: 450px; /* Ukuran lebar search bar */
     margin-left: 10px; 
     padding-left: 30px;
 }
@@ -534,44 +536,6 @@ header {
     border-radius: 12px;
 }
 
-.popup {
-    position: absolute;
-    top: 60px; /* Adjust based on search bar position */
-    left: 0;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.popup.hidden {
-    display: none;
-}
-
-.popup ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.popup ul li {
-    padding: 8px 10px;
-    cursor: pointer;
-}
-
-.popup ul li:hover {
-    background: #f0f0f0;
-}
-
-/* Style for search bar */
-.search-bar {
-    position: relative;
-}
-
 .search-icon {
     position: absolute;
     right: 10px;
@@ -579,6 +543,7 @@ header {
     height: auto;
 }
 
+/* Authentication Links (Login, Wishlist, Cart) berdampingan lebih dekat */
 .auth-links {
     display: flex;
     gap: 15px;
@@ -590,20 +555,24 @@ header {
     height: auto;
 }
 
+/* Styling untuk bagian bawah header (Kategori dan Link) */
+/* Container untuk bagian bawah header (Kategori dan Link) */
 .header-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    background-color: #fff;
+    background-color: #7AB2D3;
 }
 
+/* Menyusun kategori, dropdown, dan brand secara sejajar */
 .categories-left {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 2px; /* Menambahkan jarak antar kategori */
 }
 
+/* Styling untuk kategori dropdown */
 .category-container {
     position: relative;
     margin-left: 10px;
@@ -613,9 +582,9 @@ header {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid #ddd;
+    border: 1px solid #7AB2D3;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #7AB2D3;
     cursor: pointer;
     display: inline-block;
 }
@@ -624,6 +593,7 @@ header {
     border: none;
     outline: none; 
 }
+
 
 @keyframes slideInFromLeft {
     0% {
@@ -635,21 +605,22 @@ header {
         opacity: 1;
     }
 }
+/* General Styles for Dropdowns */
 
 .category-dropdown {
-    display: none;
+    display: none; /* Default hidden */
     position: absolute;
     top: 100%;
     left: 0;
     width: 200px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Start invisible */
+    transform: translateX(-100%); /* Start off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .category-dropdown ul {
@@ -658,8 +629,6 @@ header {
     padding: 0;
     width: 150%;
 }
-
-
 
 .category-dropdown ul li a {
     padding: 10px;
@@ -670,59 +639,67 @@ header {
 }
 
 .category-dropdown ul li a:hover {
-    background-color: #ffffff;
-    color: #a3cf5b;
+    background-color:  #ffffff;
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
+/* Menampilkan dropdown saat hover */
 .category-container:hover .category-dropdown {
-    display: block;
-    opacity: 1;
-    transform: translateX(0);
-    animation: slideInFromLeft 0.3s ease;
+    display: block; /* Show the dropdown */
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Reset position */
+    animation: slideInFromLeft 0.3s ease; /* Apply animation */
 }
 
+/* Styling untuk kategori button dan panah */
 .category-button {
     padding: 10px 20px;
     font-size: 15px;
-    border: none;
-    background-color: #fff;
+    border: none; /* Menghapus border */
+    background-color: #7AB2D3;
+    color: rgb(245, 245, 245);
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease;
+    display: inline-flex; /* Menggunakan flex agar teks dan anak panah bisa disusun dengan baik */
+    align-items: center; /* Vertikal center untuk teks dan anak panah */
+    position: relative; /* Menambahkan posisi relative agar anak panah dan garis dapat diatur */
+    overflow: hidden; /* Menyembunyikan bagian yang melampaui tombol */
+    transition: background-color 0.3s ease; /* Transisi untuk perubahan warna latar belakang */
 }
 
+/* Styling untuk garis di bawah tombol */
 .category-button::after {
-    content: '';
+    content: ''; 
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: #a3cf5b;
-    transition: width 0.7s ease;
+    width: 0%; 
+    height: 2px; 
+    background-color: #141414; 
+    transition: width 0.7s ease; 
 }
 
+/* Styling anak panah */
 .category-button .arrow {
-    font-size: 10px;
-    margin-left: 8px;
-    position: relative;
+    font-size: 10px; /* Ukuran anak panah */
+    margin-left: 8px; /* Menambahkan jarak antara teks dan anak panah */
+    position: relative; /* Menjaga anak panah tetap pada posisi yang tepat */
 }
 
+/* Hover effect untuk tombol kategori */
 .category-button:hover {
-    background-color: #ffffff;
+    background-color: #7AB2D3;
+    color: #ffffff; /* Warna latar belakang berubah saat hover */
 }
 
 .category-button:hover .arrow {
-    transform: rotate(180deg);
+    transform: rotate(180deg); /* Mengubah arah panah saat hover */
 }
 
 .category-button:hover::after {
-    width: 100%;
+    width: 100%; /* Garis akan melebar sepenuhnya ketika hover */
 }
 
+/* Dropdown khusus untuk Kucing */
 #kucing-dropdown {
     padding: 20px;
     font-size: 14px;
@@ -730,11 +707,12 @@ header {
     top: 110%;
 }
 
+/* Dropdown khusus untuk Anjing */
 #anjing-dropdown {
     padding: 20px;
     font-size: 14px;
     padding-right: 15px;
-    top: 110%;
+    top: 110%; /* Dropdown muncul di bawah tombol Anjing */
 }
 
 #layanan-dropdown {
@@ -743,7 +721,7 @@ header {
     padding-right: 15px;
     top: 110%;
 }
-
+/* Dropdown khusus untuk Hewan Lain */
 #hewan-lain-dropdown {
     padding: 20px;
     font-size: 14px;
@@ -751,26 +729,29 @@ header {
     top: 110%;
 }
 
+/* Menambahkan anak panah ke kanan item dropdown di Hewan Lain */
 #hewan-lain-dropdown ul li a {
     padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    display: flex;  
+    justify-content: space-between;  
     color: #333;
     text-decoration: none;
 }
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b;
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
+/* Menambahkan anak panah kanan hanya untuk dropdown Hewan Lain */
 #hewan-lain-dropdown ul li a::after {
-    content: '>';
+    content: '>';  /* Menambahkan tanda > sebagai anak panah */
     font-size: 12px;
-    color: #333;
-    margin-left: 7px;
+    color: #333;  /* Warna anak panah */
+    margin-left: 7px;  /* Jarak antara teks dan anak panah */
 }
 
+/* Hilangkan hover-based display logic untuk sub-dropdown */
 .sub-category-dropdown {
     display: none;
     position: absolute;
@@ -784,8 +765,8 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 200;
     width: 200px;
-    opacity: 0;
-    transform: translateX(100%);
+    opacity: 0; /* Tidak terlihat */
+    transform: translateX(100%); /* Muncul dari kanan */
     transition: opacity 0.3s ease, transform 0.3s ease;
     content: none;
 }
@@ -806,90 +787,97 @@ header {
 
 .sub-category-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b;
+    color: #a3cf5b; /* Warna teks berubah saat hover */
+    
 }
 
 #hewan-lain-dropdown ul li a:hover {
     background-color: #ffffff;
-    color: #a3cf5b;
+    color: #7AB2D3; /* Warna teks berubah saat hover */
 }
 
+/* Mengubah warna anak panah di samping item saat hover */
 #hewan-lain-dropdown ul li a:hover::after {
-    color: #a3cf5b;
+    color: #7AB2D3; /* Mengubah warna anak panah menjadi hijau */
 }
-
+/* Menampilkan sub-dropdown ketika hover pada induk atau sub-dropdown */
 #hewan-lain-dropdown ul li:hover .sub-category-dropdown,
 #hewan-lain-dropdown ul li .sub-category-dropdown:hover {
-    display: block;
-    opacity: 1;
-    transform: translateX(0);
-    animation: slideInFromRight 0.3s ease;
+    display: block; /* Menampilkan sub-dropdown */
+    opacity: 1; /* Pastikan tetap terlihat */
+    transform: translateX(0); /* Pastikan posisi sesuai */
+    animation: slideInFromRight 0.3s ease; /* Tetap menggunakan animasi */
 }
 
-
-
+/* Memastikan kategori utama tetap menunjukkan sub-dropdown saat hover */
 #hewan-lain-dropdown ul li:hover .sub-category-dropdown {
-    display: block; 
-    opacity: 1; 
-    transform: translateX(0); 
-    animation: slideInFromRight 0.3s ease; 
+    display: block; /* Menampilkan sub-dropdown ketika kategori dihover */
+    opacity: 1; /* Menjadikan sub-dropdown terlihat */
+    transform: translateX(0); /* Menjaga posisi sub-dropdown */
+    animation: slideInFromRight 0.3s ease; /* Animasi untuk tampilan sub-dropdown */
 }
 
-
+/* Posisi sub-dropdown untuk Kelinci */
 #sub-category-dropdown-kelinci {
     top: 25px;
     padding: 20px;
-    right: 50%;
+    right: 50%; /* Menempatkan sub-dropdown sedikit ke kanan */
 }
 
+/* Posisi sub-dropdown untuk Hamster */
 #sub-category-dropdown-hamster {
     top: 50px;
     padding: 20px;
-    right: 50%; 
+    right: 50%; /* Menempatkan sub-dropdown sedikit ke kiri */
 }
 
+/* Posisi sub-dropdown untuk Burung */
 #sub-category-dropdown-burung {
     top: 90px;
     padding: 20px;
-    right: 50%;
+    right: 50%; /* Menempatkan sub-dropdown sedikit ke kanan */
 }
 
+.Brands button:focus, .Blog button:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+/* Posisi sub-dropdown untuk Ikan */
 #sub-category-dropdown-ikan {
     top: 125px;
     padding: 20px;
-    right: 50%; 
+    right: 50%; /* Menempatkan sub-dropdown sedikit ke kiri */
 }
 
 .Brands button, .link button, .Blog button {
     padding: 10px 20px;
     font-size: 15px;
     font-weight: bold;
-    color: #1a1a1a; 
-    border: none;
-    background-color: #fff;
+    color: rgb(245, 245, 245); 
+    border: none; 
+    background-color: #7AB2D3; 
     cursor: pointer; 
-    display: inline-flex; 
+    display: inline-flex;
     align-items: center; 
     position: relative; 
-    overflow: hidden;
-    text-decoration: none; 
+    overflow: hidden; 
+    text-decoration: none; /* Menghilangkan garis bawah */
     transition: color 0.3s ease, background-color 0.3s ease; 
     margin-left: 15px; 
 }
 
-.Brands button, .link button, .Blog button:focus {
-    border: none;
-    outline: none; 
-}
 
 .link button {
-    margin-right: 0; 
+    margin-right: 0;
 }
 
 
 .Brands button:hover, .link button:hover, .Blog button:hover {
-    color: #333;
-    background-color: #ffffff; 
+    color: #ffffff; 
+    background-color: #7AB2D3; 
 }
 
 
@@ -899,11 +887,10 @@ header {
     bottom: 0;
     left: 0;
     width: 0; 
-    height: 2px; 
-    background-color: #a3cf5b; 
+    height: 2px;
+    background-color: #141414; 
     transition: width 0.7s ease; 
 }
-
 
 .Brands button:hover::after, .link button:hover::after, .Blog button:hover::after {
     width: 100%; 
@@ -912,9 +899,8 @@ header {
 .title-container {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f4f4f4;
     text-align: center;
-    background-color: #fda116;
+    background-color: #b9e5e8;
 }
 
 
