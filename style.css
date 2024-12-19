@@ -52,7 +52,7 @@ header {
 .website-name h1 {
     font-size: 32px;
     font-weight: bold;
-    color: #333;
+    color: #4a628a;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -284,7 +284,7 @@ header {
 #hewan-lain-dropdown ul li a::after {
     content: '>';  /* Menambahkan tanda > sebagai anak panah */
     font-size: 12px;
-    color: #333;  /* Warna anak panah */
+    color: #4a628a;  /* Warna anak panah */
     margin-left: 7px;  /* Jarak antara teks dan anak panah */
 }
 
@@ -317,7 +317,7 @@ header {
 .sub-category-dropdown ul li a {
     padding: 20px;
     display: block;
-    color: #333;
+    color: #4a628a;
     text-decoration: none;
     content: none;
 }
