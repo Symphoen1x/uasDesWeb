@@ -17,7 +17,7 @@
 	margin: 0 auto;
 	height: 4px;
 	border-radius: 1px;
-	background: #7ac400;
+	background: #B9E5E8;
 	left: 0;
 	right: 0;
 	bottom: -15px;
@@ -228,7 +228,7 @@
 
 
 .newsletter {
-    background-color: #f4c76c;
+    background-color: #7AB2D3;
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -260,7 +260,7 @@
 
 .newsletter button {
     padding: 10px 20px;
-    background-color: #a3cf5b;
+    background-color: #B9E5E8;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -328,12 +328,12 @@
 }
 
 footer{
-    background-color: #a3cf5b;
+    background-color: #B9E5E8;
 }
 
 /* Footer-top Styles */
 .footer-top{
-    background-color: #a3cf5b;
+    background-color: #B9E5E8;
     border-color: #e0e0e0;
     display: flex;
     justify-content: center;
@@ -387,14 +387,14 @@ footer{
 }
 
 .footer-section ul li a {
-    color: #777;
+    color: #fff;
     text-decoration: none;
     font-size: 15px;
     transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #fff2e8;
+    color: #4A628A;
 }
 
 .social-icons {
@@ -565,7 +565,7 @@ footer{
 .company-title {
     font-size: 16px;
     font-weight: 600;
-    color: #333;
+    color: #4A628A;
     margin-bottom: 12px;
     line-height: 1.4;
 }
@@ -574,7 +574,7 @@ footer{
 
     font-style: normal;
     font-size: 14px;
-    color: #666;
+    color: #fff;
     /* line-height: 1; */
     /* padding-left: 10px; */
 }
@@ -629,7 +629,7 @@ footer{
 
 /*Footer-bottom Styles */
 .footer-bottom {
-    background-color: #fff2e8; /* Warna latar belakang footer */
+    background-color: #7AB2D3; /* Warna latar belakang footer */
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -648,13 +648,14 @@ footer{
 /* Footer Copyright */
 .footer-copyright {
     font-size: 14px;
-    color: #6c757d; /* Warna teks copyright */
+    color: #fff; /* Warna teks copyright */
     text-align: center;
     margin-top: 15px;
+    z-index: 1000;
 }
 
 .footer-copyright a {
-    color: #6c757d;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -680,14 +681,14 @@ footer{
 
 .links li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .links li a:hover {
-    color: #007bff; /* Warna saat hover pada link */
+    color: #4A628A; /* Warna saat hover pada link */
 }
 
 .links {
