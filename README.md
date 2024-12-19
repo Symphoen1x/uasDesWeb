@@ -1,125 +1,122 @@
-**LAPORAN UAS RANCANGAN MEMBUAT DESAIN WEB**
+# Laporan UAS Rancangan Membuat Desain Web
 
-**DESAIN WEB**
+<div align="center">
 
-**![uns file]()**
+![Logo UNS](https://upload.wikimedia.org/wikipedia/id/thumb/c/cd/Logo_UNS.png/180px-Logo_UNS.png)
 
-_Tugas ini disusun guna menyelesaikan UAS mata kuliah Desain Web pada semester 3_
+*Tugas ini disusun guna menyelesaikan UAS mata kuliah Desain Web pada semester 3*
 
-**Dosen Pengampu:**
+</div>
 
-**Nurcahya Pradana Taufik Prakisya, S.kom., M.cs.**
+## Informasi Akademik
 
-Disusun oleh:
+**Dosen Pengampu**  
+Nurcahya Pradana Taufik Prakisya, S.kom., M.cs.
 
-Isa Aulia Almadani (K3523038)
+**Tim Penyusun**
+- Isa Aulia Almadani (K3523038)
+- Nanda Agung Pratama (K3523056)
 
-Nanda Agung Pratama (K3523056)
+**Institusi**  
+Program Studi Pendidikan Teknik Informatika dan Komputer  
+Fakultas Keguruan dan Ilmu Pendidikan  
+Universitas Sebelas Maret  
+2024
 
-**PROGRAM STUDI PENDIDIKAN TEKNIK INFORMATIKA DAN KOMPUTER**
+---
 
-**FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN**
+## 🐾 Critter Haven - Pet Shop Online
 
-**UNIVERSITAS SEBELAS MARET**
+### Deskripsi Proyek
+Critter Haven adalah platform e-commerce yang menghadirkan solusi lengkap untuk kebutuhan hewan peliharaan. Kami menyediakan berbagai produk berkualitas untuk berbagai jenis hewan peliharaan, termasuk:
+- 🐱 Kucing
+- 🐕 Anjing
+- 🐰 Kelinci
+- 🐹 Hamster
+- 🦜 Burung
+- 🐠 Ikan
 
-**2024**
+### Fitur Utama
 
-**Deskripsi singkat**
+#### 1. 🛒 Keranjang Belanja (Shopping Cart)
+- Manajemen produk yang fleksibel
+- Perhitungan otomatis total belanja
+- Interface yang intuitif untuk pengeditan kuantitas
+- Proses checkout yang streamlined
 
-Critter Haven adalah petshop online yang menyediakan berbagai produk berkualitas untuk hewan peliharaan seperti kucing, anjing, kelinci, hamster, burung, dan ikan. Website ini menawarkan produk perawatan hewan, makanan, aksesori, mainan, dan peralatan kebersihan, yang dirancang untuk mendukung kesehatan dan kesejahteraan hewan peliharaan.
+#### 2. 📑 Kategori Produk
+Sistem kategorisasi yang terorganisir untuk:
+- Produk Kucing: Makanan, aksesoris, perawatan
+- Produk Anjing: Makanan, perawatan, aksesoris
+- Produk Hewan Lainnya: Kebutuhan untuk kelinci, hamster, dll
 
-Website ini memiliki antarmuka user-friendly dan responsif, memudahkan pengguna dalam mencari produk berdasarkan jenis hewan peliharaan atau kategori produk. Fitur-fitur utama termasuk:
+#### 3. 🌟 Best Seller & Penawaran
+- Showcase produk populer
+- Penawaran spesial dan diskon
+- Bundle produk eksklusif
+- Promosi terbatas
 
-**Fitur-Fitur Utama Website Critter Haven:**
+#### 4. 🔍 Product Finder
+Fitur pencarian pintar dengan filter:
+- Jenis hewan
+- Kategori produk
+- Range harga
+- Brand preferensi
 
-**1\. . Keranjang Belanja (Shopping Cart)**
+#### 5. 📚 Blog Edukatif
+Konten informatif mencakup:
+- Tips perawatan hewan
+- Panduan kesehatan
+- Artikel nutrisi
+- Saran pemeliharaan
 
-Fitur keranjang belanja memungkinkan pengguna untuk menambahkan produk yang mereka pilih ke dalam keranjang sementara sebelum melanjutkan ke proses checkout. Pengguna dapat melihat dan mengedit item di keranjang mereka, seperti menambah atau mengurangi jumlah produk, serta menghapus produk yang tidak diinginkan. Setelah selesai berbelanja, pengguna dapat langsung melanjutkan ke halaman checkout untuk menyelesaikan pembelian.
+#### 6. 🏢 Halaman Brand
+- Katalog brand terpercaya
+- Informasi detail produk
+- Sistem rating dan review
+- Filter berdasarkan brand
 
-**2\. Dropdown Kategori Produk**
+#### 7. 📊 Cart Interface
+- Progress bar interaktif
+- Tampilan produk yang jelas
+- Sistem perhitungan real-time
+- Opsi pengaturan kuantitas
 
-Website ini menyediakan dropdown kategori produk yang memudahkan pengguna dalam menjelajahi berbagai jenis produk berdasarkan jenis hewan peliharaan mereka. Kategori produk utama yang tersedia meliputi:
-
-- Kucing: Makanan, aksesoris, perawatan, dan mainan untuk kucing.
-- Anjing: Makanan, perawatan, aksesoris, dan mainan untuk anjing.
-- Hewan Lain: Untuk kelinci, hamster, burung, ikan, dan hewan peliharaan lainnya.
-
-Kategori ini membantu pengguna menemukan produk yang lebih spesifik sesuai dengan kebutuhan hewan peliharaan mereka, meningkatkan pengalaman belanja yang lebih terfokus dan efisien.
-
-**3\. Best Seller & Offer**
-
-Di halaman utama, produk best seller dan penawaran spesial ditampilkan untuk menarik perhatian pengunjung. Produk best seller adalah produk yang paling banyak dibeli dan dipercaya oleh pelanggan lain. Di bagian ini, pengunjung juga dapat menemukan penawaran spesial, seperti diskon besar, bundle offer, atau promosi waktu terbatas. Hal ini mempermudah pengguna untuk memilih produk yang terjamin kualitasnya dan menguntungkan bagi kantong mereka.
-
-**4\. Product Finder**
-
-Fitur Product Finder memudahkan pengguna untuk memilih produk yang tepat berdasarkan kebutuhan spesifik hewan peliharaan mereka. Pengguna dapat memilih jenis hewan peliharaan (misalnya kucing, anjing, kelinci, dll.) dan kategori produk (seperti makanan, aksesoris, atau perawatan kesehatan). Dengan fitur ini, pengguna tidak perlu mencarinya secara manual dan dapat dengan cepat menemukan produk yang sesuai dengan preferensi dan kebutuhan hewan peliharaan mereka.
-
-**5\. Blog Artikel**
-
-Blog Critter Haven menyediakan berbagai artikel edukatif yang dapat membantu pemilik hewan peliharaan dalam merawat hewan mereka dengan lebih baik. Artikel-artikel ini mencakup berbagai topik seperti tips merawat kucing, cara menjaga kebersihan kandang, perawatan gigi hewan peliharaan, dan banyak lagi. Artikel-artikel ini ditulis oleh para ahli dan bertujuan untuk memberikan pengetahuan tambahan bagi pengunjung mengenai cara merawat hewan peliharaan mereka dengan benar.
-
-**6\. Halaman Brand**
-
-Halaman Brand memungkinkan pengguna untuk menjelajahi produk-produk dari berbagai merek terkenal yang tersedia di Critter Haven. Pengguna dapat mencari produk berdasarkan merek tertentu yang mereka percayai atau yang mereka ingin coba. Halaman ini menampilkan berbagai merek dengan informasi tentang produk mereka, memberikan transparansi dan kepercayaan lebih bagi pelanggan.
-
-**7\. Tampilan Chart yang intuitif**
-
-Halaman Cart/Keranjang ini merupakan halaman yang menampilkan daftar produk yang telah dipilih oleh pengguna untuk dibeli. Halaman ini dirancang dengan tampilan yang sederhana dan mudah dipahami, menggunakan skema warna biru yang memberikan kesan profesional dan terpercaya. Halaman ini menampilkan progress bar di bagian atas yang membantu pengguna memahami tahapan dalam proses pembelian, mulai dari keranjang, pembayaran, hingga konfirmasi. Informasi produk ditampilkan dengan jelas mencakup gambar, nama, kuantitas, dan harga. Pengguna dapat dengan mudah mengatur jumlah produk atau menghapusnya dari keranjang.
-
-**8\. Proses Checkout yang Mudah**
-
-Proses checkout di Critter Haven dirancang untuk sangat user-friendly. Setelah memilih produk, pengguna akan diarahkan ke halaman checkout di mana mereka bisa memasukkan informasi pengiriman, memilih metode pembayaran, serta melihat ringkasan pembelian mereka. Fitur ini membuat pengalaman checkout menjadi mudah, cepat, dan tanpa hambatan. Pengguna juga dapat memanfaatkan kode diskon yang mereka miliki untuk mendapatkan harga lebih murah.
-
-waktu, dengan pembaruan status pengiriman yang bisa dilacak secara online. Hal ini memastikan bahwa pelanggan menerima produk mereka dengan cepat dan aman.
-
-10\. **Metode Pembayaran Beragam**
-
-Critter Haven menyediakan berbagai metode pembayaran yang memudahkan pelanggan untuk menyelesaikan transaksi. Beberapa metode yang tersedia termasuk:
-
+#### 8. 💳 Sistem Pembayaran
+Mendukung berbagai metode pembayaran:
 - Google Pay
-- Kartu Kredit / Debit
+- Kartu Kredit/Debit
 - PayPal
 
-**Link Mock Up**
+### Link Proyek
 
-<https://www.figma.com/design/UQwzv5y8Xib9nk0SK3IMPe/UAS-FIGMA?node-id=1-7&t=mJ1hu4x4oeTjKGKX-1>
+📱 **Mockup**  
+[Figma Design](https://www.figma.com/design/UQwzv5y8Xib9nk0SK3IMPe/UAS-FIGMA?node-id=1-7&t=mJ1hu4x4oeTjKGKX-1)
 
-**Link GIT**
+💻 **Repository**  
+[GitHub Repository](https://github.com/Symphoen1x/uasDesWeb)
 
-<https://github.com/Symphoen1x/uasDesWeb>
+🌐 **Website**  
+[Live Demo](https://symphoen1x.github.io/uasDesWeb/)
 
-**Link Publikasi**
+### Referensi
 
-<https://symphoen1x.github.io/uasDesWeb/>
+1. **Light User Grid**  
+   [Bootstrap Template](https://www.bootdey.com/snippets/view/light-user-grid)  
+   *Grid system responsif untuk tampilan produk*
 
-**Daftar Referensi**
+2. **Shopping Bag & Checkout**  
+   [BB Bootstrap](https://bbbootstrap.com/snippets/shopping-bag-checkout-order-summary-94502209)  
+   *Template sistem checkout dan keranjang belanja*
 
-1. **Light User Grid**
+3. **Product Carousel**  
+   [Tutorial Republic](https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=product-list-carousel-for-ecommerce-website)  
+   *Implementasi carousel produk*
 
-Link: <https://www.bootdey.com/snippets/view/light-user-grid>
+4. **Asset Visual**  
+   [Flaticon](https://www.flaticon.com/)  
+   *Sumber daya ikon dan elemen visual*
 
-Deskripsi: Kode untuk membuat grid pengguna yang responsif dengan desain sederhana, digunakan sebagai referensi untuk tampilan grid di halaman produk.
-
-1. **Shopping Bag & Checkout Order Summary**
-
-Link: <https://bbbootstrap.com/snippets/shopping-bag-checkout-order-summary-94502209>
-
-Deskripsi: Desain untuk halaman checkout, termasuk ringkasan pesanan dan keranjang belanja, digunakan sebagai referensi untuk fitur checkout.
-
-1. **Product List Carousel for Ecommerce Website**
-
-Link: <https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=product-list-carousel-for-ecommerce-website>
-
-Deskripsi: Kode untuk membuat carousel produk di halaman utama untuk menampilkan produk terbaru atau populer.
-
-1. **Logo dari Flaticon**
-
-Link: <https://www.flaticon.com/>
-
-Deskripsi: Sumber logo dan ikon untuk website, digunakan dalam desain berbagai elemen visual pada website.
-
-1. **Nama Produk, Gambar Produk, dan Harga**
-
-Link: <https://petshopindonesia.com/?gad_source=1&gclid=CjwKCAiApY-7BhBjEiwAQMrrEWuu5ew8uKqdwrFQcsKzA56OoCO5APtGlKXK-uv65CBcuAm8ODK-2hoCs-QQAvD_BwE>
-
-Deskripsi: Data produk seperti nama, gambar, dan harga diambil secara umum dari situs Petshop Indonesia sebagai referensi untuk pengisian katalog produk dalam website Critter Haven. Data ini digunakan untuk memperkaya dan memperbarui katalog produk yang ditampilkan di website.
+5. **Data Produk**  
+   [Petshop Indonesia](https://petshopindonesia.com/)  
+   *Referensi data produk dan harga*
