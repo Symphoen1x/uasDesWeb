@@ -1,22 +1,31 @@
-/* body{
-    margin: 0;
-} */
+
 
 .top-banner {
+    
+    
     width: 100%;
     background: linear-gradient(to right, #90c95a, #aed581);
     padding: 10px 0;
     text-align: center;
     margin-bottom: 10px;
 }
-
+.sticky-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;  /* Ensure it stays on top of other content */
+    background-color: #fff; /* Optional: to make the sticky area have a background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for visibility */
+}
 .top-banner h1 {
+    
     color: #333;
     font-size: 48px;
     margin: 0;
 }
 
+
 .search-container {
+    
     margin: 20px 0;
     text-align: center;
 }
