@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 	height: 4px;
 	border-radius: 1px;
-	background: #7ac400;
+	background: #7AB2D3;
 	left: 0;
 	right: 0;
 	bottom: -15px;
@@ -27,10 +27,14 @@ body {
 .tag {
     margin: 0; 
     font-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emojifont-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji', cursive;
-    color: #000;
+    color: #fff;
     font-size: 35px;
     font-weight: 300;
 }
+
+h2 .tag {
+    color: #fff;
+}   
 
 .heart-icon {
     color: #bbc4f0;
@@ -132,12 +136,12 @@ body {
 	margin-bottom: 5px;
 }
 .carousel .thumb-content .btn {
-	color: #7ac400;
+	color: #7AB2D3;
 	font-size: 11px;
 	text-transform: uppercase;
 	font-weight: bold;
 	background: none;
-	border: 1px solid #7ac400;
+	border: 1px solid #7AB2D3;
 	padding: 6px 14px;
 	margin-top: 5px;
 	line-height: 16px;
@@ -145,7 +149,7 @@ body {
 }
 .carousel .thumb-content .btn:hover, .carousel .thumb-content .btn:focus {
 	color: #fff;
-	background: #7ac400;
+	background: #7AB2D3;
 	box-shadow: none;
 }
 .carousel .thumb-content .btn i {
@@ -164,7 +168,7 @@ body {
 .carousel-control-prev, .carousel-control-next {
 	height: 44px;
 	width: 40px;
-	background: #7ac400;	
+	background: #7AB2D3;	
 	border-radius: 4px;
 	opacity: 0.8;
 	transform: translateY(-50%);
@@ -177,7 +181,7 @@ body {
 	right: 5px;
 }
 .carousel-control-prev:hover, .carousel-control-next:hover {
-	background: #78bf00;
+	background: #7AB2D3;
 	opacity: 1;
 }
 .carousel-control-prev i, .carousel-control-next i {
@@ -189,7 +193,7 @@ body {
 	z-index: 5;
 	left: 0;
 	right: 0;
-	color: #fff;
+	color: #B9E5E8;
 	text-shadow: none;
 	font-weight: bold;
 }
@@ -208,9 +212,7 @@ body {
 	font-size: 16px;
 	color: #abb0b8;
 }
-.carousel .wish-icon .fa-heart {
-	color: #ff6161;
-}
+
 .star-rating li {
 	padding: 0;
 }
@@ -224,6 +226,7 @@ body {
 
 .BestSellers {
     position: relative;
+    background: #DFF2EB;
 }
 
 
