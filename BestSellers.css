@@ -305,7 +305,7 @@ body {
     /* Menyesuaikan ukuran tombol navigasi */
     .BestSellers .carousel-control-prev,
     .BestSellers .carousel-control-next {
-        top: -50px;
+        top: -80px;
         transform: none;
         z-index: 100;
     }
