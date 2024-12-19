@@ -240,7 +240,8 @@
 }
 
 .product-info.smart-form .rating label {
-    margin-top: 0
+    margin-top: 10px;
+    
 }
 
 .product-wrap .product-image span.tag2 {
@@ -509,7 +510,10 @@
     }
 
     .col-xs-12.col-md-12 .rating label {
-        font-size: 12px; /* 50% dari 24px */
+        font-size: 24px; /* 50% dari 24px */
+    }
+    .rating label {
+        font-size: 1px;
     }
 }
 
@@ -547,6 +551,36 @@
     }
 
     .col-xs-12.col-md-12 .rating label {
-        font-size: 14px; /* 50% dari 24px */
+        font-size: 20px; /* 50% dari 24px */
     }
+    .rating label {
+        font-size: 16px;
+    }
+}
+
+/* Styling untuk rating */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 2px;
+    padding: 8px 0;
+}
+
+.rating label {
+    cursor: pointer;
+    color: #FFD700; /* Warna kuning gelap untuk bintang tidak aktif */
+    font-size: 20px;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 768px) {
+    
+}
+
+/* Responsif untuk HP */
+@media (max-width: 480px) {
+  
 }

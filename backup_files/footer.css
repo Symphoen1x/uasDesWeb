@@ -1,6 +1,9 @@
+.navbar{
+    background-color: #f8a595;
+}
 
 /* Importing fonts from Google */
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 .header-container {
     display: flex;
     align-items: center;
@@ -25,7 +28,7 @@
 
 .tag {
     margin: 0; 
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", cursive;
+    font-family: 'Comic Sans MS', 'Bubblegum Sans', cursive;
     color: #000;
     font-size: 35px;
     font-weight: 300;
@@ -90,8 +93,10 @@
 
 /* Reseting */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+    font-family: 'Poppins', sans-serif;
 }
 
 .snippet-body {
@@ -337,7 +342,7 @@ footer{
     border-color: #e0e0e0;
     display: flex;
     justify-content: center;
-    padding: 0 30px;
+    padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -424,10 +429,6 @@ footer{
 
 /* Menambahkan media query untuk tablet dan HP */
 @media (max-width: 1230px) {
-    .footer-top {
-        flex-direction: column;
-        align-items: center;
-    }
     .footer-links {
         flex-direction: column;
         width: 100%;
