@@ -7,64 +7,220 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="article_page.css">
+    <link rel="stylesheet" href="UAS.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 </head>
 <body>
+    <header>
+        <div class="header-top">
+            <div class="logo-and-name">
+                <a href="UAS.html" class="logo">
+                    <img src="img/dashboard/logo.png" alt="Logo Petshop" width="95" height="70">
+                </a>
+                <a href="UAS.html" class="website-name-link">
+                  <h1>Critter Haven</h1>
+              </a>
+    
+                <div class="search-bar">
+                    <input type="text" placeholder="Cari produk...">
+                    <img src="img/dashboard/find.png" alt="Search Icon" class="search-icon">
+                </div>
+            </div>
+    
+            <div class="auth-links">
+                
+                
+                <a href="chart_page.html" class="auth-icon">
+                    <img src="img/dashboard/keranjang.png" alt="Keranjang Belanja">
+                </a>
+            </div>
+        </div>
+    
+        <div class="header-bottom">
+            <div class="categories-left">
+                <!-- Kategori Kucing -->
+                <div class="category-container">
+                  <a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">
+                    <button id="kucing-button" class="category-button">
+                        Kucing <span class="arrow">&#9660;</span>
+                    </button>
+                  </a>
+                    <div id="kucing-dropdown" class="category-dropdown">
+                        <ul>
+                          <li><a href="shopping.html?kucing_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                          <li><a href="shopping.html?kucing_alat_kebersihan=true">Alat Kebersihan</a></li>
+                          <li><a href="shopping.html?kucing_obat_vitamin=true">Obat & Vitamin</a></li>
+                          <li><a href="shopping.html?kucing_toilet=true">Toilet</a></li>
+                          <li><a href="shopping.html?kucing_makanan_cemilan=true&kucing_alat_kebersihan=true&kucing_obat_vitamin=true&kucing_toilet=true">Lainnya >> </a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Kategori Anjing -->
+                <div class="category-container">
+                  <a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">
+                    <button id="anjing-button" class="category-button">
+                        Anjing <span class="arrow">&#9660;</span>
+                    </button>
+                  </a>
+                    <div id="anjing-dropdown" class="category-dropdown">
+                        <ul>
+                          <li><a href="shopping.html?anjing_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                          <li><a href="shopping.html?anjing_alat_kebersihan=true">Alat Kebersihan</a></li>
+                          <li><a href="shopping.html?anjing_obat_vitamin=true">Obat & Vitamin</a></li>
+                          <li><a href="shopping.html?anjing_toilet=true">Toilet</a></li>
+                          <li><a href="shopping.html?anjing_kandang=true">Kandang</a></li>
+                            <li><a href="shopping.html?anjing_makanan_cemilan=true&anjing_alat_kebersihan=true&anjing_obat_vitamin=true&anjing_toilet=true&anjing_kandang=true">Lainnya >> </a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Kategori Hewan Lain -->
+                <div class="category-container">
+                    <button id="hewan-lain-button" class="category-button">
+                        Hewan Lain <span class="arrow">&#9660;</span>
+                    </button>
+                    <div id="hewan-lain-dropdown" class="category-dropdown">
+                        <ul>
+                            <li>
+                                <a href="shopping.html?kelinci_makanan_cemilan=true&kelinci_perawatan=true&kelinci_kandang=true">Kelinci</a>
+                                <div id="sub-category-dropdown-kelinci" class="sub-category-dropdown">
+                                    <ul>
+                                      <li><a href="shopping.html?kelinci_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                      <li><a href="shopping.html?kelinci_perawatan=true">Perawatan</a></li>
+                                      <li><a href="shopping.html?kelinci_kandang=true">Kandang</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="shopping.html?hamster_makanan=true&hamster_perawatan=true&hamster_kandang=true">Hamster</a>
+                                <div id="sub-category-dropdown-hamster" class="sub-category-dropdown">
+                                  <ul>
+                                    <li><a href="shopping.html?hamster_makanan=true">Makanan</a></li>
+                                    <li><a href="shopping.html?hamster_perawatan=true">Perawatan</a></li>
+                                    <li><a href="shopping.html?hamster_kandang=true">Kandang</a></li>
+                                  </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="shopping.html?burung_makanan_cemilan=true&burung_perawatan=true&burung_KandangStand=true">Burung</a>
+                                <div id="sub-category-dropdown-burung" class="sub-category-dropdown">
+                                  <ul>
+                                    <li><a href="shopping.html?burung_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                    <li><a href="shopping.html?burung_perawatan=true">Perawatan</a></li>
+                                    <li><a href="shopping.html?burung_KandangStand=true">Kandang & Stand</a></li>
+                                  </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="shopping.html?ikan_makanan_cemilan=true&ikan_lifesytle=true">Ikan</a>
+                                <div id="sub-category-dropdown-ikan" class="sub-category-dropdown">
+                                  <ul>
+                                    <li><a href="shopping.html?ikan_makanan_cemilan=true">Makanan & Cemilan</a></li>
+                                    <li><a href="shopping.html?ikan_lifesytle=true">Lifestyle</a></li>
+                                  </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="Blog">
+                  <button onclick="window.location.href='article_page.html';">Blog</button>
+              </div>
+    
+                <!-- Select for Brands -->
+                <div class="Brands">
+                  <button onclick="window.location.href='brand_page.html';">Brand</button>
+              </div>
+              
+              
+              
+              
+            </div>
+        </div>
+    </header>
+
     <!-- Recommendation Article Bar -->
     <div class="recommendation-bar">
         <div class="recommendation-slider">
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art1.html'">
-                    <h3>Jasa Penitipan Hewan- Critter Haven</h3>
-                    <p>Selamat datang di blog Critter Haven! Kami tahu betapa pentingnya kenyamanan dan kebahagiaan sahabat kecil Anda. Dalam artikel kali ini, kami ingin memperkenalkan layanan unggulan kami: <strong>Jasa Penitipan Hewan</strong>.</p>
+                    <div class="content-text">
+                        <h3>Jasa Penitipan Hewan- Critter Haven</h3>
+                        <p>Selamat datang di blog Critter Haven! Kami tahu betapa pentingnya kenyamanan dan kebahagiaan sahabat kecil Anda. Dalam artikel kali ini, kami ingin memperkenalkan layanan unggulan kami: <strong>Jasa Penitipan Hewan</strong>.</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i1.png" alt="idk">
+                    </div>
                 </div>
                 
             </div>
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art2.html'">
-                    <h3>Tips Membuat Kucing Betah di Kandang</h3>
-                    <p>Hai Sahabat Critter! Kucing adalah makhluk yang penuh rasa ingin tahu, tetapi ada kalanya mereka harus merasa nyaman di kandang—baik untuk perjalanan, perawatan, atau alasan lainnya. Untuk itu, yuk kita simak beberapa tips sederhana agar si meong kesayanganmu betah di kandang:</p>
+                    <div class="content-text">
+                        <h3>Tips Membuat Kucing Betah di Kandang</h3>
+                        <p>Hai Sahabat Critter! Kucing adalah makhluk yang penuh rasa ingin tahu, tetapi ada kalanya mereka harus merasa nyaman di kandang—baik untuk perjalanan, perawatan, atau alasan lainnya. Untuk itu, yuk kita simak beberapa tips sederhana agar si meong kesayanganmu betah di kandang:</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i2.png" alt="idk">
+                    </div>
                 </div>
-                
             </div>
 
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art3.html'">
-                    <h3>Traveling Bersama Hewan Peliharaan</h3>
-                    <p>Hai Sahabat Critter!</p>
-                    <p>Traveling bersama hewan peliharaan bisa menjadi pengalaman seru sekaligus menantang. Tapi jangan khawatir, dengan persiapan yang matang, perjalananmu bisa lancar dan menyenangkan. Yuk, simak tips berikut supaya traveling bareng si kesayangan jadi bebas repot!</p>
+                    <div class="content-text">
+                        <h3>Traveling Bersama Hewan Peliharaan</h3>
+                        <p>Hai Sahabat Critter!</p>
+                        <p>Traveling bersama hewan peliharaan bisa menjadi pengalaman seru sekaligus menantang. Tapi jangan khawatir, dengan persiapan yang matang, perjalananmu bisa lancar dan menyenangkan. Yuk, simak tips berikut supaya traveling bareng si kesayangan jadi bebas repot!</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i3.png" alt="idk">
+                    </div>
                 </div>
-                
             </div>
 
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art4.html'">
-                    <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
-                    <p>Tahukah kamu?</p>
-                    <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>
+                    <div class="content-text">
+                        <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
+                        <p>Tahukah kamu?</p>
+                        <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i4.png" alt="idk">
+                    </div>
                 </div>
-                
             </div>
 
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art5.html'">
-                    <h3>Mengatasi Tear Stain pada Kucing dan Anjing</h3>
-                    <p>Hai Sahabat Critter!</p>
-                    <p>Apakah kucing atau anjing kesayanganmu memiliki noda kecokelatan atau merah di sekitar area mata? Itu disebut tear stain, dan meskipun umum terjadi, penting untuk mengetahui penyebab dan cara mengatasinya. Yuk, kita bahas bersama!</p>
+                    <div class="content-text">
+                        <h3>Mengatasi Tear Stain pada Kucing dan Anjing</h3>
+                        <p>Hai Sahabat Critter!</p>
+                        <p>Apakah kucing atau anjing kesayanganmu memiliki noda kecokelatan atau merah di sekitar area mata? Itu disebut tear stain, dan meskipun umum terjadi, penting untuk mengetahui penyebab dan cara mengatasinya. Yuk, kita bahas bersama!</p>
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i5.png" alt="idk">
+                    </div>
                 </div>
-                
             </div>
 
             <div class="recommendation-item">
                 <div class="recommendation-content" onclick="window.location.href='art6.html'">
-                    <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
-                    <p>Tahukah kamu?</p>
-                    <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>   
+                    <div class="content-text">
+                        <h3>Perawatan Gigi Hewan Peliharaan dengan Dental Snack</h3>
+                        <p>Tahukah kamu?</p>
+                        <p>Perawatan gigi hewan peliharaan tidak selalu harus dengan sikat gigi. Ada cara yang lebih mudah dan menyenangkan untuk menjaga kebersihan mulut mereka, yaitu dengan dental snack!</p>   
+                    </div>
+                    <div class="content-image">
+                        <img src="imagePetArt/i6.png" alt="idk">
+                    </div>
                 </div>
-                
             </div>
 
             <!-- Ulangi struktur yang sama untuk item 2-8 -->
