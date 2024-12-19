@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 2000px; /* Membuat halaman cukup panjang untuk scroll */
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Menyembunyikan elemen yang keluar dari kontainer */
+    padding-top: 100px; /* Memberi ruang di atas agar lingkaran terlihat ketika sticky */
+}
+
+.sticky-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%; /* Menempatkan lingkaran di tengah-tengah kontainer */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#circle1 {
+    position: -webkit-sticky; /* Untuk Safari */
+    position: sticky;
+    top: 50px; /* Lingkaran pertama akan sticky di 50px dari atas saat di-scroll */
+}
+
+#circle2 {
+    position: -webkit-sticky; /* Untuk Safari */
+    position: sticky;
+    top: 150px; /* Lingkaran kedua akan sticky di 150px dari atas saat di-scroll */
+}
